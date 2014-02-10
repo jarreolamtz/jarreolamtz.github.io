@@ -1,0 +1,494 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url("fuentes/OpenSans-Regular-webfont.eot");
+  src: url("fuentes/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fuentes/OpenSans-Regular-webfont.woff") format("woff"), url("fuentes/OpenSans-Regular-webfont.ttf") format("truetype"), url("fuentes/OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'socialiconsfont';
+  src: url("fuentes/socialiconsfont.eot?-pap3r9");
+  src: url("fuentes/socialiconsfont.eot?#iefix-pap3r9") format("embedded-opentype"), url("fuentes/socialiconsfont.woff?-pap3r9") format("woff"), url("fuentes/socialiconsfont.ttf?-pap3r9") format("truetype"), url("fuentes/socialiconsfont.svg?-pap3r9#socialiconsfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* VARIABLES */
+/* Extends(pendiente) */
+/* line 41, ../sass/screen.scss */
+a {
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */
+}
+/* line 42, ../sass/screen.scss */
+a a:link {
+  color: white;
+}
+/* line 43, ../sass/screen.scss */
+a a:visited {
+  color: white;
+}
+/* line 44, ../sass/screen.scss */
+a a:hover {
+  color: white;
+}
+/* line 45, ../sass/screen.scss */
+a a:active {
+  color: white;
+}
+
+/* line 48, ../sass/screen.scss */
+body {
+  font-size: 62.5%;
+  /*roughly 10px*/
+  background: #28a6db;
+  font-family: 'open_sansregular';
+}
+
+/* line 54, ../sass/screen.scss */
+p, h1, h2, h3, span, a {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+}
+
+/*############ HEADER ###############*/
+/* line 63, ../sass/screen.scss */
+.desktop figure:first-child {
+  margin-bottom: 10%;
+}
+
+/* line 67, ../sass/screen.scss */
+.desktop header figure {
+  padding-top: 47px;
+  margin-bottom: 9em;
+}
+
+/* line 72, ../sass/screen.scss */
+.desktop header figure img {
+  max-width: 220px;
+  text-align: center;
+  -webkit-transition: .2s;
+}
+
+/* line 78, ../sass/screen.scss */
+.desktop header figure img:hover {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+}
+
+/* line 85, ../sass/screen.scss */
+#fondo-header {
+  width: 100%;
+  max-height: 176px;
+  position: absolute;
+  z-index: -1;
+}
+
+/*############ SECCION1 ###############*/
+/*section {
+	border:solid red 1px;
+}
+
+.columns{
+	border:solid red 1px;
+}
+*/
+/* line 102, ../sass/screen.scss */
+#seccion1desktop a {
+  background: #0880b0;
+  border-radius: .5em;
+  color: white;
+  padding: .8em;
+  font-weight: normal;
+  font-size: 1.8em;
+}
+
+/* line 111, ../sass/screen.scss */
+#seccion1desktop a:hover {
+  background: #0880b0;
+  border-radius: .5em;
+  color: white;
+  padding: .7em;
+  font-size: 1.7em;
+}
+
+/* line 119, ../sass/screen.scss */
+#seccion1desktop {
+  color: white;
+  font-family: 'open_sansregular';
+  text-align: center;
+  height: 450px;
+}
+
+/* line 126, ../sass/screen.scss */
+#seccion1desktop p:first-child {
+  font-weight: normal;
+  font-size: 4.2em;
+  padding: 10px 0px 0px 0px;
+}
+
+/* line 132, ../sass/screen.scss */
+#seccion1desktop p:nth-child(2) {
+  font-size: 1.8em;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+  line-height: 1.5em;
+}
+
+/* line 139, ../sass/screen.scss */
+#seccion1desktop .row div:first-child {
+  padding: 0px;
+}
+
+/* line 144, ../sass/screen.scss */
+#seccion1desktop .row div:nth-child(2) {
+  margin-top: 3em;
+}
+
+/*############ SECCION2 SOCIAL ###############*/
+/* line 156, ../sass/screen.scss */
+#socialbar {
+  height: 50px;
+  background: #0880b0;
+  position: relative;
+  width: 750px;
+  bottom: 0;
+  padding: 1.8em 30px 0px 1.8em;
+  display: inline-block;
+}
+
+/* line 166, ../sass/screen.scss */
+#socialbar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 50px solid #28a6db;
+  border-left: 50px solid rgba(0, 0, 0, 0);
+  width: 0;
+}
+
+/* line 175, ../sass/screen.scss */
+#social-extencion {
+  background: #0880b0;
+  height: 60px;
+  width: auto;
+  margin: 0px;
+}
+
+/* line 182, ../sass/screen.scss */
+#socialbar a {
+  font-size: 2.5em;
+  color: #28a6db;
+}
+
+/* line 187, ../sass/screen.scss */
+#socialbar a:hover {
+  color: #fafafa;
+  -webkit-transition: 0.1s;
+}
+
+/* line 192, ../sass/screen.scss */
+#socialbar div {
+  display: inline;
+  width: 100%;
+}
+
+/* line 198, ../sass/screen.scss */
+#socialbar figcaption {
+  padding: 0 6% 0 0;
+  display: inline-block;
+}
+
+/* line 203, ../sass/screen.scss */
+#socialbar span {
+  color: #28a6db;
+  font-size: 2em;
+  font-weight: 800;
+  padding: 0 4em 0 0;
+}
+
+/*## SOCIAL ICONS ##*/
+/* line 212, ../sass/screen.scss */
+.cell:before {
+  content: "\e600";
+  font-family: 'socialiconsfont';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 218, ../sass/screen.scss */
+.dribbble:before {
+  content: "\e601";
+  font-family: 'socialiconsfont';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 224, ../sass/screen.scss */
+.linkedin:before {
+  content: "\e602";
+  font-family: 'socialiconsfont';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 230, ../sass/screen.scss */
+.sms:before {
+  content: "\e603";
+  font-family: 'socialiconsfont';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 236, ../sass/screen.scss */
+.twitter:before {
+  content: "\e604";
+  font-family: 'socialiconsfont';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 242, ../sass/screen.scss */
+.behance:before {
+  content: "\e605";
+  font-family: 'socialiconsfont';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*############ SECCION3 ABOUTME  ###############*/
+/* line 254, ../sass/screen.scss */
+#aboutme {
+  height: 240px;
+  background: #EBEBEB;
+  text-align: center;
+}
+
+/* line 261, ../sass/screen.scss */
+#aboutme div p {
+  font-size: 2em;
+  line-height: 1.2em;
+  padding-top: 1em;
+  color: #383838;
+}
+
+/* line 268, ../sass/screen.scss */
+#aboutme h2 {
+  font-size: 5em;
+  text-transform: uppercase;
+  padding-top: 1em;
+  color: #383838;
+}
+
+/*############ SECCION4 PORTAFOLIO  ###############*/
+/* line 277, ../sass/screen.scss */
+.cellnumber {
+  display: none;
+}
+
+/* line 281, ../sass/screen.scss */
+.contenedor {
+  height: 400px;
+  width: 300px;
+  background: tomato;
+  display: inline-block;
+  margin: 1em 2em 2em 2em;
+  text-align: center;
+}
+
+/* line 291, ../sass/screen.scss */
+#portafolio-desktop {
+  background: #8a8a8a;
+  padding: 2em 1em 2em 1em;
+  color: #fff;
+  font-size: 1.8em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 301, ../sass/screen.scss */
+#portafolio-desktop .contenedor img {
+  background-image: cover;
+  border-radius: 3em;
+}
+
+/* line 307, ../sass/screen.scss */
+#portafolio-desktop h2 {
+  font-size: 3em;
+  text-transform: uppercase;
+  padding: 1em .5em;
+}
+
+/*###########################*/
+/*############ HEADER MOVILE ###############*/
+/*###########################*/
+/*############ HEADER MOVILE ###############*/
+/* line 319, ../sass/screen.scss */
+header {
+  display: block;
+}
+
+/* line 323, ../sass/screen.scss */
+#fondo-header-movile {
+  width: 100%;
+  max-height: 176px;
+  position: absolute;
+  z-index: -1;
+}
+
+/* line 330, ../sass/screen.scss */
+.movile header figure {
+  padding-top: 10px;
+  max-height: 150px;
+  font-family: 'open_sansregular';
+}
+
+/* line 336, ../sass/screen.scss */
+.movile header figure img {
+  max-height: 55px;
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+/* line 342, ../sass/screen.scss */
+.movile img {
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+/*############ SECCION1 MOVILE ###############*/
+/* line 349, ../sass/screen.scss */
+#seccion1 {
+  position: relative;
+  color: white;
+  font-family: 'open_sansregular';
+  text-align: center;
+}
+
+/* line 356, ../sass/screen.scss */
+#seccion1 div {
+  margin-top: 1.5em;
+  padding: 0px;
+}
+
+/* line 361, ../sass/screen.scss */
+#seccion1 div #calltoaction {
+  font-weight: normal;
+  font-size: 1.8em;
+}
+
+/* line 367, ../sass/screen.scss */
+#seccion1 div:first-child p {
+  font-weight: normal;
+  font-size: 4.2em;
+  padding: 10px 0px 0px 0px;
+}
+
+/* line 373, ../sass/screen.scss */
+#seccion1 div:nth-child(2) p {
+  font-size: 1.8em;
+  margin-top: .6em;
+  line-height: 1.5em;
+}
+
+/* line 379, ../sass/screen.scss */
+#seccion1 div:nth-child(3) a {
+  background: #0880b0;
+  border-radius: .5em;
+  color: white;
+  padding: .5em;
+}
+
+/*############ FOOTER MOVILE ###############*/
+/* line 389, ../sass/screen.scss */
+#footer {
+  background: #0880b0;
+  display: block;
+  height: 50px;
+  bottom: 0;
+  position: absolute;
+}
+
+/* line 397, ../sass/screen.scss */
+#footer div a {
+  font-family: 'socialico-webfont';
+  font-size: 5em;
+}
