@@ -368,13 +368,12 @@ p, h1, h2, h3, span, a {
 .contenedor {
   height: 400px;
   width: 300px;
-  background: tomato;
   display: inline-block;
   margin: 1em 2em 2em 2em;
   text-align: center;
 }
 
-/* line 291, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 #portafolio-desktop {
   background: #8a8a8a;
   padding: 2em 1em 2em 1em;
@@ -384,13 +383,13 @@ p, h1, h2, h3, span, a {
   text-align: center;
 }
 
-/* line 301, ../sass/screen.scss */
+/* line 300, ../sass/screen.scss */
 #portafolio-desktop .contenedor img {
   background-image: cover;
   border-radius: 3em;
 }
 
-/* line 307, ../sass/screen.scss */
+/* line 306, ../sass/screen.scss */
 #portafolio-desktop h2 {
   font-size: 3em;
   text-transform: uppercase;
@@ -401,12 +400,12 @@ p, h1, h2, h3, span, a {
 /*############ HEADER MOVILE ###############*/
 /*###########################*/
 /*############ HEADER MOVILE ###############*/
-/* line 319, ../sass/screen.scss */
+/* line 318, ../sass/screen.scss */
 header {
   display: block;
 }
 
-/* line 323, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 #fondo-header-movile {
   width: 100%;
   max-height: 176px;
@@ -414,28 +413,28 @@ header {
   z-index: -1;
 }
 
-/* line 330, ../sass/screen.scss */
+/* line 329, ../sass/screen.scss */
 .movile header figure {
   padding-top: 10px;
   max-height: 150px;
   font-family: 'open_sansregular';
 }
 
-/* line 336, ../sass/screen.scss */
+/* line 335, ../sass/screen.scss */
 .movile header figure img {
   max-height: 55px;
   display: block;
   margin: 0 auto 0 auto;
 }
 
-/* line 342, ../sass/screen.scss */
+/* line 341, ../sass/screen.scss */
 .movile img {
   display: block;
   margin: 0 0 10px 0;
 }
 
 /*############ SECCION1 MOVILE ###############*/
-/* line 349, ../sass/screen.scss */
+/* line 348, ../sass/screen.scss */
 #seccion1 {
   position: relative;
   color: white;
@@ -443,33 +442,33 @@ header {
   text-align: center;
 }
 
-/* line 356, ../sass/screen.scss */
+/* line 355, ../sass/screen.scss */
 #seccion1 div {
   margin-top: 1.5em;
   padding: 0px;
 }
 
-/* line 361, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 #seccion1 div #calltoaction {
   font-weight: normal;
   font-size: 1.8em;
 }
 
-/* line 367, ../sass/screen.scss */
+/* line 366, ../sass/screen.scss */
 #seccion1 div:first-child p {
   font-weight: normal;
   font-size: 4.2em;
   padding: 10px 0px 0px 0px;
 }
 
-/* line 373, ../sass/screen.scss */
+/* line 372, ../sass/screen.scss */
 #seccion1 div:nth-child(2) p {
   font-size: 1.8em;
   margin-top: .6em;
   line-height: 1.5em;
 }
 
-/* line 379, ../sass/screen.scss */
+/* line 378, ../sass/screen.scss */
 #seccion1 div:nth-child(3) a {
   background: #0880b0;
   border-radius: .5em;
@@ -478,7 +477,7 @@ header {
 }
 
 /*############ FOOTER MOVILE ###############*/
-/* line 389, ../sass/screen.scss */
+/* line 388, ../sass/screen.scss */
 #footer {
   background: #0880b0;
   display: block;
@@ -487,7 +486,7 @@ header {
   position: absolute;
 }
 
-/* line 397, ../sass/screen.scss */
+/* line 396, ../sass/screen.scss */
 #footer div a {
   font-family: 'socialico-webfont';
   font-size: 5em;
