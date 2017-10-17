@@ -99,9 +99,11 @@ header .right-side .logo-link:hover .blink {
   z-index: 2;
   cursor: pointer;
 }
-.section-01 .top .project-description  {
+.section-01 .top .project-description {
   cursor: auto;
 }
+
+
 .section-01 .top .controlsInn {
   cursor: pointer;
 }
@@ -118,24 +120,54 @@ header .right-side .logo-link:hover .blink {
   margin: 33% auto;
 }
 .section-01 .project-description h3 {
-
   margin-bottom: 15px;
+  color: black;
 }
 .section-01 .project-description h2 {
   font-family: DINCondensed-Bold;
-  font-size: 43px;
+  font-size: 52px;
   letter-spacing: 1.89px;
   line-height: 50px;
   margin-bottom: 20px;
 }
 .section-01 .project-description p {
-  /* The following articl: */
-  font-family: DINCondensed-Bold;
-  font-size: 14px;
-  letter-spacing: 0.62px;
-  line-height: 20px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 18px;
+  font-size: 12px;
+  letter-spacing: 0.53px;
+  margin-bottom: 12px;
 }
 
+.section-01 .top .project-description .module {
+  padding: 10px 0 0;
+}
+.section-01 .top .project-description .date {
+  display: inline-block;
+  font-weight: bolder;
+  margin: 0;
+}
+.section-01 .top .project-description .description {
+  display: inline-block;
+  margin: 0;
+}
+.section-01 .top .project-description .module .divider {
+  height: 1px;
+  width: 100%;
+  background: black;
+  margin-top: 8px;
+}
+.section-01 .top .project-description .modules {
+  position: relative;
+  margin-bottom: 20px;
+}
+.section-01 .top .project-description .module .lineUp {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background: black;
+  bottom: 11px;
+  right: 0;
+}
 .section-01 .top {
   z-index: 4;
 }
@@ -257,6 +289,7 @@ header .right-side .logo-link:hover .blink {
   display: none;
 }
 
+
 @media (max-width: 1300px) and (min-width: 991px) {
 }
 
@@ -357,6 +390,81 @@ header .right-side .logo-link:hover .blink {
 }
 
 @media (max-width: 767px) {
+  .section-01 {
+    height: auto;
+    overflow: initial;
+    padding-bottom: 20px;
+  }
+  .section-01 .container {
+    width: initial;
+  }
+  .heading-bigger {
+    position: relative;
+    transform: none;
+    top: initial;
+    left: initial;
+    margin-top: 40px;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: 30px;
+    text-align: center;
+  }
+  .slider {
+    margin-top: 23px;
+    margin-bottom: 20px;
+  }
+  .section-01 .slideArea {
+    height: 400px;
+  }
+  .section-01 .float-right {
+    float: none;
+    margin: auto;
+  }
+  .slick-slide {
+    float: none;
+  }
+  .slick-vertical .slick-slide {
+    float: none;
+  }
+  .section-01 .floated-element {
+    position: relative;
+  }
+  .linesBack {
+    position: relative;
+    display: none;
+  }
+
+  .section-01 .container-floated {
+    position: relative;
+    padding: 0 15px;
+  }
+  .section-01 .container-floated-nums {
+    position: relative;
+    bottom: initial;
+    padding: 0 15px;
+  }
+  .section-01 .project-image {
+    height: 400px !important;
+  }
+  .section-01 .container-floated.divider {
+    bottom: initial;
+  }
+  .section-01 .project-description {
+    padding: 60px 15px;
+    text-align: center;
+    height: initial;
+  }
+  .section-01 .project-description .center-y {
+    position: relative;
+    transform: none;
+    top: initial;
+  }
+  .section-01 .project-description h2 {
+    font-size: 32px;
+    letter-spacing: 1.89px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
 }
 
 @media (min-width: 1300px) {
