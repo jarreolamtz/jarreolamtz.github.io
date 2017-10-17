@@ -203,14 +203,22 @@ header .right-side .logo-link:hover .blink {
   left: 0;
 }
 .section-01 .clickArea .left {
-  cursor: url(../img/icons/icon-pointer-left-black.svg), auto;
+  cursor: url('../img/icons/icon-pointer-left-black-x1.png'), auto;
+  cursor: -webkit-image-set(
+    url('../img/icons/icon-pointer-left-black-x1.png') 1x,
+    url('../img/icons/icon-pointer-left-black.png') 2x
+  ), auto;
   width: 50%;
   height: 100%;
   display: inline-block;
   z-index: 2
 }
 .section-01 .clickArea .right {
-  cursor: url(../img/icons/icon-pointer-right-black.svg)100 100, auto;
+  cursor: url('../img/icons/icon-pointer-right-black-x1.png'), auto;
+  cursor: -webkit-image-set(
+    url('../img/icons/icon-pointer-right-black-x1.png') 1x,
+    url('../img/icons/icon-pointer-right-black.png') 2x
+  ), auto;
   width: 50%;
   height: 100%;
   right: 0;
@@ -276,14 +284,22 @@ header .right-side .logo-link:hover .blink {
 .controlsInn.working .up {
   height: calc(50vh - 50px );
   width: 100%;
-  cursor: url(../img/icons/icon-pointer-top-black.svg)10 0, auto !important;
+  cursor: url('../img/icons/icon-pointer-top-black-x1.png'), auto;
+  cursor: -webkit-image-set(
+    url('../img/icons/icon-pointer-top-black-x1.png') 1x,
+    url('../img/icons/icon-pointer-top-black.png') 2x
+  ), auto;
   z-index: 9999;
 }
 .controlsInn.working .down {
   height: calc(50vh - 50px );
   display: block;
   width: 100%;
-  cursor: url(../img/icons/icon-pointer-down-black.svg)10 100, auto !important;
+  cursor: url('../img/icons/icon-pointer-down-black-x1.png'), auto;
+  cursor: -webkit-image-set(
+    url('../img/icons/icon-pointer-down-black-x1.png') 1x,
+    url('../img/icons/icon-pointer-down-black.png') 2x
+  ), auto;
   z-index: 9999;
 }
 .mobile-menu {
