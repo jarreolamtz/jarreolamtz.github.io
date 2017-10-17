@@ -95,10 +95,10 @@ $(document).ready(function(){
 
 
   $(".controlsInn .up").click(function(){
-      $('.innerSlider').slick("slickPrev");
+      $(this).parent().parent().find('.innerSlider').slick("slickPrev");
   });
   $(".controlsInn .down").click(function(){
-      $('.innerSlider').slick("slickNext");
+      $(this).parent().parent().find('.innerSlider').slick("slickNext");
   });
 
 
