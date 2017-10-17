@@ -22,7 +22,7 @@
 	width: 100%;
 	height: 100%;
 	z-index: 100000;
-	background: url()no-repeat center #fff;
+	background: #fdf7ef;
 	background-size: 100px auto;
 }
 
@@ -68,6 +68,7 @@
 body {
   color: #000000;
   font-family: DINCondensed-Bold;
+  background: #fdf3e6;
 }
 .site {
 

@@ -67,10 +67,11 @@ header .right-side .logo-link:hover .blink {
 .section-01 .project-image {
   width: 100%;
   z-index: 3;
-  height: calc(100vh - 135px) !important;
-  background-size: cover !important;
-  background-position: center top !important;
-  background-repite: no-repeat !important;
+  height: calc(100vh - 165px) !important;
+  background-size: 100% auto !important;
+  background-position: top !important;
+  background-repeat: no-repeat !important;
+  border: none !important;
 }
 .section-01 .floated-element {
   position: absolute;
