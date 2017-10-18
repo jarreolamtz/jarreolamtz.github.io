@@ -271,7 +271,7 @@ header .right-side .logo-link:hover .blink {
 }
 .innerSlider .slick-dots {
   position: absolute;
-  top: calc(100vh - 420px);
+  top: 50%;
   right: 30px;
   transform: translate(-50%, -50%);
   margin: 0;
