@@ -18,10 +18,10 @@ header a {
   font-size: 20px;
   letter-spacing: 0.79px;
   line-height: 23px;
-  color: #5147FF;
+  color: #171717;
 }
 header a.active {
-  color: black;
+  color: #5148ff;
 }
 header a + a {
   margin-left: 50px;
@@ -86,7 +86,7 @@ header .right-side .logo-link:hover .blink {
 .line-divider {
   width: 100%;
   height: 2px;
-  background: #5147FF;
+  background: #171717;
   margin-bottom: 15px;
 }
 .section-01 .container-floated-nums {
