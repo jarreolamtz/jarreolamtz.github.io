@@ -72,7 +72,7 @@ header .right-side .logo-link:hover .blink {
 }
 .section-01 .container-floated {
   position: absolute;
-  bottom: 68px;
+  bottom: 65px;
   width: 100%;
   z-index: 1;
   padding: 0 30px;
@@ -199,7 +199,7 @@ header .right-side .logo-link:hover .blink {
 }
 .section-01 .slideArea {
   position: relative;
-  height: calc(100vh - 177px);
+  height: calc(100vh - 176px);
   opacity: 0;
 }
 .section-01 .slick-slide {
