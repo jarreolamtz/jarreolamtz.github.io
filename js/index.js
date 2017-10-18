@@ -76,8 +76,8 @@ $(document).ready(function(){
 
     var currentSlide = $('.slider').slick('slickCurrentSlide') + 1;
     console.log(currentSlide);
-    $("header .rotate-90 a").removeClass("active");
-    $("header .rotate-90 a:nth-child("+ currentSlide +")").addClass("active");
+    $("header a").removeClass("active");
+    $("header a:nth-child("+ currentSlide +")").addClass("active");
   });
 
   $('.slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
@@ -102,13 +102,13 @@ $(document).ready(function(){
   });
 
 
-  $("header .rotate-90 a").click(function(){
-    $("header .rotate-90 a").removeClass("active");
+  $("header a").click(function(){
+    $("header a").removeClass("active");
     $(this).addClass("active");
   });
 
 
-  $('header .rotate-90 a[data-slider], .mobile-menu a[data-slider]').click(function(e) {
+  $('header a[data-slider], .mobile-menu a[data-slider]').click(function(e) {
     e.preventDefault();
     var slideno = $(this).data('slider');
     $('.slider').slick('slickGoTo', slideno - 1);
