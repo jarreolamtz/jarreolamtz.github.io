@@ -217,7 +217,7 @@ header .right-side .logo-link:hover .blink {
   z-index: 2
 }
 .section-01 .clickArea .right {
-  cursor: url('../img/icons/icon-pointer-right-black-x1.png'), auto;
+  cursor: url('../img/icons/icon-pointer-right-black-x1.png')20 20, auto;
   cursor: -webkit-image-set(
     url('../img/icons/icon-pointer-right-black-x1.png') 1x,
     url('../img/icons/icon-pointer-right-black.png') 2x
