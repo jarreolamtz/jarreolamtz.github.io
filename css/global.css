@@ -121,17 +121,17 @@ input:focus {
 /*TEXT ---------------------------------*/
 .heading-bigger {
   font-family: DINCondensed-Bold;
-  font-size: 160px;
+  font-size: 155px;
   color: #5147FF;
   letter-spacing: 89.7px;
-  line-height: 150px;
+  line-height: 153px;
   text-transform: uppercase;
 }
 .project-title {
   font-size: 23px;
   letter-spacing: 0.92px;
   line-height: 23px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   max-width: 183px;
   color: #5147FF;
 }

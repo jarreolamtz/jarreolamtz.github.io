@@ -1,7 +1,7 @@
 
 .heading-bigger {
   position: absolute;
-  top: 45px;
+  top: 46px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 4;
@@ -11,7 +11,7 @@
 }
 header {
   width: 100%;
-  padding: 40px 30px;
+  padding: 44px 30px 42px;
   z-index: 99;
 }
 header a {
@@ -26,12 +26,15 @@ header a.active {
 header a + a {
   margin-left: 50px;
 }
+header a img {
+  width: 78px;
+}
 
 .rotate-90 {
   transform: rotate(90deg);
   position: absolute;
   transform-origin: left bottom;
-  margin-top: 30px;
+  margin-top: 37px;
   z-index: 9;
   left: 22px;
 }
@@ -41,7 +44,7 @@ header .right-side .logo-link {
 }
 header .right-side .blink {
   position: absolute;
-  top: -19px;
+  top: -15px;
   right: 0;
 }
 header .right-side .logo-link:hover .blink {
@@ -49,7 +52,7 @@ header .right-side .logo-link:hover .blink {
 }
 
 .section-01 {
-  padding-top: 35px;
+  padding-top: 41px;
   overflow: hidden;
   height: calc(100vh - 135px);
 }
@@ -59,7 +62,7 @@ header .right-side .logo-link:hover .blink {
 }
 .section-01 .container-floated {
   position: absolute;
-  bottom: 65px;
+  bottom: 69px;
   width: 100%;
   z-index: 1;
   padding: 0 30px;
@@ -96,7 +99,7 @@ header .right-side .logo-link:hover .blink {
 .section-01 .project-description {
   width: 100%;
   height: calc(100vh - 230px);
-  margin-top: 60px;
+  margin-top: 65px;
   z-index: 2;
   cursor: pointer;
 }
