@@ -16,7 +16,7 @@ header {
 }
 header .headingImage {
   width: calc(92vw);
-  top: -70px;
+  bottom: 0px;
   position: absolute;
 }
 header a {
