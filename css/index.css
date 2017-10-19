@@ -333,6 +333,7 @@ header .right-side .logo-link:hover .blink {
 
 @media (max-width: 991px) {
   body {
+    height: calc(100vh);
     min-height: 909px;
     position: relative;
   }
@@ -410,7 +411,7 @@ header .right-side .logo-link:hover .blink {
   }
   .section-01 .container-floated-nums {
     width: 100%;
-    bottom: -30px;
+    bottom: -28px;
   }
   .icon-menu {
     position: absolute;
