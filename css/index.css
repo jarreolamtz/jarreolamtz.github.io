@@ -332,6 +332,9 @@ header .right-side .logo-link:hover .blink {
 }
 
 @media (max-width: 991px) {
+  header .headingImage {
+    bottom: 45px;
+  }
   .section-01 {
     padding-top:0;
     height: 100vh;
@@ -349,16 +352,25 @@ header .right-side .logo-link:hover .blink {
   .clickArea {
     display: none;
   }
-  header {
+  /*header {
     display: none;
-  }
-  .slider {
+  }*/
+  /*.slider {
     margin-top: calc(100vh - 705px);
+  }*/
+  .section-01 {
+    height: auto;
   }
-
+  .section-01 .slider {
+    margin-top: 107px;
+  }
+  .section-01 .float-right {
+    float: none;
+    margin-right: auto;
+  }
   .section-01 .slideArea {
     position: relative;
-    height: 660px;
+    height: calc(100vh - 240px);
   }
   .controlsInn {
     display: none;
@@ -373,20 +385,23 @@ header .right-side .logo-link:hover .blink {
     height: 600px;
   }
   .section-01 .container-floated {
-    bottom: 20px;
+    bottom: 64px;
   }
   .section-01 .container-floated-nums {
     width: 100%;
   }
   .icon-menu {
     position: absolute;
-    top: 60px;
+    top: 133px;
     right: 40px;
   }
   .icon-close {
     position: absolute;
     top: 58px;
     right: 42px;
+  }
+  header .menu {
+    bottom: -16px;
   }
   .mobile-menu {
     position: fixed;
