@@ -25,7 +25,6 @@ $(document).ready(function(){
     }
   });
 
-
   // Outer Carousel
   $('.slider').slick({
     infinite: false,

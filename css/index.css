@@ -332,6 +332,10 @@ header .right-side .logo-link:hover .blink {
 }
 
 @media (max-width: 991px) {
+  body {
+    min-height: 909px;
+    position: relative;
+  }
   header .headingImage {
     bottom: 45px;
   }
@@ -360,21 +364,24 @@ header .right-side .logo-link:hover .blink {
   }*/
   .section-01 {
     height: auto;
+
+    position: absolute;
+    bottom: 40px;
   }
   .section-01 .container {
     width: 70vw;
     /* max-width: 940px; */
   }
-  .section-01 .slider {
+  /*.section-01 .slider {
     margin-top: 108px;
-  }
-  .section-01 .float-right {
+  }*/
+  /*.section-01 .float-right {
     float: none;
     margin-right: auto;
-  }
+  }*/
   .section-01 .slideArea {
     position: relative;
-    height: calc(100vh - 240px);
+    height: 682px;
   }
   .controlsInn {
     display: none;
@@ -388,21 +395,27 @@ header .right-side .logo-link:hover .blink {
   .section-01 .project-description {
     height: 638px;
     margin-top: 43px;
+    padding-bottom: 18px;
   }
   .section-01 .icon-plus img {
     margin: -6% auto;
   }
   .section-01 .container-floated {
-    bottom: 64px;
+    bottom: 15px;
     z-index: 9;
+  }
+  .section-01 .container-floated.divider {
+    bottom: -15px;
+    z-index: -1;
   }
   .section-01 .container-floated-nums {
     width: 100%;
+    bottom: -30px;
   }
   .icon-menu {
     position: absolute;
     top: 133px;
-    right: 40px;
+    right: 15px;
   }
   .icon-close {
     position: absolute;
