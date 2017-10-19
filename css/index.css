@@ -361,8 +361,12 @@ header .right-side .logo-link:hover .blink {
   .section-01 {
     height: auto;
   }
+  .section-01 .container {
+    width: 70vw;
+    /* max-width: 940px; */
+  }
   .section-01 .slider {
-    margin-top: 107px;
+    margin-top: 108px;
   }
   .section-01 .float-right {
     float: none;
@@ -376,16 +380,21 @@ header .right-side .logo-link:hover .blink {
     display: none;
   }
   .section-01 .project-image {
-    height: 600px !important;
+    height: 638px !important;
   }
   .innerSlider .slick-dots {
     top: 50%;
   }
   .section-01 .project-description {
-    height: 600px;
+    height: 638px;
+    margin-top: 43px;
+  }
+  .section-01 .icon-plus img {
+    margin: -6% auto;
   }
   .section-01 .container-floated {
     bottom: 64px;
+    z-index: 9;
   }
   .section-01 .container-floated-nums {
     width: 100%;
