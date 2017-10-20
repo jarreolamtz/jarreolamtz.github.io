@@ -1,45 +1,4 @@
 
-.heading-bigger {
-  margin-top: -47px;
-  left: 30px;
-  z-index: 4;
-}
-.heading-bigger span {
-  margin-left: 40px;
-}
-header {
-  width: 100%;
-  height: 134px;
-  padding: 44px 30px 0px;
-  z-index: 99;
-  position: relative;
-}
-header .headingImage {
-  width: calc(92vw);
-  bottom: 0px;
-  position: absolute;
-}
-header a {
-  font-size: 20px;
-  letter-spacing: 0.79px;
-  line-height: 23px;
-  color: #171717;
-}
-header .menu {
-  z-index: 99;
-  position: absolute;
-  bottom: -72px
-}
-header a.active {
-  color: #5148ff;
-}
-header a + a {
-  margin-left: 50px;
-}
-header a img {
-  width: 78px;
-}
-
 .rotate-90 {
   transform: rotate(90deg);
   position: absolute;
@@ -48,19 +7,6 @@ header a img {
   z-index: 9;
   left: 22px;
 }
-
-header .right-side .logo-link {
-  position: relative;
-}
-header .right-side .blink {
-  position: absolute;
-  bottom: -15px;
-  right: 0;
-}
-header .right-side .logo-link:hover .blink {
-  display: block !important;
-}
-
 .section-01 {
   height: calc(100vh - 134px);
   z-index: 1;
@@ -330,7 +276,6 @@ header .right-side .logo-link:hover .blink {
 
 @media (max-width: 1300px) and (min-width: 991px) {
 }
-
 @media (max-width: 991px) {
   body {
     height: calc(100vh);
@@ -413,63 +358,20 @@ header .right-side .logo-link:hover .blink {
     width: 100%;
     bottom: -28px;
   }
-  .icon-menu {
-    position: absolute;
-    top: 133px;
-    right: 15px;
-  }
-  .icon-close {
-    position: absolute;
-    top: 58px;
-    right: 42px;
-  }
-  header .menu {
-    bottom: -16px;
-  }
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #5147FF;
-    display: none;
-    z-index: 9999;
-    text-align: center;
-    padding-left: 40px;
-  }
-  .mobile-menu a {
-    font-size: 80px;
-    color: white;
-    display: block;
-    text-transform: uppercase;
-    letter-spacing: 30px;
-    line-height: 80px;
-    text-transform: uppercase;
-  }
-  .mobile-menu a + a {
-    margin-top: 60px;
-  }
-  .mobile-menu a.active {
-    color: black;
-  }
-  .logo-link {
-    position: relative;
-    width: 90px;
-    margin: 0 auto;
-  }
-  .logo-link .blink {
-    position: absolute;
-    left: 1px;
-    top: 9px;
-  }
+
 }
 
 @media (max-width: 767px) {
+  body {
+    min-height: auto;
+  }
+  .section-01 .floated-element {
+    position: initial;
+    top: initial;
+  }
   .section-01 {
-    height: auto;
-    overflow: initial;
-    padding-bottom: 20px;
+    position: relative;
+    bottom: initial;
   }
   .section-01 .container {
     width: initial;
@@ -485,12 +387,15 @@ header .right-side .logo-link:hover .blink {
     letter-spacing: 30px;
     text-align: center;
   }
+  .section-01 .floated-element.sliderInn {
+    width: auto;
+  }
   .slider {
     margin-top: 23px;
     margin-bottom: 20px;
   }
   .section-01 .slideArea {
-    height: 400px;
+    height: 415px;
   }
   .section-01 .float-right {
     float: none;
@@ -502,44 +407,62 @@ header .right-side .logo-link:hover .blink {
   .slick-vertical .slick-slide {
     float: none;
   }
-  .section-01 .floated-element {
-    position: relative;
-  }
-  .linesBack {
-    position: relative;
-    display: none;
-  }
 
   .section-01 .container-floated {
     position: relative;
     padding: 0 15px;
+    display: none;
   }
+  /*.section-01 .container-floated.divider {
+    display: block;
+  }*/
   .section-01 .container-floated-nums {
     position: relative;
     bottom: initial;
     padding: 0 15px;
   }
   .section-01 .project-image {
-    height: 400px !important;
+    height: 376px !important;
   }
   .section-01 .container-floated.divider {
     bottom: initial;
   }
   .section-01 .project-description {
-    padding: 60px 15px;
-    text-align: center;
+    padding: 30px 15px;
+    width: auto;
+    
     height: initial;
+    height: 390px;
+    margin-top:0;
+  }
+  .desc-col {
+    margin: 0 auto;
+    float: none;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .section-01 .project-description .center-y {
     position: relative;
     transform: none;
     top: initial;
+    overflow: scroll;
+    height: 315px;
   }
   .section-01 .project-description h2 {
     font-size: 32px;
     letter-spacing: 1.89px;
     line-height: 40px;
     margin-bottom: 10px;
+  }
+  .section-01 .icon-plus {
+    top: initial;
+    bottom: 17px;
+    left: calc(50% - 15px);
+  }
+  .section-01 .icon-plus img {
+    width: 15px;
   }
 }
 
