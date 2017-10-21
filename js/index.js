@@ -34,6 +34,14 @@ $(document).ready(function(){
     focusOnSelect: false,
     edgeFriction: 0.1,
     touchThreshold: 20,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          swipe: false,
+        }
+      }
+    ]
   });
 
   // Inner Carousel

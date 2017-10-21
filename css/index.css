@@ -372,6 +372,7 @@
   .section-01 {
     position: relative;
     bottom: initial;
+    padding-bottom: 0;
   }
   .section-01 .container {
     width: initial;
@@ -390,12 +391,12 @@
   .section-01 .floated-element.sliderInn {
     width: auto;
   }
-  .slider {
+  .section-01 .slider {
     margin-top: 23px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .section-01 .slideArea {
-    height: 415px;
+    height: calc( 100vh - 180px + 35px);
   }
   .section-01 .float-right {
     float: none;
@@ -422,7 +423,7 @@
     padding: 0 15px;
   }
   .section-01 .project-image {
-    height: 376px !important;
+    height: calc(100vh - 180px) !important;
   }
   .section-01 .container-floated.divider {
     bottom: initial;
@@ -430,16 +431,15 @@
   .section-01 .project-description {
     padding: 30px 15px;
     width: auto;
-    
     height: initial;
-    height: 390px;
+    height: calc(100vh - 180px);
     margin-top:0;
   }
   .desc-col {
     margin: 0 auto;
     float: none;
     position: absolute;
-    top: 30px;
+    top: 35px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -447,8 +447,9 @@
     position: relative;
     transform: none;
     top: initial;
-    overflow: scroll;
-    height: 315px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: calc( 100vh - 180px - 65px);
   }
   .section-01 .project-description h2 {
     font-size: 32px;
@@ -458,7 +459,7 @@
   }
   .section-01 .icon-plus {
     top: initial;
-    bottom: 17px;
+    bottom: 12px;
     left: calc(50% - 15px);
   }
   .section-01 .icon-plus img {
