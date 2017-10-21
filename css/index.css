@@ -18,7 +18,7 @@
 }
 .section-01 .container-floated {
   position: absolute;
-  bottom: 60px;
+  bottom: 64px;
   width: 100%;
   z-index: 1;
   padding: 0 30px;
