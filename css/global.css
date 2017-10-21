@@ -1,19 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-@font-face {
-  font-family: 'LabGrotesque-Light';
-  src: url('fonts/LabGrotesque-Light.eot'),
-  	   url('fonts/LabGrotesque-Light.woff'),
-  	   url('fonts/LabGrotesque-Light.woff2');
-}
-
-@font-face {
-  font-family: 'LabGrotesque-Medium';
-  src: url('fonts/LabGrotesque-Medium.eot'),
-  	   url('fonts/LabGrotesque-Medium.woff'),
-  	   url('fonts/LabGrotesque-Medium.woff2');
-}
 
 .loader {
 	position: fixed;
@@ -67,7 +53,7 @@
 
 body {
   color: #000000;
-  font-family: DINCondensed-Bold;
+  font-family: 'Oswald', sans-serif;;
   background: #d4d5d8;
 }
 .site {
@@ -120,7 +106,7 @@ input:focus {
 
 /*TEXT ---------------------------------*/
 .heading-bigger {
-  font-family: DINCondensed-Bold;
+  font-family: 'Oswald', sans-serif;
   font-size: 280px;
   color: #5147FF;
   letter-spacing: 89.7px;
@@ -128,7 +114,7 @@ input:focus {
   text-transform: uppercase;
 }
 .project-title {
-  font-size: 23px;
+  font-size: 20px;
   letter-spacing: 0.92px;
   line-height: 23px;
   margin-bottom: 6px;
@@ -157,7 +143,7 @@ input:focus {
 
 @media (max-width: 991px) {
   .heading-bigger {
-    font-family: DINCondensed-Bold;
+    font-family: 'Oswald', sans-serif;;
     font-size: 120px;
     color: #5147FF;
     letter-spacing: 60px;

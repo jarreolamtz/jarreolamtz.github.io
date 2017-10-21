@@ -19,7 +19,7 @@ header .headingImage {
   position: absolute;
 }
 header a {
-  font-size: 20px;
+  font-size: 17px;
   letter-spacing: 0.79px;
   line-height: 23px;
   color: #171717;
@@ -27,7 +27,7 @@ header a {
 header .menu {
   z-index: 99;
   position: absolute;
-  bottom: -72px
+  bottom: -68px
 }
 header a.active {
   color: #5148ff;
@@ -147,7 +147,7 @@ header .right-side .logo-link:hover .blink {
     right: 42px;
   }
   header .menu {
-    bottom: -16px;
+    bottom: -12px;
   }
   .mobile-menu {
     position: fixed;
@@ -187,7 +187,6 @@ header .right-side .logo-link:hover .blink {
     top: 9px;
   }
 
-  
 }
 
 @media (max-width: 767px) {

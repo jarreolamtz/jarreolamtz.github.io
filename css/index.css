@@ -18,7 +18,7 @@
 }
 .section-01 .container-floated {
   position: absolute;
-  bottom: 65px;
+  bottom: 60px;
   width: 100%;
   z-index: 1;
   padding: 0 30px;
@@ -92,8 +92,8 @@
   color: black;
 }
 .section-01 .project-description h2 {
-  font-family: DINCondensed-Bold;
-  font-size: 52px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 49px;
   letter-spacing: 1.89px;
   line-height: 50px;
   margin-bottom: 20px;
@@ -456,7 +456,7 @@
     height: calc(100vw * 1.27 - 100px ) !important;
   }
   .section-01 .project-description h2 {
-    font-size: 32px;
+    font-size: 25px;
     letter-spacing: 1.89px;
     line-height: 40px;
     margin-bottom: 10px;
