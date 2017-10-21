@@ -1,0 +1,11 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+header .icon-menu {
+  margin: 20px auto 0;
+  top: 20px;
+  left: 50%;
+  width: 100%;
+}

@@ -1,0 +1,77 @@
+#section-01 {
+  height: 100vh;
+  overflow-y: scroll;
+  margin-bottom: 60px;
+}
+#section-01 .wordmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -10px;
+}
+
+#section-02 {
+
+}
+#section-02 .text-description-heading {
+    margin-bottom: 20px;
+  }
+#section-02 .text-description-subHeading {
+  margin-bottom: 40px;
+}
+#section-02 .text-description-body {
+  margin-bottom: 80px;
+}
+#section-02 .divider {
+  width: 100%;
+  height: 10px;
+  margin-bottom: 40px;
+}
+#section-02 .image-row {
+  margin-bottom: 0;
+}
+#section-02 .box .image.mid {
+    margin-bottom: 0px;
+}
+#section-02 .box,
+#section-02 .controls {
+  text-align: center;
+  overflow: hidden;
+  height: 243px;
+}
+#section-02 .controls .box.mid,
+#section-02 .controls .box .image.mid {
+  height: 243px;
+  cursor: pointer;
+}
+#section-02 .controls p {
+  font-family: "AlteDin";
+  font-size: 154px;
+  color: #FFFFFF;
+  letter-spacing: 21.48px;
+  position: absolute;
+  bottom: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#section-02 .controls img {
+  position: absolute;
+  bottom: -30px;
+}
+#section-02 .controls .left img {
+  left: -60px;
+}
+#section-02 .controls .right img {
+  position: absolute;
+  right: -60px;
+}
+#section-02 .controls .left:hover img{
+  left: -80px;
+}
+#section-02 .controls .right:hover img {
+  position: absolute;
+  right: -80px;
+}
+#section-02 .controls .image:hover {
+  background: #272727 !important;
+}

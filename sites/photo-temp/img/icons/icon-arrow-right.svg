@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="108px" viewBox="0 0 47 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Bootstrap-4-Grid-System" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Copy" transform="translate(-1347.000000, -3466.000000)" fill="#272727">
+            <g id="Controls" transform="translate(45.000000, 3394.000000)">
+                <g id="Right" transform="translate(690.000000, 0.000000)">
+                    <path d="M617.164829,116.646339 L612.152634,125.001315 L612.058288,125.265411 C611.959547,125.541814 611.987222,125.84764 612.133977,126.101827 L612.133977,126.101827 L642.902634,179.394704 C643.178776,179.872997 643.790366,180.036872 644.268659,179.760729 L644.268659,179.760729 L658.122523,171.762197 C658.123369,171.761709 658.124215,171.761219 658.12506,171.760728 C658.602541,171.483184 658.764622,170.871116 658.487078,170.393635 L632.615606,125.884808 L658.241091,81.500167 C658.517233,81.0218744 658.353358,80.4102839 657.875066,80.1341416 L644.018659,72.1341416 L644.018659,72.1341416 C643.540366,71.8579992 642.928776,72.0218744 642.652634,72.500167 L642.652634,72.500167 L617.164829,116.646339 Z" id="Combined-Shape" transform="translate(635.311343, 125.947435) rotate(-180.000000) translate(-635.311343, -125.947435) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
