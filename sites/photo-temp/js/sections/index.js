@@ -6,18 +6,15 @@ $(document).ready(function() {
       $("header").addClass("active");
     }
   });
+});
 
-  $('#fullpage').fullpage({
-    scrollingSpeed: 1500,
-    scrollOverflow:true,
-    touchSensitivity: 15,
-		normalScrollElementTouchThreshold: 2,
-    onLeave: function(index, nextIndex, direction) {
-      if(index === 1){
-        $(".wordmark").addClass("unActive");
-      } else {
-        $(".wordmark").removeClass("unActive");
-      }
-    },
-  });
+function checkOffset() {
+  if($('.wordmark-div').offset().top + $('.wordmark-div').height() >= $('#section-02').offset().top - 10)
+      $('.wordmark-div').addClass("unActive");
+  if($(document).scrollTop() + window.innerHeight < $('#section-02').offset().top)
+      // restore when you scroll up
+      $('.wordmark-div').removeClass("unActive");
+  }
+$(document).scroll(function() {
+    checkOffset();
 });

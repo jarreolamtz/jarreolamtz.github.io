@@ -1,11 +1,9 @@
 #section-01 {
-  height: 100vh;
-  overflow-y: scroll;
-  margin-bottom: 40px;
+  position: relative;
 }
 .wordmark-div {
   width: 8.33333333%;
-  position: fixed !important;
+  position: fixed;
   height: 100vh;
 }
 .wordmark {
@@ -15,18 +13,20 @@
   transform: translateY(-50%);
   height: 104vh;
 }
-.wordmark.unActive {
+.wordmark-div.unActive {
   position: absolute;
   top: initial;
   transform: none;
   bottom: 0;
-  /*Bottom: on js page */
+}
+.wordmark-div.unActive .wordmark {
+  top: 48vh;
 }
 /*#section-02 {
   padding-top: 30px;
 }*/
 #section-02 .text-description-heading {
-    margin-top: 30px;
+    margin-top: 70px;
     margin-bottom: 22px;
   }
 #section-02 .text-description-subHeading {
