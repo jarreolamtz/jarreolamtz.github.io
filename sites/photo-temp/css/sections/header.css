@@ -2,10 +2,63 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 2;
 }
 header .icon-menu {
-  margin: 20px auto 0;
-  top: 20px;
-  left: 50%;
+  margin: 20px 0 0 -7px;
   width: 100%;
+  cursor: pointer;
+  position: relative;
+  height: 50px;
+  z-index: 4;
+}
+
+header .icon-menu .line {
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  background: #272727;
+}
+header .icon-menu .line.one {
+  top: 0;
+  transform: rotate(0deg) translateY(0%);
+}
+header .icon-menu .line.two {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  opacity: 1;
+}
+header .icon-menu .line.three {
+  bottom: 0;
+}
+header.active .icon-menu {
+  margin: 35px 0 0 -7px;
+}
+header.active .icon-menu .line.one {
+  transform: rotate(45deg) translateY(-50%);
+  top: 50%;
+  left: -3px;
+}
+header.active .icon-menu .line.two {
+  opacity: 0;
+}
+header.active .icon-menu .line.three {
+  transform: rotate(-45deg) translateY(-50%);
+  top: 50%;
+  left: 3px;
+}
+header .menu-container {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #5148FF;
+  visibility: hidden;
+  opacity: 0;
+}
+header.active .menu-container {
+  visibility: visible;
+  opacity: 1;
 }

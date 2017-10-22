@@ -1,26 +1,33 @@
 #section-01 {
   height: 100vh;
   overflow-y: scroll;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
-#section-01 .wordmark {
-  position: absolute;
-  top: 50%;
+
+.wordmark {
+  position: fixed !important;
+  top: 50vh;
   transform: translateY(-50%);
   left: -10px;
 }
-
-#section-02 {
-
+.wordmark.unActive {
+  position: absolute;
+  top: initial;
+  transform: none;
+  /*Bottom: on js page */
 }
+/*#section-02 {
+  padding-top: 30px;
+}*/
 #section-02 .text-description-heading {
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 22px;
   }
 #section-02 .text-description-subHeading {
-  margin-bottom: 40px;
+  margin-bottom: 47px;
 }
 #section-02 .text-description-body {
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 #section-02 .divider {
   width: 100%;
@@ -37,11 +44,11 @@
 #section-02 .controls {
   text-align: center;
   overflow: hidden;
-  height: 243px;
+  height: 203px;
 }
 #section-02 .controls .box.mid,
 #section-02 .controls .box .image.mid {
-  height: 243px;
+  height: 203px;
   cursor: pointer;
 }
 #section-02 .controls p {
@@ -53,6 +60,12 @@
   bottom: -90px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
+}
+#section-02 .controls span {
+  top: 15px;
+  position: absolute;
+  left: 10px;
 }
 #section-02 .controls img {
   position: absolute;
@@ -72,6 +85,14 @@
   position: absolute;
   right: -80px;
 }
-#section-02 .controls .image:hover {
-  background: #272727 !important;
+#section-02 .controls .image .hover {
+  width: calc(100% - 30px);
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 15px;
+  background: transparent;
+}
+#section-02 .controls .image:hover .hover {
+  background: #272727;
 }

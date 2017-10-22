@@ -80,7 +80,7 @@ function gridMaker() {
     var documentHeight = ($(document).height() + "px");
     //Baseline Properties--------------------------
     var baselineFill = "rgba(0,144,255,0.16)";
-    var baselineSize = 22;
+    var baselineSize = 20;
     var baselineSizeDone = baselineSize - 1;
     var baselineQuant = (Math.round($( document ).height() / baselineSize));
     var baseline = "<div class='baselineIn'></div>";
@@ -95,29 +95,32 @@ function gridMaker() {
     var lg =  1170;
     var fluid = ($(window).width());
 
-    if($(window).width() < 767 ){
-        var gridSize = xs;
-        //Select de type of Grid
-        var columnW = (gridSize / 6 - (gutter + gutter) + "px" );
+    // if($(window).width() < 767 ){
+    //     var gridSize = xs;
+    //     //Select de type of Grid
+    //     var columnW = (gridSize / 6 - (gutter + gutter) + "px" );
+    //
+    // } else if ($(window).width() >= 768 && $(window).width() < 991 ){
+    //     var gridSize = sm;
+    //     //Select de type of Grid
+    //     var columnW = (gridSize / 12 - (gutter + gutter) + "px" ) ;
+    //     $(".columnIn:nth-child(n+7)").show();
+    // } else if ($(window).width() >= 992 && $(window).width() < 1199 ){
+    //     var gridSize = md;
+    //     //Select de type of Grid
+    //     var columnW = (gridSize / 12 - (gutter + gutter) + "px" ) ;
+    //     $(".columnIn:nth-child(n+7)").show();
+    // } else if ($(window).width() >= 1200){
+    //     var gridSize = lg;
+    //     //Select de type of Grid
+    //     var columnW = (gridSize / 12 - (gutter + gutter) + "px" ) ;
+    //     $(".columnIn:nth-child(n+7)").show();
+    // }
 
-    } else if ($(window).width() >= 768 && $(window).width() < 991 ){
-        var gridSize = sm;
-        //Select de type of Grid
-        var columnW = (gridSize / 12 - (gutter + gutter) + "px" ) ;
-        $(".columnIn:nth-child(n+7)").show();
-    } else if ($(window).width() >= 992 && $(window).width() < 1199 ){
-        var gridSize = md;
-        //Select de type of Grid
-        var columnW = (gridSize / 12 - (gutter + gutter) + "px" ) ;
-        $(".columnIn:nth-child(n+7)").show();
-    } else if ($(window).width() >= 1200){
-        var gridSize = lg;
-        //Select de type of Grid
-        var columnW = (gridSize / 12 - (gutter + gutter) + "px" ) ;
-        $(".columnIn:nth-child(n+7)").show();
-    }
-
-
+    var gridSize = fluid;
+    //Select de type of Grid
+    var columnW = (gridSize / 12 - (gutter + gutter) + "px" ) ;
+    $(".columnIn:nth-child(n+7)").show();
 
     //Select your Column background-color
     var columnFill = "rgba(0,144,255,0.16)";
