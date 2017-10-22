@@ -3,17 +3,22 @@
   overflow-y: scroll;
   margin-bottom: 40px;
 }
-
-.wordmark {
+.wordmark-div {
+  width: 8.33333333%;
   position: fixed !important;
+  height: 100vh;
+}
+.wordmark {
+  position: absolute;
+  right: 15px;
   top: 50vh;
   transform: translateY(-50%);
-  left: -10px;
 }
 .wordmark.unActive {
   position: absolute;
   top: initial;
   transform: none;
+  bottom: 0;
   /*Bottom: on js page */
 }
 /*#section-02 {

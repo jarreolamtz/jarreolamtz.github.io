@@ -76,6 +76,8 @@ span::selection {
     font-size: 154px;
     letter-spacing: 19.48px;
     line-height: 135px;
+    text-align: right;
+    margin-right: -27px;
 }
 
 .text-heading {
@@ -366,6 +368,9 @@ textarea {
 .image-row {
   margin-bottom: 40px;
 }
+.image-row:nth-last-child(1) {
+  margin-bottom: 0px;
+}
 .box {
   height: 680px;
   width: 100%;
@@ -394,7 +399,10 @@ textarea {
   bottom: 32px;
   width: calc(100% - 90px);
 }
-
+.image-row:nth-last-child(1) .box .image.mid,
+.image-row:nth-last-child(1) .text-module .bottom {
+  margin-bottom: 0px;
+}
 /* HOVERS */
 @media screen and (min-width: 992px) {
     a:hover::after,
