@@ -184,7 +184,7 @@ header .right-side .logo-link:hover .blink {
   .logo-link .blink {
     position: absolute;
     left: 1px;
-    top: 9px;
+    top: 25px;
   }
 
 }
