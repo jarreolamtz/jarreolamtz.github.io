@@ -55,6 +55,15 @@ span::selection {
   background: #272727;
   color: white;
 }
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+a::-moz-selection,
+p::-moz-selection,
+span::-moz-selection {
+  background: #272727;
+  color: white;
+}
 /* FILLS  --------------------------------- */
 .fill-black {
     background: #151515;
@@ -99,6 +108,7 @@ span::selection {
     font-family: "AlteDin";
     font-size: 154px;
     letter-spacing: 21.48px;
+    margin-left: -10px;
 }
 .text-description-subHeading {
     font-family: 'AlteDin';
@@ -110,7 +120,7 @@ span::selection {
     font-family: "AlteDin";
     font-size: 14px;
     letter-spacing: 1.95px;
-    line-height: 30px;
+    line-height: 25px;
 }
 
 .text-footer {
@@ -318,19 +328,6 @@ h1, h2, h3, h4, address {
 }
 
 
-p::selection,
-h1::selection,
-h2::selection,
-h3::selection,
-h4::selection,
-li::selection,
-a::selection,
-span::selection,
-address::selection {
-    background: #FE8587 !important;
-    color: white;
-}
-
 input,
 textarea {
     border-radius: 0 !important;
@@ -403,6 +400,32 @@ textarea {
 .image-row:nth-last-child(1) .text-module .bottom {
   margin-bottom: 0px;
 }
+
+
+/* Wordmark */
+.wordmark-div {
+  width: 8.33333333%;
+  position: fixed;
+  height: 100vh;
+}
+.wordmark {
+  position: absolute;
+  right: 15px;
+  top: 50vh;
+  transform: translateY(-50%);
+  height: 104vh;
+}
+.wordmark-div.unActive {
+  position: absolute;
+  top: initial;
+  transform: none;
+  bottom: 0;
+}
+.wordmark-div.unActive .wordmark {
+  top: 48vh;
+}
+
+
 /* HOVERS */
 @media screen and (min-width: 992px) {
     a:hover::after,
@@ -417,8 +440,15 @@ textarea {
       outline: none !important;
       width: calc(100% + 5px);
     }
+    a:hover,
+    a:focus,
+    a.active {
+      outline: none !important;
+      color: #272727;
+    }
     *:focus {
-        outline: none;
+        outline: none !important;
+        text-decoration: none!important;
     }
 
     /* LINKS --------------------------------- */
@@ -443,240 +473,9 @@ textarea {
 }
 /* TABLET --------------------------------- */
 @media screen and (max-width: 991px) {
-    a,
-    a:hover,
-    a:focus,
-    a:active {
-     text-decoration: none;
-    }
-    .site {
-        min-height: calc(100vh - 300px);
-    }
-    .text-center-mobile {
-        text-align: center;
-    }
-    .text-heading-text p {
-        margin-top: 10px;
-    }
-    .container {
-        max-width: initial;
-        padding: 0 40px;
-    }
-    /* FONTS --------------------------------- */
-    .text-heading-section {
-        font-size: 28px;
-        letter-spacing: -1.17px;
-        line-height: 34px;
-    }
-    .text-heading-post {
-        font-family: 'PFRegalDisplayPro-Reg';
-        font-size: 28px;
-        letter-spacing: -0.29px;
-        line-height: 35px;
-    }
-
-    .text-heading-subPost {
-        font-size: 20px;
-        letter-spacing: 0.25px;
-        line-height: 26px;
-    }
-
-    .text-subHeading-post {
-        font-family: "Apercu-Regular";
-        font-size: 11px;
-        letter-spacing: 1.43px;
-        line-height: 20px;
-        text-transform: uppercase;
-    }
-    .text-phrase {
-        font-size: 22px;
-        letter-spacing: -0.31px;
-        line-height: 27px;
-    }
-    .text-body-serif {
-        font-size: 18px;
-        letter-spacing: 0.28px;
-        line-height: 24px;
-    }
-
-    .text-body-serif + .text-body-serif {
-        margin-top: 22px;
-    }
-
-    .text-body {
-        font-family: "Apercu-Regular";
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0.22px;
-    }
-
-    a.link-heading-section {
-        width: 100%;
-        text-align: center;
-        padding: 0;
-        line-height: 29px;
-    }
-    .text-link {
-        font-family: "Apercu-Regular";
-        font-size: 11px;
-        letter-spacing: 1.43px;
-        line-height: 24px;
-        text-transform: uppercase;
-    }
-    .relatedPost .text-subHeading-post {
-        margin-top: 12px;
-    }
-
-    .relatedPost .text-heading-subPost {
-        margin-top: 4px;
-    }
-    .relatedPost img {
-        width: 100%;
-        /*height: 155px;*/
-        height: auto;
-        display: block;
-    }
-    .text-center-sm {
-        text-align: center;
-    }
-    .text-link.button-stroke {
-        line-height: 19px;
-    }
-    *:hover > .gradientBox {
-        opacity: 0;
-    }
-    *.hover {
-      display: none;
-    }
-    .social-container a:hover img,
-    .social-container a:active img,
-    .social-container a:focus img {
-      opacity: 1;
-    }
 
 }
 /* PHONE --------------------------------- */
 @media screen and (max-width: 767px) {
-    .site {
-        min-height: calc(100vh - 385px);
-    }
-    #postContainer .col-md-3 {
-        vertical-align: top !important;
-        float: none;
-        display: block;
-        margin-bottom: 57px;
-    }
-    #postContainer .postRow {
-        padding-right: 0;
-    }
-    .relatedPost img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    .col-xs-center {
-        float: none;
-        display: inline-block;
-    }
-    .container {
-        max-width: initial;
-        padding: 0 15px;
-    }
 
-    .loader img {
-        width: 160px;
-    }
-    .text-heading-text {
-        position: relative;
-        margin-bottom: 12px;
-    }
-    .line-section {
-        margin-bottom: 48px;
-    }
-    /* FONTS --------------------------------- */
-    .text-heading-section {
-        font-size: 28px;
-        letter-spacing: -1.17px;
-        line-height: 34px;
-    }
-    .text-heading-post {
-        font-size: 24px;
-        letter-spacing: -0.25px;
-        line-height: 30px;
-    }
-
-    .text-heading-subPost {
-        font-size: 20px;
-        letter-spacing: 0.25px;
-        line-height: 26px;
-    }
-
-    .text-subHeading-post {
-        font-family: "Apercu-Regular";
-        font-size: 11px;
-        color: #A1A1A1;
-        letter-spacing: 1.43px;
-        line-height: 20px;
-        text-transform: uppercase;
-    }
-    .relatedPost .text-subHeading-post {
-        margin-top: 18px;
-    }
-    .text-phrase {
-        font-size: 22px;
-        letter-spacing: -0.31px;
-        line-height: 27px;
-    }
-    .relatedPost {
-        margin-bottom: 54px;
-    }
-    .relatedPost .text-heading-subPost {
-        margin-top: 6px;
-    }
-    .text-body-serif {
-        font-size: 16px;
-        letter-spacing: 0.25px;
-        line-height: 22px;
-    }
-
-    .text-body-serif + .text-body-serif {
-        margin-top: 22px;
-    }
-
-    .text-body {
-        font-family: "Apercu-Regular";
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0.22px;
-    }
-    .link-heading-section {
-        display: none;
-    }
-    .text-heading-subPost {
-        font-size: 18px;
-        letter-spacing: 0.22px;
-        line-height: 24px;
-    }
-    .blueDots-link a.text-link::before,
-    .blueDots-link a.text-link::before {
-       font-size: 8px !important;
-    }
-    .blueDots-link a.text-link.active::before {
-       font-size: 8px !important;
-    }
-    a.text-link.active.dotRed::before {
-       font-size: 8px !important;
-    }
-    a.text-link.active.dotBlue::before {
-       font-size: 8px !important;
-    }
-    a.text-link.active.dotPink::before {
-       font-size: 8px !important;
-    }
-    a.text-link.active.dotGray::before {
-        font-size: 8px !important;
-    }
-    a.text-link.active.dotBeige::before {
-       font-size: 8px !important;
-    }
 }

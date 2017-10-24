@@ -14,7 +14,8 @@ function checkOffset() {
   if($(document).scrollTop() + window.innerHeight < $('#section-02').offset().top)
       // restore when you scroll up
       $('.wordmark-div').removeClass("unActive");
-  }
+}
 $(document).scroll(function() {
     checkOffset();
 });
+checkOffset();

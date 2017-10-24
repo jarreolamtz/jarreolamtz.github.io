@@ -62,3 +62,28 @@ header.active .menu-container {
   visibility: visible;
   opacity: 1;
 }
+header .menu-container .links {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -15px;
+}
+
+/* HOVERS */
+@media screen and (min-width: 992px) {
+  header .menu-container a::after,
+  header .menu-container a:hover::after,
+  header .menu-container a:focus::after,
+  header .menu-container a.active::after {
+      border-top: 12px solid #272727 !important;
+  }
+}
+
+/* TABLET --------------------------------- */
+@media screen and (max-width: 991px) {
+
+}
+/* PHONE --------------------------------- */
+@media screen and (max-width: 767px) {
+
+}
