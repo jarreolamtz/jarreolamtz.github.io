@@ -35,8 +35,8 @@ a::after {
   bottom: 8px;
   left: -4px;
   right: -4px;
-  height: 0.5em;
-  border-top: 2px solid transparent;
+  height: 0.65em;
+  border-top: 4px solid transparent;
   outline: none !important;
   width: 0px;
   /* Transition */
@@ -64,100 +64,122 @@ span::-moz-selection {
   background: #272727;
   color: white;
 }
+img::selection,
+br::selection {
+  background: transparent;
+}
+img::-moz-selection,
+br::-moz-selection {
+  background: transparent;
+}
 /* FILLS  --------------------------------- */
 .fill-black {
     background: #151515;
 }
 
 .fill-gray {
-    background: #D8D8D8;
+    background: #e0e1e2;
 }
 
 .fill-white {
     background: #FFFFFF;
 }
 
+.fill-blue {
+    background: #5148FF;
+}
+
 
 
 /* FONTS --------------------------------- */
 .text-big-number {
-    font-family: "AlteDin";
-    font-size: 154px;
-    letter-spacing: 19.48px;
-    line-height: 135px;
-    text-align: right;
-    margin-right: -27px;
+  font-family: "AlteDin";
+  font-size: 154px;
+  letter-spacing: 19.48px;
+  line-height: 135px;
+  text-align: right;
+  margin-right: -27px;
 }
 
 .text-heading {
-    font-family: "AlteDin";
-    font-size: 44px;
-    letter-spacing: 0.74px;
-    line-height: 60px;
-    margin-bottom: 8px;
+  font-family: "AlteDin";
+  font-size: 44px;
+  letter-spacing: 0.74px;
+  line-height: 60px;
+  margin-bottom: 8px;
+  background: #272727;
+  color: white;
+  padding: 0 20px;
+  display: inline-block;
+  transform: rotate(-1deg);
 }
 
 .text-body {
-    font-family: 'AlteDin';
-    font-size: 14px;
-    letter-spacing: 0.24px;
-    line-height: 25px;
+  font-family: 'AlteDin';
+  font-size: 14px;
+  letter-spacing: 0.48px;
+  line-height: 25px;
 }
 
 .text-description-heading {
-    font-family: "AlteDin";
-    font-size: 154px;
-    letter-spacing: 21.48px;
-    margin-left: -10px;
+  font-family: "AlteDin";
+  font-size: 154px;
+  letter-spacing: 21.48px;
+  margin-left: -10px;
 }
 .text-description-subHeading {
-    font-family: 'AlteDin';
-    font-size: 34px;
-    letter-spacing: 3.74px;
-    line-height: 50px;
+  font-family: 'AlteDin';
+  font-size: 34px;
+  letter-spacing: 3.74px;
+  line-height: 50px;
 }
 .text-description-body {
-    font-family: "AlteDin";
-    font-size: 14px;
-    letter-spacing: 1.95px;
-    line-height: 25px;
+  font-family: "AlteDin";
+  font-size: 14px;
+  letter-spacing: 1.95px;
+  line-height: 25px;
 }
 
 .text-footer {
-    font-family: "AlteDin";
-    font-size: 14px;
-    letter-spacing: 1.95px;
-    line-height: 30px;
+  font-family: "AlteDin";
+  font-size: 14px;
+  letter-spacing: 1.95px;
+  line-height: 30px;
 }
-
 
 .text-link {
-    font-family: "AlteDin";
-    font-size: 14px;
-    letter-spacing: 1.95px;
-    line-height: 30px;
-
+  font-family: "AlteDin";
+  font-size: 14px;
+  letter-spacing: 1.95px;
+  line-height: 30px;
 }
 
+.text-heading-menu {
+  font-family: "AlteDin";
+  font-size: 34px;
+  letter-spacing: 0.74px;
+  line-height: 60px;
+  margin-bottom: 8px;
+}
 
 /* COLORS --------------------------------- */
 .color-black {
-    color: #272727;
+  color: #272727;
 }
 
 .color-white {
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 .color-blue {
-    color: #5148FF;
+  color: #5148FF;
 }
 
 
 /* BUTTON FILL --------------------------------- */
 button {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 }
 .button-fill {
     color: #ffffff;
@@ -388,7 +410,7 @@ textarea {
   margin-bottom: 27px;
 }
 
-.box.fill-gray .text-module {
+.box.fill-box .text-module {
   padding: 29px 30px;
 }
 .box .text-module .bottom {
@@ -435,8 +457,8 @@ textarea {
       position: absolute;
       bottom: 8px;
       left: -4px;
-      height: 0.5em;
-      border-top: 2px solid #272727;
+      height: 0.65em;
+      border-top: 4px solid #272727;
       outline: none !important;
       width: calc(100% + 5px);
     }
@@ -446,6 +468,27 @@ textarea {
       outline: none !important;
       color: #272727;
     }
+    /*White links*/
+
+    a.color-white:hover::after,
+    a.color-white:focus::after,
+    a.color-white.active::after {
+      content: "";
+      position: absolute;
+      bottom: 8px;
+      left: -4px;
+      height: 0.5em;
+      border-top: 2px solid white;
+      outline: none !important;
+      width: calc(100% + 5px);
+    }
+    a.color-white:hover,
+    a.color-white:focus,
+    a.color-white.active {
+      outline: none !important;
+      color: white;
+    }
+
     *:focus {
         outline: none !important;
         text-decoration: none!important;
@@ -456,6 +499,14 @@ textarea {
     a.color-blue:focus {
         color: #5148FF;
     }
+
+    .wordmark-div a:hover::after,
+    .wordmark-div a:focus::after,
+    .wordmark-div a.active::after {
+      border-top: none;
+      outline: 0 !important;
+      width: 0;
+  }
 }
 /* MODULE --------------------------------- */
 @media screen and (min-width: 992px) {

@@ -77,8 +77,8 @@
   position: absolute;
   top:0;
   left: 15px;
-  background: transparent;
+  background: #272727;
 }
 #section-02 .controls .image:hover .hover {
-  background: #272727;
+  background: transparent;
 }

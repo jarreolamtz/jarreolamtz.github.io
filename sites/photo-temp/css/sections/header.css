@@ -33,40 +33,55 @@ header .icon-menu .line.three {
   bottom: 0;
 }
 header.active .icon-menu {
-  margin: 35px 0 0 -7px;
+  margin: 20px 0 0 12px;
 }
 header.active .icon-menu .line.one {
   transform: rotate(45deg) translateY(-50%);
   top: 50%;
   left: -3px;
+  width: 50px;
+  background: white;
 }
 header.active .icon-menu .line.two {
   opacity: 0;
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 header.active .icon-menu .line.three {
   transform: rotate(-45deg) translateY(-50%);
   top: 50%;
   left: 3px;
+  width: 50px;
+  background: white;
 }
 header .menu-container {
   height: 100vh;
-  width: 100vw;
+  width: 455px;
   position: fixed;
   top: 0;
-  left: 0;
-  background: #5148FF;
+  right: -455px;
+  background: #272727;
   visibility: hidden;
   opacity: 0;
 }
 header.active .menu-container {
   visibility: visible;
   opacity: 1;
+  right: 0;
 }
 header .menu-container .links {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  left: -15px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 335px;
+}
+header .menu-container .text-body {
+  margin-bottom: 0px !important;
+}
+header .menu-container .color-white {
+  margin-bottom: 30px !important;
 }
 
 /* HOVERS */
@@ -75,7 +90,8 @@ header .menu-container .links {
   header .menu-container a:hover::after,
   header .menu-container a:focus::after,
   header .menu-container a.active::after {
-      border-top: 12px solid #272727 !important;
+      border-top: 4px solid white;
+      bottom: 4px;
   }
 }
 

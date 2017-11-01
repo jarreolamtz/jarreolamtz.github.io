@@ -6,6 +6,14 @@ $(document).ready(function() {
       $("header").addClass("active");
     }
   });
+
+  $('header').on('click', function(e) {
+  e.stopPropagation();
+  });
+
+  $(document).on('click', function (e) {
+    $("header").removeClass("active");
+  });
 });
 
 function checkOffset() {
@@ -19,3 +27,5 @@ $(document).scroll(function() {
     checkOffset();
 });
 checkOffset();
+
+setTimeout
