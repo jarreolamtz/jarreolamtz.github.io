@@ -29,14 +29,15 @@ a {
     -o-transition: all 600ms cubic-bezier(0.01, 0.87, 0.82, 1.01);
     transition: all 600ms cubic-bezier(0.01, 0.87, 0.82, 1.01);
 }
+
 a::after {
   content: "";
   position: absolute;
-  bottom: 8px;
+  bottom: 5px;
   left: -4px;
   right: -4px;
   height: 0.65em;
-  border-top: 4px solid transparent;
+  border-top: 19px solid transparent;
   outline: none !important;
   width: 0px;
   /* Transition */
@@ -126,6 +127,7 @@ br::-moz-selection {
   font-size: 154px;
   letter-spacing: 21.48px;
   margin-left: -10px;
+  line-height: 154px;
 }
 .text-description-subHeading {
   font-family: 'AlteDin';
@@ -328,7 +330,19 @@ button {
     -webkit-transform: translate(-50%, -50%));
 }
 
-
+/* TEXT COLUMNS -----------------------------*/
+.columns-2 {
+  column-count: 2;
+  column-gap: 30px;
+}
+.columns-3 {
+  column-count: 3;
+  column-gap: 30px;
+}
+.columns-4 {
+  column-count: 4;
+  column-gap: 30px;
+}
 
 /* GENERAL --------------------------------- */
 
@@ -422,7 +436,9 @@ textarea {
 .image-row:nth-last-child(1) .text-module .bottom {
   margin-bottom: 0px;
 }
-
+.box.mid + .box {
+  margin-top: 40px;
+}
 
 /* Wordmark */
 .wordmark-div {
@@ -455,18 +471,21 @@ textarea {
     a.active::after {
       content: "";
       position: absolute;
-      bottom: 8px;
+      bottom: 5px;
       left: -4px;
       height: 0.65em;
-      border-top: 4px solid #272727;
+      border-top: 19px solid #272727;
       outline: none !important;
       width: calc(100% + 5px);
+      z-index: -1;
     }
     a:hover,
     a:focus,
     a.active {
       outline: none !important;
-      color: #272727;
+      color: white !important;
+      z-index: 2;
+      padding: 0 4px;
     }
     /*White links*/
 
@@ -475,10 +494,10 @@ textarea {
     a.color-white.active::after {
       content: "";
       position: absolute;
-      bottom: 8px;
+      bottom: 4px;
       left: -4px;
-      height: 0.5em;
-      border-top: 2px solid white;
+      height: 0.65em;
+      border-top: 19px solid white;
       outline: none !important;
       width: calc(100% + 5px);
     }
@@ -506,7 +525,13 @@ textarea {
       border-top: none;
       outline: 0 !important;
       width: 0;
-  }
+      padding:0;
+    }
+    .wordmark:hover,
+    .wordmark:focus,
+    .wordmark.active {
+      padding: 0;
+    }
 }
 /* MODULE --------------------------------- */
 @media screen and (min-width: 992px) {
