@@ -18,14 +18,9 @@ footer a + a {
 /* TABLET --------------------------------- */
 @media screen and (max-width: 991px) {
   footer {
-    padding: 80px 0 55px;
-  }
-  footer .row{
-    display: inline-flex;
-    flex-wrap: wrap;
-  }
-  footer .row .col-sm-6 {
-    margin-bottom: 30px;
+    padding: 25px 0px;
+    min-height: 60px;
+    text-align: center;
   }
 }
 /* PHONE --------------------------------- */

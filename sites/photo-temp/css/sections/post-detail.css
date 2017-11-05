@@ -82,3 +82,53 @@
 #section-02 .controls .image:hover .hover {
   background: transparent;
 }
+
+/* TABLET --------------------------------- */
+@media screen and (max-width: 991px) {
+  #section-01 {
+    padding-top: 100px;
+  }
+  .box {
+      height: 400px;
+  }
+  .box .image {
+    height: 400px;
+  }
+  #section-02 .text-description-heading {
+    margin-top: 55px;
+    margin-bottom: 15px;
+  }
+  #section-02 .text-description-subHeading {
+    margin-bottom: 20px;
+  }
+  #section-02 .divider {
+    margin-bottom: 18px;
+  }
+  #section-02 .text-description-body {
+    margin-bottom: 55px;
+  }
+  #section-02 .controls .box.mid,
+  #section-02 .controls .box .image.mid {
+    height: 140px;
+  }
+  #section-02 .controls p {
+    font-size: 92px;
+    letter-spacing: 21.48px;
+    bottom: -48px;
+  }
+  #section-02 .box,
+  #section-02 .controls {
+    text-align: center;
+    overflow: hidden;
+    height: 140px;
+  }
+  #section-02 .controls span {
+    top: 5px;
+    position: absolute;
+    left: 7px;
+  }
+  #section-02 .controls .right img,
+  #section-02 .controls .left img {
+    display: none;
+  }
+}
