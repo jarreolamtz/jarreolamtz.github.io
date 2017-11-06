@@ -25,3 +25,24 @@ footer {
     margin-bottom: 0px;
     height: 286px;
 }
+
+/* TABLET --------------------------------- */
+@media screen and (max-width: 991px) {
+  #section-01 {
+    padding-top: 100px;
+  }
+  .text-description-heading {
+    margin-bottom: 0px;
+    height: initial;
+  }
+  .image-row {
+    margin-bottom: 30px;
+  }
+  .text-description-subHeading {
+    margin-bottom: 20px;
+  }
+}
+/* PHONE --------------------------------- */
+@media screen and (max-width: 767px) {
+
+}

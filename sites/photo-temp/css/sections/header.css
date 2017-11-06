@@ -186,10 +186,43 @@ header .contact-container.active {
     z-index: 4;
     float: right;
   }
+  header.active .icon-menu {
+    margin: 33px 0;
+  }
   header .icon-menu .line {
     height: 5px;
     position: absolute;
     background: #272727;
+    left: 1px;
+  }
+  header .menu-container a.active {
+    margin-bottom: 30px !important;
+    z-index: 2;
+    color: #272727 !important;
+    padding: 0 4px;
+  }
+  header .menu-container a.active::after {
+    border-top: 39px solid white;
+    bottom: 0px;
+    z-index: -1;
+  }
+  header .menu-container .color-white {
+    margin-bottom: 60px !important;
+  }
+  header .contact-container .social-div {
+    margin-bottom: 60px;
+  }
+  header .contact-container h2 {
+    font-size: 35px;
+    letter-spacing: 3.84px;
+    line-height: 50px;
+  }
+  header .contact-container .submit-button {
+    width: 50%;
+  }
+  .contact-container form input,
+  .contact-container form textarea {
+    padding: 8px;
   }
 }
 /* PHONE --------------------------------- */
