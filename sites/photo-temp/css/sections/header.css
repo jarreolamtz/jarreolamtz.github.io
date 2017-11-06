@@ -219,6 +219,7 @@ header .contact-container.active {
   }
   header .contact-container .submit-button {
     width: 50%;
+    background: #e0e1e2;
   }
   .contact-container form input,
   .contact-container form textarea {
