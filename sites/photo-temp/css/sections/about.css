@@ -44,5 +44,37 @@ footer {
 }
 /* PHONE --------------------------------- */
 @media screen and (max-width: 767px) {
-
+  #section-01 {
+      padding-top: 60px;
+      margin-bottom: 40px;
+  }
+  .text-description-heading {
+    margin-top: 0px;
+    margin-bottom: 11px;
+  }
+  .box {
+    height: auto;
+  }
+  .box .text-module .bottom {
+    position: initial;
+    bottom: initial;
+    width: 100%;
+    padding: 0;
+  }
+  .box .image.mid {
+    margin-bottom: 12px;
+  }
+  .image-row {
+    margin-bottom: 0px;
+  }
+  .text-description-subHeading {
+    margin-bottom: 17px;
+  }
+  .columns-2 {
+    column-count: 1;
+    column-gap: 0px;
+  }
+  footer {
+    margin-top: 0px;
+  }
 }

@@ -177,11 +177,15 @@ header .contact-container.active {
 
 /* TABLET --------------------------------- */
 @media screen and (max-width: 991px) {
+  header {
+    position: absolute;
+  }
   header .icon-menu {
     margin: 33px 0;
     width: 48px;
     cursor: pointer;
-    position: relative;
+    position: fixed;
+    right: 30px;
     height: 27px;
     z-index: 4;
     float: right;
@@ -193,7 +197,9 @@ header .contact-container.active {
     height: 5px;
     position: absolute;
     background: #272727;
-    left: 1px;
+  }
+  header.active .icon-menu .line.one {
+    left: -1px;
   }
   header .menu-container a.active {
     margin-bottom: 30px !important;
@@ -228,5 +234,74 @@ header .contact-container.active {
 }
 /* PHONE --------------------------------- */
 @media screen and (max-width: 767px) {
-
+  header .icon-menu {
+    height: 20px;
+    width: 35px;
+    margin-top: 20px;
+    right: 20px;
+  }
+  header .icon-menu .line {
+    height: 3px;
+  }
+  header.active .icon-menu .line.one,
+  header.active .icon-menu .line.three {
+    width: 35px;
+  }
+  header.active .icon-menu .line.three {
+    left: 2px;
+  }
+  header.active .icon-menu {
+    margin: 20px 0;
+  }
+  header .menu-container {
+    width: 80vw;
+    right: -80vw;
+  }
+  header .menu-container .links {
+    width: 100%;
+    padding: 0 40px;
+  }
+  header .menu-container .color-white {
+    margin-bottom: 27px !important;
+  }
+  .text-heading-menu + p {
+    display: none;
+  }
+  header .menu-container .color-white:nth-last-child(1) {
+    margin-bottom: 0 !important;
+  }
+  header .menu-container a.active::after {
+    bottom: -1px;
+  }
+  .contact-container form .inputDiv {
+    margin-bottom: 20px;
+  }
+  .contact-container form label {
+    letter-spacing: 1.95px;
+    margin-bottom: 5px;
+    font-size: 11px;
+  }
+  .contact-container form input {
+    height: 30px;
+    font-size: 11px;
+  }
+  .contact-container form textarea {
+    height: 80px;
+    font-size: 11px;
+  }
+  .contact-container form input.submit-button {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+  header .contact-container h2 {
+    font-size: 17px;
+    letter-spacing: 2.37px;
+    line-height: 24px;
+  }
+  header .contact-container .social-div {
+    margin-bottom: 11px;
+  }
+  .contact-container .social-div a {
+    font-size: 18px;
+  }
 }

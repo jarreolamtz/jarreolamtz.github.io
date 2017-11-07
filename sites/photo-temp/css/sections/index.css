@@ -10,9 +10,7 @@
   margin-top: -40px;
 }
 
-.box  {
-  height: auto;
-}
+
 .box + .box {
   margin-top: 40px;
 }
@@ -58,7 +56,12 @@
   position: absolute;
   bottom: 35px;
 }
-
+/* HOVERS */
+@media screen and (min-width: 992px) {
+  .box  {
+    height: auto;
+  }
+}
 /* TABLET --------------------------------- */
 @media screen and (max-width: 991px) {
   #section-01 {
@@ -67,10 +70,6 @@
   }
   #section-01 .text-body {
     margin-bottom: 20px;
-  }
-  .box {
-    height: 400px;
-    overflow: hidden;
   }
   .box.extended {
     height: auto;
@@ -95,5 +94,35 @@
 }
 /* PHONE --------------------------------- */
 @media screen and (max-width: 767px) {
-
+  #section-01 {
+    padding-top: 60px;
+    height: initial;
+    margin-bottom: 40px;
+  }
+  #section-01 .box + .box {
+    display: none;
+  }
+  #section-01 .bottom {
+    position: initial;
+    bottom: initial;
+  }
+  #section-01 .scroll-y {
+    margin-bottom: 20px;
+  }
+  #section-01 .text-body {
+    margin-bottom: 22px;
+  }
+  #section-01 .project-list .divider {
+    margin-bottom: 18px;
+  }
+  #section-01 .project-list a p + p {
+    margin-left: 18px;
+  }
+  #section-01 .text-module-index {
+    height: auto;
+    position: initial;
+  }
+  #section-01 .project-list a {
+    line-height: 27px;
+  }
 }

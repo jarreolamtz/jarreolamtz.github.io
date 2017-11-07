@@ -88,12 +88,12 @@
   #section-01 {
     padding-top: 100px;
   }
-  .box {
+  /*.box {
       height: 400px;
   }
   .box .image {
     height: 400px;
-  }
+  }*/
   #section-02 .text-description-heading {
     margin-top: 55px;
     margin-bottom: 15px;
@@ -130,5 +130,65 @@
   #section-02 .controls .right img,
   #section-02 .controls .left img {
     display: none;
+  }
+}
+
+/* PHONE --------------------------------- */
+@media screen and (max-width: 767px) {
+  #section-01 {
+    padding-top: 60px;
+  }
+  .box.fill-box .text-module {
+      padding: 10px 20px;
+  }
+  .text-big-number {
+    text-align: right;
+    width: 100%;
+  }
+  .image-row {
+    margin-bottom: 0;
+  }
+  .box {
+    margin-bottom: 20px;
+  }
+  #section-02 .text-description-heading {
+    margin-top: 40px;
+    margin-bottom: 11px;
+  }
+  .box .image.mid {
+    margin-bottom: 20px;
+  }
+  .box-text-mobile {
+    height: auto;
+  }
+  #section-02 .text-description-subHeading {
+    margin-bottom: 20px;
+  }
+  #section-02 .divider {
+    margin-bottom: 14px;
+  }
+  #section-02 .controls .image .hover {
+    height: 60px;
+  }
+  #section-02 .controls .box.mid,
+  #section-02 .controls .box .image.mid {
+    height: 60px;
+  }
+  #section-02 .box,
+  #section-02 .controls {
+    height: 60px;
+  }
+  #section-02 .controls p {
+    font-size: 33px;
+    letter-spacing: 4.59px;
+    bottom: 3px;
+  }
+  #section-02 .controls span {
+    top: -13px;
+    position: absolute;
+    left: 2px;
+  }
+  #section-02 .text-description-body {
+    margin-bottom: 53px;
   }
 }

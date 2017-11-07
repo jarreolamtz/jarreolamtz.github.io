@@ -25,5 +25,18 @@ footer a + a {
 }
 /* PHONE --------------------------------- */
 @media screen and (max-width: 767px) {
-
+  footer {
+    text-align: center;
+  }
+  footer a {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    line-height: 30px;
+  }
+  footer a:nth-child(2){
+    margin: 0;
+  }
+  footer a + a {
+    margin-left: 10px;
+  }
 }
