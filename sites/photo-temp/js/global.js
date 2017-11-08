@@ -7,16 +7,21 @@ $(document).ready(function() {
       $("header").addClass("active");
     }
   });
-  $("header .contact-trigger").click(function(){
-    $("header .contact-container").addClass("active");
+  $(".contact-trigger").click(function(){
+    $("header").addClass("active");
+    $(".contact-container").addClass("active");
+    console.log("contact!");
   });
 
   $('header').on('click', function(e) {
   e.stopPropagation();
   });
-
-  $(document).on('click', function (e) {
-    $("header").removeClass("active");
-    $("header .contact-container").removeClass("active");
-  });
+  if( $("header").hasClass("active") == true ){
+    $(document).on('click', function (e) {
+      $("header").removeClass("active");
+      $("header .contact-container").removeClass("active");
+    });
+  } else {
+    
+  }
 });
