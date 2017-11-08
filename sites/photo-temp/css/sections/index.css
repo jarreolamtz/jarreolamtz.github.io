@@ -5,12 +5,12 @@
 #section-01 {
   height: 100vh;
   overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .text-big-number {
   margin-top: -40px;
 }
-
-
 .box + .box {
   margin-top: 40px;
 }

@@ -1,5 +1,7 @@
 #section-01 {
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /*#section-02 {
@@ -82,7 +84,10 @@
 #section-02 .controls .image:hover .hover {
   background: transparent;
 }
+/* DESKTOP 1440 --------------------------*/
+@media screen and (min-width: 1440px) {
 
+}
 /* TABLET --------------------------------- */
 @media screen and (max-width: 991px) {
   #section-01 {

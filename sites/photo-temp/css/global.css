@@ -19,6 +19,9 @@ body {
   color: #272727;
   text-transform: uppercase;
 }
+.container-fluid {
+  max-width: 1440px;
+}
 a {
   position: relative;
   color: #151515;
@@ -450,10 +453,13 @@ textarea {
 }
 .wordmark {
   position: absolute;
-  right: 15px;
+  left: -5px;
   top: 50vh;
   transform: translateY(-50%);
   height: 104vh;
+}
+.wordmark img {
+  height: 100%;
 }
 .wordmark-div.unActive {
   position: absolute;
@@ -580,6 +586,12 @@ a.color-white.active {
         float: none;
         display: inline-block;
     }
+}
+/* DESKTOP 1440 --------------------------*/
+@media screen and (min-width: 1441px) {
+  .wordmark {
+    left: -30px;
+  }
 }
 /* TABLET --------------------------------- */
 @media screen and (max-width: 991px) {
