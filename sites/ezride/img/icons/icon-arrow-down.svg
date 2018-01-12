@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="139px" height="140px" viewBox="0 0 139 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="140" height="140"></rect>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-340.000000, -620.000000)">
+        <g id="Group-8" transform="translate(0.000000, 620.000000)">
+            <g id="Group-9">
+                <g id="Arrow" transform="translate(340.000000, 0.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <g mask="url(#mask-2)" fill="#FFFFFF" id="Rectangle-5">
+                        <g transform="translate(-0.992908, 0.000000)">
+                            <rect x="53.6170213" y="0" width="32.7659574" height="142"></rect>
+                            <polygon points="116.623663 70.7572125 139.721291 93.8548401 82.6565638 150.919567 59.5589362 127.82194"></polygon>
+                            <polygon points="0.95412234 93.8548401 24.05175 70.7572125 81.116477 127.82194 58.0188494 150.919567"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

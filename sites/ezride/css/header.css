@@ -1,0 +1,35 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+header .bottom-line {
+  height: 1px;
+  width: 100%;
+  background: rgba(151,151,151, .10);
+  position: absolute;
+}
+header .sideB {
+  text-align: right;
+}
+header .logo {
+  margin-top: 18px;
+}
+header .sideB a {
+  color: white;
+  display: inline-block;
+  margin-bottom: 0;
+}
+header .sideB a + a {
+  margin-left: 35px;
+}
+header .sideB .button {
+  height: 60px;
+  line-height: 60px;
+  width: 200px;
+  text-align: center;
+}
+header .icon-messenger {
+  width: 30px;
+}
