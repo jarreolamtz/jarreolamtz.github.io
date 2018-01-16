@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="51px" viewBox="0 0 34 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon - location</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Contacto" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1183.000000, -389.000000)">
+        <g id="Bitmap" transform="translate(960.000000, 60.000000)">
+            <g id="Icon---location" transform="translate(227.000000, 329.000000)">
+                <g>
+                    <path d="M26,13 C26,5.82 20.18,0 13,0 C5.82,0 0,5.82 0,13 C0,15.58 0.761,17.978 2.057,20 C9.188,32.304 12,35 12,40 L12,41 C12,41.553 12.447,42 13,42 C13.553,42 14,41.553 14,41 L14,40 C14,35 16.812,32.304 23.943,20 C25.239,17.978 26,15.58 26,13" id="Fill-1" fill="#5176C0"></path>
+                    <path d="M17,13 C17,15.209 15.209,17 13,17 C10.791,17 9,15.209 9,13 C9,10.791 10.791,9 13,9 C15.209,9 17,10.791 17,13" id="Fill-3" fill="#2B4981"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

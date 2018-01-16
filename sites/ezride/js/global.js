@@ -3,6 +3,7 @@ $(document).ready(function(){
   // SELECTORS:--------------------------------------
   //general -------------------------
   var h_textLink = ("header .sideB .text-link");
+  var h_button = ("header .sideB .button");
   var ctrl_lineBold = ("#controls .lineBold");
   //section-01 ---------------------
   var s1_fillBlue = ("#section-01 .fill-dots-blue");
@@ -24,14 +25,19 @@ $(document).ready(function(){
   var s3_bulletFirst = ("#section-03 .bullet.first");
   var s3_bulletLast = ("#section-03 .bullet.last");
   var s3_array = [ s3_bulletFirst, s3_bulletLast ];
-
-
+  var s3_listFirst = ("#section-03 .listFirst li");
+  var s3_listLast = ("#section-03 .listLast li");
+  var s3_arrayList = [ s3_listFirst, s3_listLast ];
+  //section-04 -----------------------
+  var s4_headingBig = ("#section-04 .text-heading-big");
+  var s4_modules = ("#section-04 .module");
+  var s4_array = [ s4_headingBig, "#section-04 .module" ];
 
   $('#fullpage').fullpage({
     anchors:['section01', 'section02', 'section03', 'section04'],
     css3: true,
     scrollingSpeed: 1800,
-    easingcss3: 'cubic-bezier(0.480, 0.945, 0.500, 1.000)',
+    // easingcss3: 'cubic-bezier(0.480, 0.945, 0.500, 1.000)',
     fixedElements: '#controls',
     onLeave: function(index, nextIndex, direction){
   		var leavingSection = $(this);
@@ -107,6 +113,9 @@ $(document).ready(function(){
         });
         // BULLETS: s3
         TweenMax.staggerFromTo(s3_array, 1.6,{y:"20%", opacity:0 },{y:"0%", opacity:1, ease:Power1. easeInOut,delay: 1.6 }, .4);
+        // LIST
+        TweenMax.staggerFromTo("#section-03 .bullet p", 1,{y:"+=40", opacity:0 },{y:"0%", opacity:1, ease:Power1. easeInOut,delay: 1.4 }, .2);
+        TweenMax.staggerFromTo("#section-03 li", 1,{y:"+=40", opacity:0 },{y:"0%", opacity:1, ease:Power1. easeInOut,delay: 2 }, .2);
   		}
       if(index == 3 && direction =='down'){
         var topSelect = (lineHeight * 3);
@@ -114,6 +123,30 @@ $(document).ready(function(){
           y: topSelect,
           ease:Power1. easeInOut
         });
+        // BULLETS: s3
+        TweenMax.staggerFromTo(s3_array, 1,{y:"0%", opacity:1 },{y:"20%", opacity:0, ease:Power1. easeInOut }, .2);
+        // FILL DOTS TRANS: Section-03
+        var halfVh = ($(window).height()/2) - 60;
+        TweenMax.to(s3_fillTrans, 1.6, {
+          height: "0px",
+          ease:Power1. easeInOut
+        });
+        // LIST
+        TweenMax.staggerFromTo("#section-03 .bullet p", 1,{y:"0%", opacity:1 },{y:"+=40", opacity:0, ease:Power1. easeInOut}, .2);
+        TweenMax.staggerFromTo("#section-03 li", 1,{y:"0%", opacity:1 },{y:"+=40", opacity:0, ease:Power1. easeInOut}, .2);
+        // HEADER
+        TweenMax.to(h_textLink,1,{
+          color: "#ffffff",
+          delay: 1,
+          ease:Power1. easeInOut
+        });
+        TweenMax.to(h_button,1,{
+          backgroundColor: "#4569B2",
+          delay: 1,
+          ease:Power1. easeInOut
+        });
+        TweenMax.fromTo(s4_headingBig, 1.2, {y:"+=40px", opacity:0 },{y:"0%", opacity:1, delay: 1.2, ease:Power1. easeInOut }, .2)
+        TweenMax.staggerFromTo("#section-04 .module", 1.2,{y:"+=40px", opacity:0 },{y:"0%", opacity:1, delay: 1.4, ease:Power1. easeInOut }, .2);
   		}
       //LEAVING SECTION - UP --------------------
   		else if(index == 2 && direction == 'up'){
@@ -185,6 +218,36 @@ $(document).ready(function(){
           y: topSelect,
           ease:Power1. easeInOut
         });
+        // FILL DOTS TRANS: Section-03
+        var halfVh = ($(window).height()/2) - 60;
+        TweenMax.fromTo(s3_fillTrans, 1.6, {
+          height: "0px"
+          }, {
+          height: halfVh,
+          ease:Power1. easeInOut,
+          delay: 1.6
+        });
+        // BULLETS: s3
+        TweenMax.staggerFromTo(s3_array, 1.6,{y:"20%", opacity:0 },{y:"0%", opacity:1, ease:Power1. easeInOut,delay: 1.6 }, .4);
+        // LIST: s3
+        TweenMax.staggerFromTo("#section-03 .bullet p", 1,{y:"+=40", opacity:0 },{y:"0%", opacity:1, ease:Power1. easeInOut,delay: 1.4 }, .2);
+        TweenMax.staggerFromTo("#section-03 li", 1,{y:"+=40", opacity:0 },{y:"0%", opacity:1, ease:Power1. easeInOut,delay: 2 }, .2);
+        // VIDEO
+        TweenMax.to(s3_video, 0, {
+          y: "0px",
+          ease:Power1. easeInOut
+        });
+        //HEADER
+        TweenMax.to(h_textLink,1,{
+          color: "#35393E",
+          ease:Power1. easeInOut
+        });
+        TweenMax.to(h_button,1,{
+          backgroundColor: "#35393E",
+          ease:Power1. easeInOut
+        });
+        TweenMax.fromTo(s4_headingBig, 1.2, {y:"0px", opacity:1 },{y:"+=40", opacity:0, ease:Power1. easeInOut }, .2)
+        TweenMax.staggerFromTo("#section-04 .module", 1.2,{y:"0px", opacity:1 },{y:"+=40", opacity:0, delay:.2, ease:Power1. easeInOut }, .2);
   		}
   	}
   });
@@ -197,10 +260,11 @@ $(document).ready(function(){
   $("#controls .circle.down").click(function(){
     $.fn.fullpage.moveSectionDown();
   });
+
   // ON REFRESH -----------------------------
   setTimeout(function(){
-    // IF IT'S SECTION-01 --
-    if ($("#fullpage #section-01").hasClass("active") === true ) {
+    // IF IT'S SECTION-01 ------
+    if(window.location.href.indexOf("#section01") > -1) {
       // FILL DOT BLUE: section-02
       TweenMax.fromTo(s2_fillBlue, 1.2,
         {x: "80%",opacity:0}
@@ -227,26 +291,21 @@ $(document).ready(function(){
         className:"+=transition-remove"
       });
     }
-    // IF IT'S SECTION-02 --
-    else if( $("#fullpage #section-02").hasClass("active") === true ){
-      // FILL DOT BLUE: section-01
-      // TweenMax.to(s1_fillBlue, 3.2, {
-      //   position:"absolute",
-      //   x:"-50%",
-      //   ease:Power1. easeInOut,
-      // });
-      // BACK BLUE s2
-      // TweenMax.fromTo(s2_fillBlue, 1.6,
-      //   {x:"50%",
-      //     opacity:0},
-      //   {x:"0%",
-      //     opacity:1,
-      //     ease:Power1. easeInOut,
-      //     delay: 1
-      // });
+    // IF IT'S SECTION-02 ------
+    else if(window.location.href.indexOf("#section02") > -1) {
+      var topSelect = (lineHeight * 1);
+      TweenMax.to(ctrl_lineBold, 1.6, {
+        y: topSelect,
+        ease:Power1. easeInOut
+      });
     }
-    // IF IT'S SECTION-03 --
-    else if ($("#fullpage #section-03").hasClass("active") === true ){
+    // IF IT'S SECTION-03 ------
+    else if(window.location.href.indexOf("#section03") > -1) {
+      var topSelect = (lineHeight * 2);
+      TweenMax.to(ctrl_lineBold, 1.6, {
+        y: topSelect,
+        ease:Power1. easeInOut
+      });
       // ARRAY s2
       TweenMax.to(s2_array, .2,{y: "20%", opacity: 0});
       // VIDEO
@@ -257,15 +316,40 @@ $(document).ready(function(){
       var halfVh = ($(window).height()/2) - 60;
       // Fill trans s3
       TweenMax.fromTo(s3_fillTrans, 1.2,
-      {height: "0px"},
-      {height: halfVh,
-        ease:Power1. easeInOut,
-        delay: .8
+        {height: "0px"},
+        {height: halfVh,
+          ease:Power1. easeInOut,
+          delay: .8
+        });
+        // BULLETS: s3
+        TweenMax.staggerFromTo("#section-03 .bullet p", 1,{y:"+=40", opacity:0 },{y:"0%", opacity:1, ease:Power1. easeInOut,delay: 1.4 }, .2);
+        TweenMax.staggerFromTo("#section-03 li", 1,{y:"+=40", opacity:0 },{y:"0%", opacity:1, ease:Power1. easeInOut,delay: 2 }, .2);
+      }
+    // IF IT'S SECTION-04 ------
+    else if(window.location.href.indexOf("#section04") > -1) {
+      // HEADER
+      TweenMax.to(h_textLink,1,{
+        color: "#ffffff",
+        delay: 1.6,
       });
-      // BULLETS: s3
-      TweenMax.staggerFromTo(s3_array, 1.6,{y:"20%", opacity:0 },{y:"0%", opacity:1, ease:Power1. easeInOut,delay: 1.4 }, .4);
+      TweenMax.to(h_button,1,{
+        backgroundColor: "#4569B2"
+      });
+
+      var topSelect = (lineHeight * 3);
+      TweenMax.to(ctrl_lineBold, 1.6, {
+        y: topSelect,
+        ease:Power1. easeInOut
+      });
+      TweenMax.fromTo(s4_headingBig, 1.2, {y:"+=40px", opacity:0 },{y:"0%", opacity:1, delay: 1.8, ease:Power1. easeInOut }, .2)
+      TweenMax.staggerFromTo("#section-04 .module", 1.2,{y:"+=40px", opacity:0 },{y:"0%", opacity:1, delay: 1.8, ease:Power1. easeInOut }, .2);
+      // VIDEO
+      TweenMax.to(s3_video, 0, {
+        y: "0px"
+      });
     }
-  }, 300);
+  }, 1600);
+
   //ANIMATION START ------------------------
   TweenMax.to(s2_fillTrans, 1.6, {
     height: 300,

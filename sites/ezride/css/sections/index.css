@@ -252,13 +252,18 @@
 }
 #section-03 .bullet {
   position: relative;
+  margin-top: -25%;
 }
 #section-03 .bullet .text-body {
   margin-bottom: 0;
 }
-#section-03 .textarea {
+#section-03 .textarea.top {
   margin-top: 60px;
   height: calc(50vh - 60px);
+  position: relative;
+}
+#section-03 .textarea.bottom {
+  height: calc(50vh);
   position: relative;
 }
 #section-03 .fill-dots-trans {
@@ -269,6 +274,82 @@
   z-index: -1;
 }
 #section-03 .centery {
-  top: 24%;
+  top: 50%;
   position: relative;
+}
+#section-03 .textarea.bottom .centery {
+  height: 200px;
+  transform: translateY(-50%);
+}
+/* #section-03 .textarea.bottom ul {
+  position: relative;
+  margin-top: -25%;
+} */
+#section-03 .textarea.bottom ul p {
+  margin: 0 0 0 50px;
+}
+#section-03 .textarea.bottom ul li {
+  position: relative;
+}
+#section-03 .textarea.bottom ul li + li {
+  margin-top: 40px;
+}
+#section-03 .textarea.bottom img {
+  position: absolute;
+}
+#section-03 .listFirst li::before {
+  content: "";
+  width: 100%;
+  background: rgba(151,151,151, .10);
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: calc(100% - 35px);
+}
+/* SECTION 04 ----------------------------- */
+#section-04 .text-heading-big {
+  margin-bottom: 40px;
+}
+#section-04 .title {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1.36px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+#section-04 .title img {
+  margin-left: 5px;
+  height: 14px;
+}
+#section-04 .info {
+  color:;
+}
+#section-04 .fa {
+  border: 1px solid white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  padding-top: 9px;
+  font-size: 15px;
+}
+#section-04 .fa + .fa {
+  margin-left: 20px;
+}
+#section-04 .center-container {
+  height: calc(100vh - 60px);
+  margin-top: 60px;
+}
+#section-04 .module {
+  margin-bottom: 40px;
+}
+#section-04 .msn {
+  width: 30px;
+}
+#section-04 #map-canvas {
+  width: 100%;
+  margin-top: 60px;
+  height: calc(100vh - 60px);
 }
