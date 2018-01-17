@@ -80,12 +80,6 @@ $(document).ready(function(){
           ease:Power1. easeInOut,
           delay: 1
         });
-        // VIDEO: section-03
-        if(window.location.href.indexOf("#section03") > -1) {
-
-        } else {
-          TweenMax.fromTo(s3_video, 1.6, {y: "0px"}, {y: "-140px", delay: 2});
-        }
   		}
       if(index == 2 && direction =='down'){
         // CONTROLS LINE BOLD Y
@@ -298,6 +292,11 @@ $(document).ready(function(){
         y: topSelect,
         ease:Power1. easeInOut
       });
+      TweenMax.to(s3_video, 1.2, {
+        y: "-140px",
+        ease:Power1. easeInOut,
+        delay: 1
+      });
     }
     // IF IT'S SECTION-03 ------
     else if(window.location.href.indexOf("#section03") > -1) {
@@ -348,7 +347,7 @@ $(document).ready(function(){
         y: "0px"
       });
     }
-  }, 1600);
+  }, 1800);
 
   //ANIMATION START ------------------------
   TweenMax.to(s2_fillTrans, 1.6, {
@@ -391,7 +390,7 @@ $(document).ready(function(){
     }
   });
   // VIDEO CLICK
-  $(s3_video).click(function(){
+  $("#controlsvid").click(function() {
     if( $(s3_video).hasClass("active") == true ) {
       $(s3_video).removeClass("active");
       TweenMax.to(s3_video, 1.2, {
@@ -417,10 +416,33 @@ $(document).ready(function(){
         opacity:0,
         ease:Power1. easeInOut
       });
+      TweenMax.to("#controlsvid", 1, {
+        opacity:0,
+        ease:Power1. easeInOut
+      });
       TweenMax.to("header", 1, {
         opacity:0,
         ease:Power1. easeInOut
       });
+      setTimeout(function(){
+        $("#section-03 .active #video").mousemove(function (){
+          $(".circle-line").removeAttr("style");
+        });
+        document.onmousemove = (function() {
+          var onmousestop = function() {
+            TweenMax.to("#section-03 .active #controlsvid", 1, {
+              opacity:0,
+              ease:Power1. easeInOut
+            });
+          }, thread;
+
+          return function() {
+            clearTimeout(thread);
+            thread = setTimeout(onmousestop, 500);
+          };
+        })();
+      }, 600);
+
     }
   });
 });
