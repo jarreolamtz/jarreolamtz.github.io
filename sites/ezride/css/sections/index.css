@@ -220,7 +220,8 @@
   left: 0;
   z-index: 1;
 }
-#section-03 .video-area {
+#section-03 .video-area,
+#section-03 video {
   position: absolute;
   left: 0;
   width: 100%;
@@ -231,28 +232,61 @@
 #section-03 .video-area.active {
   z-index: 9;
 }
+#section-03 .video-area {
+  background: black;
+}
+#section-03 .video-area #video {
+  opacity: 0.8;
+}
+#section-03.active .video-area.active #video {
+  opacity: 1;
+}
 #section-03 .video-area .circle-line {
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  top: 73px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 1;
+}
+#section-03 .video-area .circle {
   width: 51px;
   height: 51px;
   border-radius: 50%;
   border: 1px solid white;
-  position: absolute;
   padding: 13px 20px;
-  top: 73px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
 }
+
 #section-03.active .video-area .circle-line {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#section-03.active .video-area.active .circle-line {
-  opacity: 0;
+#section-03 .video-area .circle-line .circle:hover {
+  width: 56px;
+  height: 56px;
+  padding: 16px 23px;
+  margin: -3px;
 }
 #section-03 .bullet {
   position: relative;
   margin-top: -25%;
+}
+#section-03 .video-area .pause {
+  display: none;
+}
+#section-03.active .video-area.active .circle-line {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  background: rgba(0,0,0,0.05);
+}
+#section-03.active .video-area .circle-line.active .play {
+  display: none;
+}
+#section-03.active .video-area .circle-line.active .pause {
+  display: block;
 }
 #section-03 .bullet .text-body {
   margin-bottom: 0;
@@ -305,7 +339,7 @@
   display: block;
   position: absolute;
   top: 50%;
-  right: calc(100% - 35px);
+  right: 100%;
 }
 /* SECTION 04 ----------------------------- */
 #section-04 .text-heading-big {
