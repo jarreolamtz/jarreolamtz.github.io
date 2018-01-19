@@ -33,3 +33,93 @@ header .sideB .button {
 header .icon-messenger {
   width: 30px;
 }
+
+
+/* HOVERS */
+@media screen and (min-width: 992px) {
+    header a.icon-menu {
+      display: none;
+    }
+    a,
+    a:hover,
+    a:focus {
+    color: #2d2d2d;
+    text-decoration: none;
+    outline: none !important;
+    }
+    *:focus {
+      outline: none;
+    }
+    /* LINKS --------------------------------- */
+    a.color-black:hover,
+    a.color-black:focus {
+        color: #4b4b4b;
+    }
+
+    a.color-gray:hover,
+    a.color-gray:focus {
+        color: #b3b3b3;
+    }
+
+    a.color-white:hover,
+    a.color-white:focus {
+        color: #d4d4d4;
+    }
+}
+
+/* MODULE --------------------------------- */
+@media screen and (min-width: 992px) {
+
+}
+
+/* MODULE --------------------------------- */
+@media screen and (max-width: 992px) and (min-width: 768px){
+
+}
+
+/* MODULE --------------------------------- */
+@media screen and (min-width: 768px) {
+
+}
+
+/* TABLET - 991px --------------------------------- */
+@media screen and (max-width: 991px) {
+  header {
+    height: 60px;
+  }
+  header .sideB a {
+    display: inline-block;
+    height: 60px;
+    padding: 17px 0;
+    vertical-align: top;
+  }
+  header .sideB a.icon-menu {
+    margin-right: 30px;
+    position: relative;
+  }
+  header a.icon-menu .white {
+    margin-top: 1px;
+  }
+  header a.icon-menu .black {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    opacity: 0;
+  }
+  header .menu-area {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  header .close-menu {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+  }
+}
+
+/* PHONE - 767px --------------------------------- */
+@media screen and (max-width: 767px) {
+
+}

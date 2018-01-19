@@ -1,4 +1,16 @@
 /* CONTROLS ----------------------------- */
+#controls::before {
+  content: attr(data-slide);
+  position: absolute;
+  color: white;
+  font-size: 13px;
+  top: -26px;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 #controls {
   height: 480px;
   width: 35px;
@@ -16,7 +28,7 @@
   text-align: center;
   padding-top: 5px;
   z-index: 1;
-  cursor: pointer;
+
 }
 #controls .circle.up {
 
@@ -52,6 +64,7 @@
 }
 #section-01 .fill-dots-blue {
   height: 100vh;
+  width: 100%;
 }
 #section-01 .center-container {
   height: 100vh;
@@ -88,7 +101,7 @@
   right: 0;
 }
 #section-01 .drop {
-  cursor: pointer;
+
   opacity: 0;
 }
 #section-01 .drop .text-link {
@@ -117,6 +130,7 @@
 }
 #section-02 .fill-dots-blue {
   height: 300px;
+  overflow: hidden;
 }
 #section-02 .fill-dots-blue .slides,
 #section-02 .fill-dots-blue .controlBlue {
@@ -135,6 +149,7 @@
 #section-02 .fill-dots-blue .slides .slide-blue .text-link {
   position: absolute;
   top: -30px;
+  letter-spacing: 2px;
 }
 #section-02 .fill-dots-blue .slides .slide-blue .text-body {
   margin-bottom: 0;
@@ -165,7 +180,7 @@
   background: white;
   text-align: center;
   position: absolute;
-  cursor: pointer;
+
   padding: 2px;
 }
 #section-02 .fill-dots-blue .controlsBlue .circle.left {
@@ -248,7 +263,7 @@
   top: 73px;
   left: 50%;
   transform: translate(-50%, -50%);
-  cursor: pointer;
+
   z-index: 1;
 }
 #section-03 .video-area .circle {
@@ -386,4 +401,86 @@
   width: 100%;
   margin-top: 60px;
   height: calc(100vh - 60px);
+}
+
+.ctrlq.fb-button{
+  display: none !important;
+}
+.messenger-trigger {
+
+}
+
+/* TABLET - 991px --------------------------------- */
+@media screen and (max-width: 991px) {
+  #controls {
+    left: 30px;
+  }
+  #section-01 .fill-dots-black .big-arrow-down {
+    right: 15px;
+  }
+  #section-01 .col-sm-3 {
+    position: absolute;
+  }
+  #section-01 .center-y .text-body {
+    margin-bottom: 18px;
+  }
+  #section-03 .textarea.top {
+    height: 50vh;
+  }
+  #section-03 .bullet {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  #section-03 .bullet.last {
+    margin-bottom: 0;
+  }
+  #section-03 .fill-dots-trans {
+    top: 0;
+  }
+  #section-03 .centery {
+    transform: translateY(-50%);
+    height: 300px;
+  }
+  #section-03 .textarea.bottom ul li + li {
+    margin-top: 20px;
+  }
+  #section-03 .listFirst {
+    margin-bottom: 20px;
+  }
+  #section-03 li::before {
+    content: "";
+    width: 100%;
+    background: rgba(151,151,151, .10);
+    height: 1px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 100%;
+  }
+  #section-03 .textarea.bottom .centery {
+    height: 280px;
+  }
+  #section-03 .textarea.bottom {
+    height: calc(50vh - 60px);
+    position: relative;
+  }
+  #section-04 .fa + .fa {
+    margin-left: 15px;
+  }
+  #section-04 .socialDiv {
+    width: 145px;
+  }
+
+  #section-04 #map-canvas {
+    width: 100%;
+    margin-top: 0px;
+    height: 30vh;
+  }
+  #section-04 .center-container {
+    height: calc(70vh - 60px);
+    margin-top: 60px;
+  }
+  #section-04 .bottomRow .module {
+    margin-bottom: 0;
+  }
 }
