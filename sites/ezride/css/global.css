@@ -305,7 +305,7 @@ a,
 a:hover,
 a:focus,
 a:active {
-    color: #151515;
+    color: white;
     outline: none;
 }
 /* LOADER --------------------------------- */
@@ -345,7 +345,7 @@ a:active {
     a,
     a:hover,
     a:focus {
-    color: #2d2d2d;
+    color: white;
     text-decoration: none;
     outline: none !important;
     }
@@ -366,6 +366,9 @@ a:active {
     a.color-white:hover,
     a.color-white:focus {
         color: #d4d4d4;
+    }
+    .messenger-trigger:hover {
+      transform: scale(1.1);
     }
 }
 
@@ -431,6 +434,7 @@ a:active {
     -o-animation:      hoverCircle 1.2s infinite alternate; /* Opera 12+ */
     animation:         hoverCircle 1.2s infinite alternate; /* IE 10+, Fx 29+ */
     animation-timing-function: ease-out;
+    background: #ed6565;
   }
   .cursor.circleBlue {
     background: #355088;
@@ -491,10 +495,10 @@ a:active {
     letter-spacing: 1px;
     line-height: 70px;
   }
-  #section-01 .text-heading-big {
-    font-size: 75px;
+  .text-heading-big {
+    font-size: 65px;
     letter-spacing: 2px;
-    line-height: 85px;
+    line-height: 75px;
   }
   .text-subHeading {
     font-size: 28px;
@@ -532,6 +536,9 @@ a:active {
 
 /* PHONE - 767px --------------------------------- */
 @media screen and (max-width: 767px) {
+  body {
+    font-size: 11px;
+  }
   .site {
 
   }
@@ -542,21 +549,43 @@ a:active {
   .container {
 
   }
+  .clearfix-mobile:before,
+  .clearfix-mobile:after {
+    display: table;
+    content: " ";
+  }
+  .clearfix-mobile:after {
+    clear: both;
+  }
   /* LOADER --------------------------------- */
   .loader img {
       width: 160px;
   }
   /* FONTS --------------------------------- */
+   .text-heading-big {
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: 45px;
+  }
   .text-heading {
-
+    font-size: 35px;
+    letter-spacing: 0;
+    line-height: 47px;
   }
   .text-subHeading {
-
+    font-size: 22px;
+    letter-spacing: 1.4px;
+    line-height: 30px;
+    margin-bottom: 10px;
   }
   .text-body + .text-body {
 
   }
   .text-body {
-
+    font-size: 11px;
+  }
+  .row-mobile-cancel {
+    padding: 0;
+    margin: 0;
   }
 }

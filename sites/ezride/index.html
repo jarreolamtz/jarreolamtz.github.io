@@ -79,19 +79,19 @@
       <header>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-sm-4 col-md-4">
+            <div class="col-xs-6 col-sm-4 col-md-4">
               <a href="#section01">
                 <img src="img/icons/logo.svg" alt="Ezride" class="logo">
               </a>
             </div>
-            <div class="col-sm-8 col-md-8 sideB">
+            <div class="col-xs-6 col-sm-8 col-md-8 sideB">
               <div class="row">
-                <a href="" class="text-link hidden-sm">Acerca</a>
-                <a href="" class="text-link hidden-sm">Servicios</a>
+                <a href="" class="text-link hidden-xs hidden-sm">Acerca</a>
+                <a href="" class="text-link hidden-xs hidden-sm">Servicios</a>
                 <a href="javascript:void(0)" class="text-link">
-                  <img src="img/icons/icon-messenger.png" alt="Chat Messenger" class="icon-messenger messenger-trigger">
+                  <img src="img/icons/icon-messenger.png" alt="Chat Messenger" class="icon-messenger messenger-trigger transition">
                 </a>
-                <a href="" class="button text-button fill-black hidden-sm">Contactanos</a>
+                <a href="#section04" class="button text-button fill-black hidden-xs hidden-sm transition">Contactanos</a>
                 <a href="javascript:void(0)" class="icon-menu">
                   <img src="img/icons/icon-menu.svg" alt="" class="white">
                   <img src="img/icons/icon-menu-black.svg" alt="" class="black">
@@ -117,14 +117,14 @@
       <!-- FULLPAGE -->
       <div id="fullpage">
         <!-- CONTROLS -->
-        <div id="controls" data-slide="01/04">
-          <div class="circle up cur">
+        <div id="controls" data-slide="01/04" class="hidden-xs">
+          <div class="circle up cur transition btnPlay">
             <img src="img/icons/icon-arrow-up.svg" alt="">
           </div>
           <div class="line">
             <div class="lineBold" style="top: 0;"></div>
           </div>
-          <div class="circle down cur">
+          <div class="circle down cur transition">
             <img src="img/icons/icon-arrow-up.svg" alt="">
           </div>
         </div>
@@ -133,14 +133,14 @@
           <div class="container-fluid">
             <div class="row">
               <!-- Fill BLUE DOT -->
-              <div class="col-sm-3 col-md-2">
+              <div class="col-xs-4 col-sm-3 col-md-2">
                 <div class="row">
                   <div class="col-md-12 fill-dots-blue"></div>
                 </div>
                 <div class="clearfix"></div>
               </div>
               <!--  CENTER-XY -->
-              <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-pull-1">
+              <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-md-pull-1">
                 <div class="center-container">
                   <div class="center-y">
                     <h1 class="text-heading-big color-white">
@@ -151,15 +151,15 @@
                       para el manejo de vehículo de servicio pasajeros brindamos facilidades para
                       adquirir un automóvil al mejor costo y en el menor tiempo posible.
                     </h2>
-                    <a href="#section03" class="text-link color-white">Ver servicios <img src="img/icons/icon-arrow-right.svg"></a>
+                    <a href="#section03" class="text-link color-white">Ver servicios <img src="img/icons/icon-arrow-right.svg" class="transition"></a>
                   </div>
                 </div>
               </div>
               <!-- FILL DOTS BLACK -->
-              <div class="col-sm-6 col-md-4 fill-dots-black">
+              <div class="col-xs-12 hidden-xs col-sm-6 col-md-4 fill-dots-black">
                 <div class="row">
-                  <div class="col-sm-12 col-md-12 fill-dots-black">
-                    <a class="drop transition-600" href="#section02">
+                  <div class="col-sm-12 col-md-12">
+                    <a class="drop" href="#section02">
                       <div class="row">
                         <div class="col-sm-10 col-sm-offset-2 col-md-8 col-md-offset-3">
                           <p class="text-link color-white">02/04</p>
@@ -171,6 +171,12 @@
                   </div>
                 </div>
               </div>
+              <!-- SOCIAL DIV -->
+              <div class="hidden-xs socialDiv transition-600">
+                <a href="" class="fa fa-facebook color-white transition"></a>
+                <a href="" class="fa fa-twitter color-white transition"></a>
+                <a href="" class="fa fa-instagram color-white transition"></a>
+              </div>
             </div>
           </div>
         </section>
@@ -179,11 +185,11 @@
           <div class="container-fluid">
             <div class="row">
               <!-- FILL BLACK DOT -->
-              <div class="col-sm-6 col-md-4">
+              <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="row">
-                  <div class="col-sm-12 col-md-12 fill-dots-black">
-                    <div class="row">
-                      <div class="col-md-8 col-md-offset-3">
+                  <div class="col-xs-12 col-sm-12 col-md-12 fill-dots-black">
+                    <div class="row row-mobile-cancel">
+                      <div class="col-xs-12 col-md-8 col-md-offset-3">
                         <div class="textBlock">
                           <h1 class="text-heading color-white">
                             Nosotros
@@ -201,14 +207,15 @@
                   </div>
                 </div>
               </div>
+              <div class="clearfix"></div>
               <!-- BLOCK TOP -->
               <div class="blockTop">
-                <div class="col-sm-6 col-sm-offset-6 col-md-3 col-md-offset-4">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-3 col-md-offset-4">
                   <h2 class="text-subHeading">
                     La mejor alternativa de inversión automotriz.
                   </h2>
                 </div>
-                <div class="col-sm-6 col-sm-offset-6 col-md-5 col-md-offset-0">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-5 col-md-offset-0">
                   <p class="text-body">
                     En Noviembre del 2013 comenzamos operaciones en la compra y venta de automóviles bajo
                     el nombre de GECSA, en Septiembre del 2015 nace el concepto de la venta dirigida hacia
@@ -225,12 +232,13 @@
                     y gracias a nuestra alianza te ofreceremos 6 meses gratis de seguro en la compra de tu automóvil.
                   </p>
                 </div>
+                <div class="clearfix"></div>
               </div>
               <!-- BLOCK BOTTOM -->
               <div class="blockBottom">
-                <div class="col-sm-6 col-sm-offset-6 col-md-3 col-md-offset-9">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-3 col-md-offset-9">
                   <div class="row">
-                    <div class="col-md-12 fill-dots-blue">
+                    <div class="col-xs-12 col-md-12 fill-dots-blue">
                       <!-- Slides -->
                       <div class="slides transition-1200">
                         <!-- Slide 01 -->
@@ -256,13 +264,13 @@
                       </div>
                       <!-- Controls -->
                       <div class="controlsBlue transition-1200">
-                        <div class="circle left cur">
+                        <div class="circle left cur transition">
                           <img src="img/icons/icon-arrow-up.svg" alt="">
                         </div>
                         <div class="line">
                           <div class="lineBold" style="top: 0;"></div>
                         </div>
-                        <div class="circle right cur">
+                        <div class="circle right cur transition">
                           <img src="img/icons/icon-arrow-up.svg" alt="">
                         </div>
                       </div>
@@ -271,7 +279,7 @@
                 </div>
               </div>
               <!-- FILL DOTS TRANS -->
-              <div class="fill-dots-trans back"></div>
+              <div class="fill-dots-trans back hidden-xs"></div>
             </div>
           </div>
         </section>
@@ -280,9 +288,9 @@
           <div class="container-fluid">
             <div class="row">
               <!-- VIDEO -->
-              <div class="col-sm-6 col-md-4">
+              <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="row">
-                  <div class="col-md-12 video-div">
+                  <div class="col-xs-12 col-md-12 video-div">
                     <div class="video-area">
                       <div id="controlsvid" class="circle-line transition-1200 cur">
                         <span class="circle transition">
@@ -290,7 +298,21 @@
                           <img src="img/icons/icon-pause.svg" alt="Detener video" class="pause transition">
                         </span>
                       </div>
-                      <video id="video" controls poster="img/assets/back-02.jpg" style="background-size:100% 100%; object-fit: cover;">
+
+                      <!-- VIDEO CONTROLS -->
+                      <div id="video-controls" style="opacity: 0;">
+                  			<button type="button" id="play-pause" class="play">Play</button>
+                        <div class="seek-div">
+                          <div class="seek-init"></div>
+                          <input id="seek-bar" value="0" type="range">
+                          <div class="seek-end"></div>
+                        </div>
+                  			<button type="button" id="mute">Mute</button>
+                  			<input id="volume-bar" min="0" max="1" step="0.1" value="1" type="range">
+                  			<button type="button" id="full-screen">Full-Screen</button>
+                  		</div>
+                      <!-- VIDEO CONTROLS END -->
+                      <video id="video"  poster="img/assets/back-02.jpg" style="background-size:100% 100%; object-fit: cover;">
                         <source src="video/video-01.mp4" type="video/mp4">
                       </video>
                     </div>
@@ -298,9 +320,10 @@
                 </div>
               </div>
               <!-- BULLETS -->
-              <div class="textarea top">
+              <div class="clearfix-mobile"></div>
+              <div class="textarea top clearfix">
                 <div class="centery">
-                  <div class="col-sm-6 col-md-3 col-md-offset-1">
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-1">
                     <div class="bullet first">
                       <p class="text-subHeading">
                         Inicia tu proyecto de negocio
@@ -311,7 +334,7 @@
                       </p>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-md-3">
+                  <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="bullet last">
                       <p class="text-subHeading">
                         Una inversión inteligente
@@ -325,40 +348,40 @@
                 </div>
                 <div class="fill-dots-trans"></div>
               </div>
-              <div class="textarea bottom">
+              <div class="textarea bottom clearfix">
                 <div class="centery">
-                  <div class="col-sm-6 col-md-3 col-md-offset-1">
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-1">
                     <ul class="listFirst">
                       <li>
-                        <img src="img/icons/icon-list-1.svg">
+                        <img src="img/icons/bullets-01.svg">
                         <p>Sin anualidades</p>
                       </li>
                       <li>
-                        <img src="img/icons/icon-list-2.svg">
+                        <img src="img/icons/bullets-02.svg">
                         <p>Entrega inmediata</p>
                       </li>
                       <li>
-                        <img src="img/icons/icon-list-3.svg">
+                        <img src="img/icons/bullets-03.svg">
                         <p>No checamos buro de crédito</p>
                       </li>
                       <li>
-                        <img src="img/icons/icon-list-4.svg">
+                        <img src="img/icons/bullets-04.svg">
                         <p>Sin comprobande de ingresos</p>
                       </li>
                     </ul>
                   </div>
-                  <div class="col-sm-6 col-md-3">
+                  <div class="col-xs-12 col-sm-6 col-md-3">
                     <ul class="listLast">
                       <li>
-                        <img src="img/icons/icon-list-5.svg">
+                        <img src="img/icons/bullets-05.svg">
                         <p>Sin comisión por apertura</p>
                       </li>
                       <li>
-                        <img src="img/icons/icon-list-6.svg">
+                        <img src="img/icons/bullets-06.svg">
                         <p>Mínimos requisitos</p>
                       </li>
                       <li>
-                        <img src="img/icons/icon-list-7.svg">
+                        <img src="img/icons/bullets-07.svg">
                         <p>El pago de tu auto es equivalente al pago de un renta</p>
                       </li>
                     </ul>
@@ -372,30 +395,41 @@
         <section class="section fill-dots-black" id="section-04" data-anchor="section04">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-sm-12 col-md-7 col-md-offset-1">
+              <div class="col-xs-12 col-sm-12 col-md-7 col-md-offset-1">
                 <div class="center-container">
-                  <div class="center-y">
+                  <div class="center-y center-y">
                     <div class="row">
-                      <div class="col-sm-7 col-sm-offset-1 col-md-9 col-md-offset-0">
+                      <div class="col-xs-12 col-sm-7 col-sm-offset-1 col-md-9 col-md-offset-0">
                         <h2 class="text-heading-big color-white">¡consigue tu propio auto!</h2>
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-sm-3 col-sm-offset-1 col-md-4 col-md-offset-0">
+                      <div class="col-xs-6 col-sm-3 col-sm-offset-1 col-md-4 col-md-offset-0">
                         <div class="module">
                           <p class="title color-white">Teléfonos</p>
-                          <a href="tel:+52 0448118005217" class="text-body color-white">+52 044-811-800-5217</a>
-                          <a href="tel:018009992938843" class="text-body color-white">01800-999-293-8843</a>
+                          <a href="tel:+52 0448118005217" class="text-body color-white transition">+52 044-811-800-5217</a>
+                          <a href="tel:018009992938843" class="text-body color-white transition">01800-999-293-8843</a>
                         </div>
                       </div>
-                      <div class="col-sm-3 col-md-4">
+                      <div class="col-xs-6 col-sm-3 col-md-4">
                         <div class="module">
                           <p class="title color-white">Correos</p>
-                          <a href="mailto:" class="color-white body-text">contacto@ezride.mx</a><br>
-                          <a href="mailto:" class="color-white body-text">ventas@ezride.mx</a>
+                          <a href="mailto:" class="color-white body-text transition">contacto@ezride.mx</a><br>
+                          <a href="mailto:" class="color-white body-text transition">ventas@ezride.mx</a>
                         </div>
                       </div>
-                      <div class="col-sm-4 col-md-4">
+                      <div class="hidden-xs col-sm-4 col-md-4">
+                        <div class="module">
+                          <p class="title color-white">Dirección</p>
+                          <a href="" class="color-white body-text transition">
+                            Loma Alta 214 Col. Loma Larga Monterrey, NL, México
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="row visible-xs">
+                      <div class="col-xs-6">
                         <div class="module">
                           <p class="title color-white">Dirección</p>
                           <a href="" class="color-white body-text">
@@ -403,34 +437,39 @@
                           </a>
                         </div>
                       </div>
+                      <div class="col-xs-6">
+                        <div class="module">
+                          <a href="preguntas.html" class="title color-white">Preguntas frecuentes <img src="img/icons/icon-arrow-right.svg" class="transition"></a>
+                        </div>
+                      </div>
                     </div>
                     <div class="row bottomRow">
-                        <div class="col-sm-3 col-sm-offset-1 col-md-4 col-md-offset-0">
+                        <div class="col-xs-6 col-sm-3 col-sm-offset-1 col-md-4 col-md-offset-0">
                           <div class="module">
                             <p class="title color-white">Chat directo</p>
-                            <img class="msn messenger-trigger" src="img/icons/icon-messenger.png" alt="Chat directo">
+                            <img class="msn messenger-trigger transition" src="img/icons/icon-messenger.png" alt="Chat directo">
                           </div>
                         </div>
-                        <div class="col-sm-3 col-md-4">
+                        <div class="col-xs-6 col-sm-3 col-md-4">
                           <div class="module">
                             <p class="title color-white">Redes Sociales</p>
                             <div class="socialDiv">
-                              <a href="" class="fa fa-facebook color-white"></a>
-                              <a href="" class="fa fa-twitter color-white"></a>
-                              <a href="" class="fa fa-instagram color-white"></a>
+                              <a href="" class="fa fa-facebook color-white transition"></a>
+                              <a href="" class="fa fa-twitter color-white transition"></a>
+                              <a href="" class="fa fa-instagram color-white transition"></a>
                             </div>
                           </div>
                         </div>
-                        <div class="col-sm-4 col-md-4">
+                        <div class="hidden-xs col-sm-4 col-md-4">
                           <div class="module">
-                            <a href="preguntas.html" class="title color-white">Preguntas frecuentes <img src="img/icons/icon-arrow-right.svg"></a>
+                            <a href="preguntas.html" class="title color-white transition">Preguntas frecuentes <img src="img/icons/icon-arrow-right.svg" class="transition"></a>
                           </div>
                         </div>
                       </div>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-4">
+              <div class="col-xs-12 col-sm-12 col-md-4">
                 <div class="row">
                   <div id="map-canvas"></div>
                 </div>
@@ -442,7 +481,6 @@
     </div>
   </div>
 
-
   <!-- Js -->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <!--CDN link for  TweenMax-->
@@ -452,12 +490,13 @@
   <script src="js/plugins/slick.min.js"></script>
   <script src="js/plugins/jquery.lazyload.js"></script>
   <script src="js/plugins/jquery.fullPage.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/sections/index.js"></script>
   <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
   <script src="https://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
   <script src="js/plugins/map.js"></script>
   <script src="js/plugins/assets.js"></script>
   <script src="js/plugins/cursor.js"></script>
+  <script src="js/plugins/videoplayer.js"></script>
   <!-- <script src="js/plugins/grid.js"></script> -->
 
   <!-- Loader -->
@@ -468,8 +507,10 @@
         }, 600);
       });
 
-      home();
-      cursorfollow();
+      if( $(window).width() > 768 ){
+        home();
+        cursorfollow();
+      }
 
       // Grab a handle to the video
       var video = document.getElementById("video");

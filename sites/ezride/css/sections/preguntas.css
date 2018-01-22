@@ -1,0 +1,88 @@
+header .sideB a.text-link {
+  color: #35393E;
+}
+#section-01 .fill-dots-black {
+  height: 100vh;
+}
+#section-01 .fill-dots-black h1 {
+  margin-top: 140px;
+  display: table-caption;
+  position: relative;
+}
+#section-01 .fill-dots-black a {
+  display: block;
+  margin-top: 20px;
+}
+#section-01 .fill-dots-black a img {
+  margin-right: 10px;
+  margin-top: -1px;
+}
+
+#section-01 .text-heading::after {
+  content: "+";
+  position: absolute;
+  top: -17px;
+  right: -22px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+#section-01 .preguntaSide {
+  margin-top: 60px;
+  padding-top: 82px;
+  height: calc(100vh - 60px);
+}
+#section-01 .preguntaMod {
+  margin-bottom: 50px;
+  position: relative;
+  z-index: -1;
+}
+#section-01 .preguntaMod::before {
+  content: "";
+  width: 200px;
+  background: rgba(151,151,151, .2);
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 13px;
+  right: calc(100% + 15px);
+  z-index: -4 !important;
+}
+#section-01 .pregunta {
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #35393E;
+  letter-spacing: 0.8px;
+  margin-bottom: 5px;
+  line-height: 25px;
+}
+#section-01 .respuesta {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+  #section-01 .fill-dots-black {
+    height: auto;
+    padding-bottom: 60px;
+  }
+  #section-01 .fill-dots-black h1 {
+    margin-top: 120px;
+    display: inline-block;
+    position: relative;
+  }
+  #section-01 .text-heading::after {
+    right: -30px;
+  }
+  #section-01 .preguntaSide {
+    margin-top: 60px;
+    padding-top: 0px;
+    height: auto;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #section-01 .fill-dots-black h1 {
+    display: table-caption;
+  }
+}
