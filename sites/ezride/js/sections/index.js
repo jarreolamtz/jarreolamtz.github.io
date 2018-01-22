@@ -50,6 +50,40 @@ $(window).load(function(){
   var s4_array = [ s4_headingBig, "#section-04 .module" ];
 
   if( viewPort > 767 ) {
+    $("#section-01 .center-y a").click(function(){
+      // CONTROLS LINE BOLD Y
+      var topSelect = (lineHeight * 2);
+      // OBJECTS ONE
+      TweenMax.to(ctrl_lineBold, 1.6, {
+        y: topSelect,
+        ease:Power1. easeInOut
+      });
+      // OJECTS TWO
+      TweenMax.staggerFromTo(s2_array, 1.2,{y: "0%", opacity: 1}, {y: "20%", opacity: 0, ease:Power1. easeInOut}, .4);
+
+      // FILL DOTS TRANS: Section-03
+      var halfVh = ($(window).height()/2) - 60;
+      TweenMax.fromTo(s3_fillTrans, 1.6, {
+        height: "0px"
+      }, {
+        height: halfVh,
+        ease:Power1. easeInOut,
+        delay: 1.6
+      });
+      // BULLETS: s3
+      TweenMax.staggerFromTo(s3_array, 1.6,{y:"20%", opacity:0 },{y:"0%", opacity:1, ease:Power1. easeInOut,delay: 1.6 }, .4);
+      // LIST
+      TweenMax.staggerFromTo("#section-03 .bullet p", 1,{y:"+=40", opacity:0 },{y:"0%", opacity:1, ease:Power1. easeInOut,delay: 1.4 }, .2);
+      TweenMax.staggerFromTo("#section-03 li", 1,{y:"+=40", opacity:0 },{y:"0%", opacity:1, ease:Power1. easeInOut,delay: 2 }, .2);
+    });
+    $("header .indexLink").click(function(){
+      if( window.location.href.indexOf("#section01") > -1 ) {
+        //Do nothing
+      } else {
+        startOne();
+      }
+    });
+
     $('#fullpage').fullpage({
       anchors:['section01', 'section02', 'section03', 'section04'],
       css3: true,
@@ -103,13 +137,17 @@ $(window).load(function(){
               delay: 1
             });
             //VIDEO
-            TweenMax.fromTo(s3_video, 1.2, {
-              y: "0px",
-            }, {
-              y: "-140px",
-              ease:Power1. easeInOut,
-              delay: 1
-            });
+            if( nextIndex == 2) {
+              TweenMax.fromTo(s3_video, 1.2, {
+                y: "0px",
+              }, {
+                y: "-140px",
+                ease:Power1. easeInOut,
+                delay: 1
+              });
+            } else {
+
+            }
           }
           if(index == 2 && direction =='down'){
             // CONTROLS LINE BOLD Y
@@ -519,6 +557,8 @@ $(window).load(function(){
         }
       }
     });
+
+
   }
   else {
     //NOT USE FULLPAGE
@@ -534,39 +574,58 @@ $(window).load(function(){
     $.fn.fullpage.moveSectionDown();
   });
 
+  function startOne() {
+    // HEADER
+    TweenMax.to(h_textLink,1,{
+      color: "#ffffff",
+      delay: .8,
+    });
+    // FILL DOT BLUE: section-02
+    TweenMax.fromTo(s2_fillBlue, 1.2,
+      {x: "80%",opacity:0}
+      ,{x: "0%",opacity:1, delay: 1.2}
+    );
+    // CENTER XY
+    TweenMax.fromTo(s1_centerXY, 1.6, {
+      y: "+=40px",
+      opacity:0,
+    }, {
+      y: "-50%",
+      opacity:1,
+      delay: 1
+    });
+    //FILL BLUE
+    TweenMax.fromTo(s1_fillBlue, 1.2, {
+      x:"-50%",
+      delay: 1.2
+    }, {
+      x:"0%",
+      delay: 1
+    });
+    //FILL BLACK
+    TweenMax.fromTo(s1_fillBack, 1.2, {
+      height: 0
+    }, {
+      height: 140,
+      delay: .8,
+      className:"+=transition-remove"
+    });
+
+  };
   // ON REFRESH -----------------------------
     //DESKTOP
     if( viewPort > 991 ){
       // IF IT'S SECTION-01 ------
       if(window.location.href.indexOf("#section01") > -1) {
-        // FILL DOT BLUE: section-02
-        TweenMax.fromTo(s2_fillBlue, 1.2,
-          {x: "80%",opacity:0}
-          ,{x: "0%",opacity:1, delay: 1.2}
-        );
-        // CENTER XY
-        TweenMax.from(s1_centerXY, 1.6, {
-          position:"absolute",
-          y: "+=40px",
-          opacity:0,
-          delay: 1.6
-        });
-        //FILL BLUE
-        TweenMax.from(s1_fillBlue, 1, {
-          position:"absolute",
-          x:"-50%",
-          delay: 1.2
-        });
-        //FILL BLACK
-        TweenMax.from(s1_fillBack, 1, {
-          position:"absolute",
-          x:"-50%",
-          delay: .8,
-          className:"+=transition-remove"
-        });
+        startOne();
       }
       // IF IT'S SECTION-02 ------
       else if(window.location.href.indexOf("#section02") > -1) {
+        // HEADER TEXT COLOR
+        TweenMax.to(h_textLink,1,{
+          color: "#35393E",
+          delay: 1
+        });
         var topSelect = (lineHeight * 1);
         TweenMax.to(ctrl_lineBold, 1.6, {
           y: topSelect,
@@ -593,7 +652,11 @@ $(window).load(function(){
       }
       // IF IT'S SECTION-03 ------
       else if(window.location.href.indexOf("#section03") > -1) {
-
+        // HEADER TEXT COLOR
+        TweenMax.to(h_textLink,1,{
+          color: "#35393E",
+          delay: 1
+        });
         var topSelect = (lineHeight * 2);
         TweenMax.to(ctrl_lineBold, 1.6, {
           y: topSelect,
@@ -816,7 +879,7 @@ $(window).load(function(){
         ease:Power1. easeInOut
       });
       TweenMax.to("header", 1, {
-        opacity:0,
+        opacity:1,
         ease:Power1. easeInOut
       });
     }
