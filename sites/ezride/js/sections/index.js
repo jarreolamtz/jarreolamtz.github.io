@@ -10,11 +10,12 @@ else if(window.location.href.indexOf("#section03") > -1) {
 else if(window.location.href.indexOf("#section04") > -1) {
   $("#section-04").addClass("active");
 }
+var viewPort = $(window).width();
 
 $(window).load(function(){
 
   var lineHeight = $("#controls .line").height() / 4;
-  var viewPort = $(window).width();
+
   // SELECTORS:--------------------------------------
   //general -------------------------
   var h_textLink = ("header .sideB .text-link");
@@ -49,8 +50,14 @@ $(window).load(function(){
   var s4_modules = ("#section-04 .module");
   var s4_array = [ s4_headingBig, "#section-04 .module" ];
 
-  if( viewPort > 767 ) {
+  //desktop
+  if( viewPort > 991 ) {
     $("#section-01 .center-y a").click(function(){
+      var topSelect = (lineHeight * 2);
+      TweenMax.to(ctrl_lineBold, 1.6, {
+        y: topSelect,
+        ease:Power1. easeInOut
+      });
       // CONTROLS LINE BOLD Y
       var topSelect = (lineHeight * 2);
       // OBJECTS ONE
@@ -99,12 +106,16 @@ $(window).load(function(){
           //alert("desktop" + viewPort);
           //LEAVING SECTION - DOWN ------------------
           if(index == 1 && direction =='down'){
-            // CONTROLS LINE BOLD Y
-            var topSelect = (lineHeight * 1);
-            TweenMax.to(ctrl_lineBold, 1.6, {
-              y: topSelect,
-              ease:Power1. easeInOut
-            });
+            if( nextIndex == 2 ) {
+              // CONTROLS LINE BOLD Y
+              var topSelect = (lineHeight * 1);
+              TweenMax.to(ctrl_lineBold, 1.6, {
+                y: topSelect,
+                ease:Power1. easeInOut
+              });
+            } else {
+
+            }
             // HEADER TEXT COLOR
             TweenMax.to(h_textLink,1,{
               color: "#35393E",
@@ -235,11 +246,15 @@ $(window).load(function(){
             });
           }
           else if(index == 3 && direction == 'up'){
-            var topSelect = (lineHeight * 1);
-            TweenMax.to(ctrl_lineBold, 1.6, {
-              y: topSelect,
-              ease:Power1. easeInOut
-            });
+            if( nextIndex === 2 ) {
+              var topSelect = (lineHeight * 1);
+              TweenMax.to(ctrl_lineBold, 1.6, {
+                y: topSelect,
+                ease:Power1. easeInOut
+              });
+            } else {
+
+            }
             TweenMax.staggerFromTo(s2_array, 1.2,{y: "20%", opacity: 0}, {y: "0%", opacity: 1, ease:Power1. easeInOut, delay: .8}, .4);
             TweenMax.to(s3_video, 1.2, {
               y: "-140px",
@@ -275,11 +290,15 @@ $(window).load(function(){
             TweenMax.staggerFromTo(s3_array, 1,{y:"0%", opacity:1 },{y:"20%", opacity:0, ease:Power1. easeInOut }, .4);
           }
           else if(index == 4 && direction == 'up'){
-            var topSelect = (lineHeight * 2);
-            TweenMax.to(ctrl_lineBold, 1.6, {
-              y: topSelect,
-              ease:Power1. easeInOut
-            });
+            if( nextIndex == 3 ){
+              var topSelect = (lineHeight * 2);
+              TweenMax.to(ctrl_lineBold, 1.6, {
+                y: topSelect,
+                ease:Power1. easeInOut
+              });
+            } else {
+              
+            }
             // FILL DOTS TRANS: Section-03
             var halfVh = ($(window).height()/2) - 60;
             TweenMax.fromTo(s3_fillTrans, 1.6, {
@@ -313,7 +332,7 @@ $(window).load(function(){
           }
         }
         //TABLET
-        else if( viewPort < 992 && viewPort > 767){
+        else if( viewPort <= 991 && viewPort > 768){
           //alert("tablet");
           //LEAVING SECTION - DOWN ------------------
           if(index == 1 && direction =='down'){
@@ -552,16 +571,28 @@ $(window).load(function(){
           }
         }
         //PHONE
-        else if( viewPort < 768 ){
+        else if(viewPort <= 767 ){
 
         }
       }
     });
-
-
   }
-  else {
-    //NOT USE FULLPAGE
+  //tablet
+  else if( viewPort <= 991 && viewPort >= 768 ){
+    $("header .indexLink").click(function(){
+      if( window.location.href.indexOf("#section01") > -1 ) {
+        //Do nothing
+      } else {
+        startOneTablet()
+      }
+    });
+  }
+  //phone
+  else if( viewPort <= 767 ) {
+    $("header .indexLink").click(function(){
+      $("body, html").animate({ scrollTop: 0}, 1200);
+    });
+
   }
 
   // CONTROLS: Generals ---------------------
@@ -579,6 +610,12 @@ $(window).load(function(){
     TweenMax.to(h_textLink,1,{
       color: "#ffffff",
       delay: .8,
+    });
+    // CONTROLS LINE BOLD Y
+    var topSelect = (lineHeight * 0);
+    TweenMax.to(ctrl_lineBold, 1.6, {
+      y: topSelect,
+      ease:Power1. easeInOut
     });
     // FILL DOT BLUE: section-02
     TweenMax.fromTo(s2_fillBlue, 1.2,
@@ -612,8 +649,41 @@ $(window).load(function(){
     });
 
   };
+  function startOneTablet() {
+    TweenMax.to(h_textLink,1,{
+      color: "#FFFFFF"
+    });
+    TweenMax.to(ctrl_lineBold, 1.6, {
+      y: 0,
+      ease:Power1. easeInOut
+    });
+    // FILL DOT BLUE: section-02
+    TweenMax.fromTo(s2_fillBlue, 1.2,
+      {x: "80%",opacity:0}
+      ,{x: "0%",opacity:1, delay: 1.2}
+    );
+    // CENTER XY
+    TweenMax.from(s1_centerXY, 1.6, {
+      position:"absolute",
+      y: "+=40px",
+      opacity:0,
+      delay: 1.6
+    });
+    //FILL BLUE
+    TweenMax.from(s1_fillBlue, 1, {
+      position:"absolute",
+      x:"-50%",
+      delay: 1.2
+    });
+    //FILL BLACK
+    TweenMax.from(s1_fillBack, 1, {
+      position:"absolute",
+      x:"-50%",
+      delay: .8,
+      className:"+=transition-remove"
+    });
+  }
   // ON REFRESH -----------------------------
-    //DESKTOP
     if( viewPort > 991 ){
       // IF IT'S SECTION-01 ------
       if(window.location.href.indexOf("#section01") > -1) {
@@ -706,34 +776,10 @@ $(window).load(function(){
       }
     }
     //TABLET
-    else if( viewPort < 992 && viewPort > 767){
+    else if( viewPort <= 991 && viewPort >= 768 ){
       // IF IT'S SECTION-01 ------
       if(window.location.href.indexOf("#section01") > -1) {
-        // FILL DOT BLUE: section-02
-        TweenMax.fromTo(s2_fillBlue, 1.2,
-          {x: "80%",opacity:0}
-          ,{x: "0%",opacity:1, delay: 1.2}
-        );
-        // CENTER XY
-        TweenMax.from(s1_centerXY, 1.6, {
-          position:"absolute",
-          y: "+=40px",
-          opacity:0,
-          delay: 1.6
-        });
-        //FILL BLUE
-        TweenMax.from(s1_fillBlue, 1, {
-          position:"absolute",
-          x:"-50%",
-          delay: 1.2
-        });
-        //FILL BLACK
-        TweenMax.from(s1_fillBack, 1, {
-          position:"absolute",
-          x:"-50%",
-          delay: .8,
-          className:"+=transition-remove"
-        });
+        startOneTablet();
       }
       // IF IT'S SECTION-02 ------
       else if(window.location.href.indexOf("#section02") > -1) {
@@ -799,7 +845,7 @@ $(window).load(function(){
       }
     }
     //PHONE
-    else if( viewPort < 768){}
+    else if( viewPort <= 767){}
 
   //ANIMATION START ------------------------
   TweenMax.to(s2_fillTrans, 1.6, {

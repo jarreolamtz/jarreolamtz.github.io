@@ -1,5 +1,5 @@
+var viewPort = $(window).width();
 $(window).load(function(){
-  var viewPort = $(window).width();
 
 
   $(".messenger-trigger").click(function(){
