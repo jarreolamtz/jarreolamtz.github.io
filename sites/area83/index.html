@@ -78,21 +78,24 @@
               <header>
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-3 offset-1">
+                    <div class="col-4 offset-1">
                       <h1 class="text-minHeading color-white initLine text-drop-gsap">Full Site Febrero 2018</h1>
                     </div>
-                    <div class="col-5">
+                    <div class="col-2">
                       <!-- Empty -->
                     </div>
-                    <div class="col-2">
+                    <div class="col-4">
                       <div class="endLine">
-                        <a href="mailTo:hola@area83.mx" class="text-minHeading color-white text-drop-gsap">hola@area83.mx</a>
-                        <a href="tel:+52 8115782169" class="text-minHeading color-white text-drop-gsap">+52 8115782169</a>
+                        <a href="mailTo:hola@area83.mx" class="text-minHeading color-white text-drop-gsap transition">hola@area83.mx</a>
+                        <a href="tel:+52 8115782169" class="text-minHeading color-white text-drop-gsap transition">+52 8115782169</a>
+                        <a href="https://vimeo.com/area83media" class="text-minHeading color-white text-drop-gsap transition">Vimeo</a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="line"></div>
+                <div class="line">
+                  <div class="lineView"></div>
+                </div>
               </header>
               <!-- Section - 01 -->
               <section id="section-01">
@@ -101,7 +104,7 @@
                   <iframe id="video" src="https://player.vimeo.com/video/181581011?api=1&player_id=player1" id="video" class="center-xy" frameborder="0" autoplay webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
                 <img src="img/icons/logo-color.svg" class="logo center-xy" alt="Area 83">
-                <a href="javascript:void(0)" id="playButton" class="text-button color-white">Demo Reel</a>
+                <a href="javascript:void(0)" id="playButton" class="text-button color-white"><span class="transition">Demo Reel</span></a>
                 <div class="vertLines"></div>
                 <div class="glitch"></div>
                 <canvas id="canvas" width="300" height="300"></canvas>
@@ -134,6 +137,9 @@
             $(".loader").fadeOut(1200);
             animationsGsap();
           }, 4800);
+          setTimeout(function(){
+            glitchStart();
+          }, 4000);
           home();
           // cursorfollow();
       </script>

@@ -1,15 +1,23 @@
+// START ANIMATIONS GSAP ---------------------------------------
 function animationsGsap() {
   var h_dropText = document.getElementsByClassName("text-drop-gsap");
+  var h_line = document.getElementsByClassName("lineView");
   var s1_buttonPlay = document.getElementById("playButton");
+
   TweenMax.fromTo(s1_buttonPlay, 3,{
     y: "-=10",
     opacity: 0,
   }, {
-    delay: 2,
+    delay: 2.5,
     ease: Power4.easeOut,
     y: 0,
     opacity: 1,
   })
+  TweenMax.from(h_line, 1,{
+    width: "0",
+    delay: .5,
+    ease: Power2.easeOut
+  });
 
   var mySplitText = new SplitText(h_dropText, {type:"chars,words, lines"}),
     tl = new TimelineMax({repeatDelay:0.5});
@@ -17,6 +25,7 @@ function animationsGsap() {
   tl.staggerFrom(mySplitText.chars, 0.04, {opacity:0}, 0.04);
 };
 
+// VIMEO CONTROLS ---------------------------------------
 $("#playButton").click(function(){
   $(".videoDiv").addClass("active");
   $(".videoDiv").fadeIn(600);
@@ -25,9 +34,6 @@ $(".closeVideo").click(function(){
   $(".videoDiv").removeClass("active");
   $(".videoDiv").fadeOut(600);
 });
-
-
-
 var iframe = document.getElementById('video');
 // $f == Froogaloop
 var player = $f(iframe);
@@ -44,13 +50,9 @@ pauseButton.addEventListener("click", function() {
 
 
 
-
-
-
-$(function(){
-  /*
-    :glitchBoy
-  */
+// GLITCH VIDEO ---------------------------------------
+function glitchStart(){
+  console.log("glitch!");
 
   var bodyW = document.body.clientWidth;
   var bodyH = document.body.clientHeight;
@@ -113,13 +115,13 @@ $(function(){
     }
   }
   glitchBoy.prototype.process = function () {
-  requestAnimationFrame(process);
- }
+    requestAnimationFrame(process);
+   }
 
   /*
-    :videoGirl
+    :videoGo
   */
-  function videoGirl(options, callback){
+  function videoGo(options, callback){
     var options = $.extend({
       src:"",
       type:'video/ogg',
@@ -151,7 +153,7 @@ $(function(){
   // sync
   var FPS = 15;
   var frm = 0;
-  var vGirl = new videoGirl({
+  var vGirl = new videoGo({
     src:'video/demito.mp4',
     type:'video/mp4'
   }, sync);
@@ -176,4 +178,4 @@ $(function(){
       }
     }, 1000/FPS);
   }
-});
+};

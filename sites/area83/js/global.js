@@ -9,13 +9,21 @@ $(document).ready(function(){
   //DESKTOP
   if( viewPort > tablet ){
     console.log("Desktop");
-    var initLine = ($(".initLine").offset().left) + ($(".initLine").width());
-    var endLine = $(".endLine").offset().left;
-    var widthLine = endLine - initLine - 20;
-    var linePos = (document.body.clientWidth / 2) + (($(".initLine").width() - $(".endLine").width())/2);
-    console.log("linePos " + linePos);
-    $("header .line").width(widthLine);
-    $("header .line").css("left", linePos);
+    function lineHeader(){
+      var initLine = ($(".initLine").offset().left) + ($(".initLine").width());
+      var endLine = $(".endLine").offset().left;
+      var widthLine = endLine - initLine - 20;
+      var linePos = (document.body.clientWidth / 2) + (($(".initLine").width() - $(".endLine").width())/2);
+      $("header .line").width(widthLine);
+      $("header .line").css("left", linePos);
+      console.log("linePos " + linePos);
+    }
+    lineHeader();
+
+    window.onresize = function() {
+      $(".lineView").removeAttr("style");
+      lineHeader();
+    }
   }
   //TABLET
   else if( viewPort < desktop && viewPort > phone){

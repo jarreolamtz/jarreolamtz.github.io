@@ -165,7 +165,6 @@ a,
 a:hover,
 a:focus,
 a:active {
-  color: #151515;
   outline: none;
   text-decoration: none !important; }
 
@@ -203,10 +202,9 @@ a:active {
 
 /* HOVERS */
 @media screen and (min-width: 992px) {
-  a,
   a:hover,
   a:focus {
-    color: #2d2d2d;
+    color: #ea7200 !important;
     text-decoration: none;
     outline: none !important; }
 
