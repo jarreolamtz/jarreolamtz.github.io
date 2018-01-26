@@ -1,8 +1,8 @@
 function animationsGsap() {
   console.log("gsap!");
   var s1_buttonPlay = document.getElementById("playButton")
-  TweenMax.fromTo(s1_buttonPlay, 4,{
-    y: "-=20",
+  TweenMax.fromTo(s1_buttonPlay, 3,{
+    y: "-=10",
     opacity: 0,
   }, {
     delay: 2,
