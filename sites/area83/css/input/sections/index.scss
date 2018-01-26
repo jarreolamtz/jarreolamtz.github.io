@@ -1,0 +1,156 @@
+@import '../framework/bootstrap-4/bootstrap';
+@import '../framework/bootstrap-4/_reboot';
+
+#section-01 {
+  width: 100vw;
+  height: 100vh;
+  background-position: center center !important;
+  background-size: cover !important;
+  position: relative;
+  img {
+    z-index: 2;
+  }
+}
+canvas#canvas {
+  background-size: content !important;
+  position: absolute;
+  top: 0;
+  opacity: .15;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -2;
+}
+
+$ease-out-quint:cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$ease-in-quint:cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$screen-background:#121010;
+@keyframes flicker{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      opacity:random();
+    }
+  }
+}
+.glitch {
+  width:100vw;
+  height: 100vh;
+  overflow:hidden;
+  background-size: cover !important;
+  background-position: center center !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  // flicker
+  &::after {
+    content:" ";
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:transparentize($screen-background,0.9);
+    opacity:0;
+    pointer-events:none;
+    animation:flicker 0.15s infinite;
+    z-index: 1;
+  }
+  // scanlines
+  &::before {
+    content:" ";
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:linear-gradient(transparentize($screen-background,1) 50%, transparentize(darken($screen-background,10),0.75) 50%), linear-gradient(90deg,transparentize(#ff0000,0.94),transparentize(#00ff00,0.98),transparentize(#0000ff,0.94));
+    background-size:100% 2px, 3px 100%;
+    pointer-events:none;
+    z-index: 1;
+  }
+}
+.vertLines {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent);
+  background-size: 8.333vw, 100% 100%;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+  left: -1px;
+  top: 0;
+}
+#section-01 .elements {
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+}
+@keyframes borderVideo {
+    0% {box-shadow: 0 0 0 2px black, 0 0 0 4px #EA7200}
+    100% {box-shadow: 0 0 0 4px black, 0 0 0 6px #EA7200}
+}
+#section-01 #playButton {
+  margin-bottom: 10px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer !important;
+  box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent;
+
+  &:hover {
+    transform: scale(1.1);
+    animation-name: borderVideo;
+    animation-duration: .6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
+
+.videoDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999999999999;
+  display: none;
+  background: rgba(0,0,0,.8);
+  .closeVideo {
+    position: absolute;
+    top: 50%;
+    left: calc(100vw - 10vw / 2);
+    transform: translate(-50%,-50%);
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer !important;
+    box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent;
+
+    &:hover {
+      transform: translate(-50%,-50%) scale(1.1);
+      animation-name: borderVideo;
+      animation-duration: .6s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
+  iframe {
+    width: calc(80vw) !important;
+    height: calc(80vw / 1.77777777777779) !important;
+  }
+}
+
+@include media-breakpoint-up(xs) {
+
+}
+@include media-breakpoint-up(sm) {  }
+@include media-breakpoint-up(md) {
+
+}
+@include media-breakpoint-up(lg) {  }
+@include media-breakpoint-up(xl) {
+
+}

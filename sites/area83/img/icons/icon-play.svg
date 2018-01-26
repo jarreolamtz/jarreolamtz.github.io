@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-693.000000, -593.000000)">
+        <g id="Group" transform="translate(694.000000, 594.000000)">
+            <circle id="Oval" stroke="#FFFFFF" stroke-width="2" cx="26" cy="26" r="26"></circle>
+            <path d="M37.009785,27.6675848 L22.6009119,36.6475121 C21.6634905,37.2317337 20.4299551,36.9454088 19.8457335,36.0079874 C19.6479359,35.6906085 19.543085,35.3241301 19.543085,34.9501605 L19.543085,16.9903059 C19.543085,15.8857364 20.4385155,14.9903059 21.543085,14.9903059 C21.9170546,14.9903059 22.283533,15.0951568 22.6009119,15.2929544 L37.009785,24.2728817 C37.9472064,24.8571034 38.2335313,26.0906388 37.6493096,27.0280601 C37.4877637,27.2872709 37.2689958,27.5060389 37.009785,27.6675848 Z" id="Triangle" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

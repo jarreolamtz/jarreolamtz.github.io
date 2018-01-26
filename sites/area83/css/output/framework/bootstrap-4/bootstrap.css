@@ -1,0 +1,86 @@
+/*
+Error: Invalid CSS after "...lor}: #{$value}": expected "{", was ";"
+        on line 4 of input/framework/bootstrap-4/_root.scss
+        from line 11 of input/framework/bootstrap-4/bootstrap.scss
+
+1: :root {
+2:   // Custom variable values only support SassScript inside `#{}`.
+3:   @each $color, $value in $colors {
+4:     --#{$color}: #{$value};
+5:   }
+6: 
+7:   @each $color, $value in $theme-colors {
+8:     --#{$color}: #{$value};
+9:   }
+
+Backtrace:
+input/framework/bootstrap-4/_root.scss:4
+input/framework/bootstrap-4/bootstrap.scss:11
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:1278:in `expected'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:1208:in `expected'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:1203:in `tok!'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:677:in `block'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:697:in `block_child'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:686:in `block_contents'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:678:in `block'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:319:in `each_directive'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:234:in `special_directive'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:209:in `directive'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:697:in `block_child'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:686:in `block_contents'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:678:in `block'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:670:in `ruleset'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:696:in `block_child'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:686:in `block_contents'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/scss/parser.rb:41:in `parse'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/engine.rb:414:in `_to_tree'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/engine.rb:321:in `to_tree'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/stack.rb:88:in `block in with_import'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/stack.rb:88:in `with_import'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `call'
+/Users/arreola/.rvm/gems/ruby-2.0.0-p648/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...lor}: #{$value}\": expected \"{\", was \";\"\A         on line 4 of input/framework/bootstrap-4/_root.scss\A         from line 11 of input/framework/bootstrap-4/bootstrap.scss\A \A 1: :root {\A 2:   // Custom variable values only support SassScript inside `#{}`.\A 3:   @each $color, $value in $colors {\A 4:     --#{$color}: #{$value};\A 5:   }\A 6: \A 7:   @each $color, $value in $theme-colors {\A 8:     --#{$color}: #{$value};\A 9:   }"; }

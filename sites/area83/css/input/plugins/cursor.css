@@ -1,0 +1,70 @@
+/* DESKTOP --------------------------------- */
+@media screen and (min-width: 991px) {
+  .cursor {
+    position: absolute;
+    background-color: #D16703;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    transition: .3s cubic-bezier(.75,-1.27,.3,2.33) -webkit-transform,.2s cubic-bezier(.75,-.27,.3,1.33) opacity;
+    transition: .3s cubic-bezier(.75,-1.27,.3,2.33) transform,.2s cubic-bezier(.75,-.27,.3,1.33) opacity;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  @-webkit-keyframes hoverCircle {
+    0%   {
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+        }
+    100% {
+      -webkit-transform: scale(1.8);
+      transform: scale(1.8);
+     }
+  }
+  .cursor.active {
+    -webkit-animation: hoverCircle 1.2s infinite alternate; /* Safari 4+ */
+    -moz-animation:    hoverCircle 1.2s infinite alternate; /* Fx 5+ */
+    -o-animation:      hoverCircle 1.2s infinite alternate; /* Opera 12+ */
+    animation:         hoverCircle 1.2s infinite alternate; /* IE 10+, Fx 29+ */
+    animation-timing-function: ease-out;
+    background: #ed6565;
+  }
+  .cursor.circleBlue {
+    background: #355088;
+  }
+  .cursor-follower {
+      position: absolute;
+      background-color: rgba(184,187,194,.3);
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      transition: .6s cubic-bezier(.75,-1.27,.3,2.33) -webkit-transform,.2s cubic-bezier(.75,-.27,.3,1.33) opacity;
+      transition: .6s cubic-bezier(.75,-1.27,.3,2.33) transform,.2s cubic-bezier(.75,-.27,.3,1.33) opacity;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      pointer-events: none;
+      z-index: 9999;
+      -webkit-transform: translate(5px,5px);
+      transform: translate(5px,5px);
+  }
+  *,body,html,a {
+   cursor:none !important;
+  }
+  [aria-busy=true] {
+   cursor:progress;
+  }
+  [aria-controls] {
+   cursor:pointer;
+  }
+  [aria-disabled] {
+   cursor:default;
+  }
+}

@@ -1,0 +1,371 @@
+// sass --watch input:output
+
+/*.site-content {
+	background: url(../img/delete/contacto-tablet.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	opacity: 0.6;
+}*/
+
+/* IMPORTS */
+/* VARIABLES  --------------------------------- */
+// FILLS
+$fill-black:#151515;
+$fill-gray: #A1A1A1;
+$fill-white: #FFFFFF;
+// COLORS
+$color-black: #151515;
+$color-gray: #A1A1A1;
+$color-white: #ffffff;
+// OPACITY
+$opacity-75: 0.75;
+$opacity-50: 0.5;
+$opacity-25: 0.25;
+$opacity-15: 0.15;
+/* MIXINS --------------------------------- */
+@mixin rotation($deg) {
+  -webkit-transform: rotate($deg);
+     -moz-transform: rotate($deg);
+      -ms-transform: rotate($deg);
+          transform: rotate($deg);
+}
+@mixin transition($ms) {
+  -webkit-transition: all $ms ease-in-out;
+     -moz-transition: all $ms ease-in-out;
+      -ms-transition: all $ms ease-in-out;
+          transition: all $ms ease-in-out;
+}
+/* FILLS  --------------------------------- */
+.fill-black {
+  background: $fill-black;
+}
+.fill-gray {
+  background: $fill-gray;
+}
+.fill-white {
+  background: $fill-white;
+}
+/* FONTS --------------------------------- */
+.text-heading {
+  font-family: "RussoOne-Regular";
+  font-size: 40px;
+  letter-spacing: 4px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+.text-minHeading {
+  font-family: "RussoOne-Regular";
+  font-size: 15px;
+  letter-spacing: 4px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.text-body {
+
+}
+.text-body + .text-body {
+
+}
+.text-link {
+
+}
+/* COLORS --------------------------------- */
+.color-black {
+  color: $color-black;
+}
+
+.color-gray {
+  color: $color-gray;
+}
+
+.color-white {
+  color: $color-white;
+}
+/* BUTTON FILL --------------------------------- */
+button {
+
+}
+.button-fill {
+
+}
+.button-fill img {
+  display: inline-block;
+}
+/* BUTTON STROKE --------------------------------- */
+.button-stroke {
+
+}
+.button-stroke img {
+
+}
+/* OPACITY --------------------------------- */
+.opacity-75 {
+  opacity: $opacity-75;
+}
+
+.opacity-50 {
+  opacity: $opacity-50;
+}
+
+.opacity-25 {
+  opacity: $opacity-25;
+}
+
+.opacity-15 {
+  opacity: $opacity-15;
+}
+/* ROTATES --------------------------------- */
+.rotate-45 {
+  @include rotation(45deg)
+}
+.rotate-90 {
+  @include rotation(90deg)
+}
+.rotate-180 {
+  @include rotation(180deg)
+}
+.rotate-270 {
+  @include rotation(270deg)
+}
+/* TRANSITIONS --------------------------------- */
+.transition {
+  @include transition(300ms)
+}
+.transition-600 {
+  @include transition(600ms)
+}
+.transition-900 {
+  @include transition(900ms)
+}
+/* CENTERS --------------------------------- */
+.center-container {
+  position: relative
+}
+.center-x {
+
+}
+.center-y {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.center-xy {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+/* GENERAL --------------------------------- */
+body {
+  background: black !important;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, address {
+  margin: 0;
+}
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+li::selection,
+a::selection,
+span::selection,
+address::selection {
+
+}
+input,
+textarea {
+  border-radius: 0 !important;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  color: #151515;
+  outline: none;
+}
+/* LOADER --------------------------------- */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999999999;
+  background: black;
+}
+.loader img {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 437px;
+}
+
+/* GENERAL --------------------------------- */
+.line-black {
+  width: 100%;
+  height: 1px;
+  background: #333333;
+  display: block;
+  margin: 5px 0;
+}
+.line-gray {
+  width: 100%;
+  height: 1px;
+  background: #D8D8D8;
+  display: block;
+  margin: 5px 0;
+}
+
+/* HOVERS */
+@media screen and (min-width: 992px) {
+    a,
+    a:hover,
+    a:focus {
+      color: #2d2d2d;
+      text-decoration: none;
+      outline: none !important;
+    }
+    *:focus {
+        outline: none;
+    }
+    /* LINKS --------------------------------- */
+    a.color-black:hover,
+    a.color-black:focus {
+        color: #4b4b4b;
+    }
+
+    a.color-gray:hover,
+    a.color-gray:focus {
+        color: #b3b3b3;
+    }
+
+    a.color-white:hover,
+    a.color-white:focus {
+        color: #d4d4d4;
+    }
+}
+
+/* MODULE --------------------------------- */
+@media screen and (min-width: 992px) {
+    .col-md-center {
+        float: none;
+        display: inline-block;
+    }
+}
+
+/* MODULE --------------------------------- */
+@media screen and (max-width: 992px) and (min-width: 768px){
+    .col-sm-center {
+        float: none;
+        display: inline-block;
+    }
+}
+
+/* MODULE --------------------------------- */
+@media screen and (min-width: 768px) {
+  .col-bottom {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+  }
+}
+
+/* TABLET - 991px --------------------------------- */
+@media screen and (max-width: 991px) {
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+   text-decoration: none;
+  }
+  .text-center-mobile {
+      text-align: center;
+  }
+  .text-heading-text p {
+      margin-top: 10px;
+  }
+  .container {
+      max-width: initial;
+      padding: 0 40px;
+  }
+  /* FONTS --------------------------------- */
+  .text-heading-section {
+
+  }
+  .text-heading-post {
+
+  }
+  .text-heading-subPost {
+
+  }
+  .text-subHeading-post {
+
+  }
+  .text-body + .text-body {
+
+  }
+  .text-body {
+
+  }
+  .text-link {
+
+  }
+  .text-center-sm {
+      text-align: center;
+  }
+}
+
+/* PHONE - 767px --------------------------------- */
+@media screen and (max-width: 767px) {
+  .site {
+
+  }
+  .col-xs-center {
+      float: none;
+      display: inline-block;
+  }
+  .container {
+
+  }
+  /* LOADER --------------------------------- */
+  .loader img {
+      width: 160px;
+  }
+  /* FONTS --------------------------------- */
+  .text-heading {
+
+  }
+  .text-subHeading {
+
+  }
+  .text-body + .text-body {
+
+  }
+  .text-body {
+
+  }
+}
