@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'RussoOne-Regular';
-  src: url('RussoOne-Regular.eot');
-  src: url('RussoOne-Regular.woff2') format('woff2'),
-       url('RussoOne-Regular.woff') format('woff'),
-       url('RussoOne-Regular.ttf') format('truetype'),
-       url('RussoOne-Regular.svg#RussoOne-Regular') format('svg'),
-       url('RussoOne-Regular.eot?#iefix') format('embedded-opentype');
+  src: url('russoone-regular.eot');
+  src: url('russoone-regular.woff2') format('woff2'),
+       url('russoone-regular.woff') format('woff'),
+       url('russoone-regular.ttf') format('truetype'),
+       url('russoone-regular.svg#RussoOne-Regular') format('svg'),
+       url('russoone-regular.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
