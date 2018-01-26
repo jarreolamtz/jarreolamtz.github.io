@@ -9,8 +9,9 @@ header {
     top: 10px;
     transform: translateX(-50%); }
   header .initLine {
-    display: inline;
-    margin-left: -15px; }
+    display: inline-block;
+    margin-left: -15px;
+    vertical-align: top; }
   header .endLine {
     margin-right: -15px;
     float: right;
