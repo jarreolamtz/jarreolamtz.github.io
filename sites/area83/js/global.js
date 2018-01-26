@@ -5,19 +5,19 @@ $(document).ready(function(){
   var tablet = 991;
   var phone = 767;
 
-
+  function lineHeader(){
+    var initLine = ($(".initLine").offset().left) + ($(".initLine").width());
+    var endLine = $(".endLine").offset().left;
+    var widthLine = endLine - initLine - 20;
+    var linePos = (document.body.clientWidth / 2) + (($(".initLine").width() - $(".endLine").width())/2);
+    $("header .line").width(widthLine);
+    $("header .line").css("left", linePos);
+    console.log("linePos " + linePos);
+  }
   //DESKTOP
   if( viewPort > tablet ){
     console.log("Desktop");
-    function lineHeader(){
-      var initLine = ($(".initLine").offset().left) + ($(".initLine").width());
-      var endLine = $(".endLine").offset().left;
-      var widthLine = endLine - initLine - 20;
-      var linePos = (document.body.clientWidth / 2) + (($(".initLine").width() - $(".endLine").width())/2);
-      $("header .line").width(widthLine);
-      $("header .line").css("left", linePos);
-      console.log("linePos " + linePos);
-    }
+
     lineHeader();
 
     window.onresize = function() {
@@ -28,6 +28,12 @@ $(document).ready(function(){
   //TABLET
   else if( viewPort < desktop && viewPort > phone){
     console.log("Tablet");
+    lineHeader();
+
+    window.onresize = function() {
+      $(".lineView").removeAttr("style");
+      lineHeader();
+    }
   }
   //PHONE
   else if( viewPort <= phone){
