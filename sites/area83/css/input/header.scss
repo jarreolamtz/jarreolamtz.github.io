@@ -1,0 +1,25 @@
+header {
+  position: fixed;
+  top: 15px;
+  width: 100vw;
+  .line {
+    height: 1px;
+    background: white;
+    position: absolute;
+    top: 10px;
+    transform: translateX(-50%);
+  }
+  .initLine {
+    display: inline;
+    margin-left: -15px;
+  }
+  .endLine {
+    margin-right: -15px;
+    float: right;
+    text-align: right;
+    a {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}

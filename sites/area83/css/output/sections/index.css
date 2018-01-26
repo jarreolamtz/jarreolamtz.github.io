@@ -6759,6 +6759,22 @@ template {
   position: relative; }
   #section-01 img {
     z-index: 2; }
+  #section-01 #playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 63px 0 0 -91px;
+    padding: 12px 40px;
+    border-radius: 2px;
+    border: 1px solid white;
+    cursor: pointer !important;
+    box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent;
+    opacity: 0; }
+    #section-01 #playButton:hover {
+      animation-name: borderVideo;
+      animation-duration: .6s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate; }
 
 canvas#canvas {
   background-size: content !important;
@@ -6771,47 +6787,47 @@ canvas#canvas {
 
 @keyframes flicker {
   0% {
-    opacity: 0.86390901; }
+    opacity: 0.1412515482; }
   5% {
-    opacity: 0.1611987707; }
+    opacity: 0.2120574337; }
   10% {
-    opacity: 0.3829217836; }
+    opacity: 0.1409544873; }
   15% {
-    opacity: 0.6233671003; }
+    opacity: 0.4333701313; }
   20% {
-    opacity: 0.3727401974; }
+    opacity: 0.7292609423; }
   25% {
-    opacity: 0.9468244054; }
+    opacity: 0.6644152444; }
   30% {
-    opacity: 0.9930427633; }
+    opacity: 0.0634513437; }
   35% {
-    opacity: 0.1614276676; }
+    opacity: 0.9106055272; }
   40% {
-    opacity: 0.2045128497; }
+    opacity: 0.8230734965; }
   45% {
-    opacity: 0.1544298517; }
+    opacity: 0.5478833852; }
   50% {
-    opacity: 0.6649099538; }
+    opacity: 0.690277406; }
   55% {
-    opacity: 0.6318231788; }
+    opacity: 0.2453208511; }
   60% {
-    opacity: 0.3800406234; }
+    opacity: 0.7061870276; }
   65% {
-    opacity: 0.8178530763; }
+    opacity: 0.7638472871; }
   70% {
-    opacity: 0.1141506693; }
+    opacity: 0.111560998; }
   75% {
-    opacity: 0.3621618481; }
+    opacity: 0.7196921205; }
   80% {
-    opacity: 0.7929732411; }
+    opacity: 0.6306360255; }
   85% {
-    opacity: 0.6275971468; }
+    opacity: 0.1837306713; }
   90% {
-    opacity: 0.8983019008; }
+    opacity: 0.7078873371; }
   95% {
-    opacity: 0.9910220006; }
+    opacity: 0.634643381; }
   100% {
-    opacity: 0.3372550762; } }
+    opacity: 0.2092969395; } }
 .glitch {
   width: 100vw;
   height: 100vh;
@@ -6868,22 +6884,9 @@ canvas#canvas {
 
 @keyframes borderVideo {
   0% {
-    box-shadow: 0 0 0 2px black, 0 0 0 4px #EA7200; }
+    box-shadow: 0 0 0 2px black, 0 0 0 4px rgba(234, 114, 0, 0.2); }
   100% {
     box-shadow: 0 0 0 4px black, 0 0 0 6px #EA7200; } }
-#section-01 #playButton {
-  margin-bottom: 10px;
-  width: 40px;
-  border-radius: 50%;
-  cursor: pointer !important;
-  box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent; }
-  #section-01 #playButton:hover {
-    transform: scale(1.1);
-    animation-name: borderVideo;
-    animation-duration: .6s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate; }
-
 .videoDiv {
   position: absolute;
   top: 0;

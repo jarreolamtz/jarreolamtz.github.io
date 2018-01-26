@@ -9,6 +9,13 @@ $(document).ready(function(){
   //DESKTOP
   if( viewPort > tablet ){
     console.log("Desktop");
+    var initLine = ($(".initLine").offset().left) + ($(".initLine").width());
+    var endLine = $(".endLine").offset().left;
+    var widthLine = endLine - initLine - 20;
+    var linePos = (document.body.clientWidth / 2) + (($(".initLine").width() - $(".endLine").width())/2);
+    console.log("linePos " + linePos);
+    $("header .line").width(widthLine);
+    $("header .line").css("left", linePos);
   }
   //TABLET
   else if( viewPort < desktop && viewPort > phone){

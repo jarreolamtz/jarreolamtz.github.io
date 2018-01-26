@@ -1,3 +1,17 @@
+function animationsGsap() {
+  console.log("gsap!");
+  var s1_buttonPlay = document.getElementById("playButton")
+  TweenMax.fromTo(s1_buttonPlay, 4,{
+    y: "-=20",
+    opacity: 0,
+  }, {
+    delay: 2,
+    ease: Power4.easeOut,
+    y: 0,
+    opacity: 1,
+  })
+};
+
 $("#playButton").click(function(){
   $(".videoDiv").addClass("active");
   $(".videoDiv").fadeIn(600);

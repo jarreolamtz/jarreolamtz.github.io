@@ -10,7 +10,26 @@
   img {
     z-index: 2;
   }
+  #playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 63px 0 0 -91px;
+    padding: 12px 40px;
+    border-radius: 2px;
+    border: 1px solid white;
+    cursor: pointer !important;
+    box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent;
+    opacity: 0;
+    &:hover {
+      animation-name: borderVideo;
+      animation-duration: .6s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
 }
+
 canvas#canvas {
   background-size: content !important;
   position: absolute;
@@ -91,23 +110,8 @@ $screen-background:#121010;
   z-index: 3;
 }
 @keyframes borderVideo {
-    0% {box-shadow: 0 0 0 2px black, 0 0 0 4px #EA7200}
+    0% {box-shadow: 0 0 0 2px black, 0 0 0 4px rgba(234,114,0,.2)}
     100% {box-shadow: 0 0 0 4px black, 0 0 0 6px #EA7200}
-}
-#section-01 #playButton {
-  margin-bottom: 10px;
-  width: 40px;
-  border-radius: 50%;
-  cursor: pointer !important;
-  box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent;
-
-  &:hover {
-    transform: scale(1.1);
-    animation-name: borderVideo;
-    animation-duration: .6s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-  }
 }
 
 .videoDiv {

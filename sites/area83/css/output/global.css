@@ -20,15 +20,22 @@
 /* FONTS --------------------------------- */
 .text-heading {
   font-family: "RussoOne-Regular";
-  font-size: 40px;
+  font-size: 30px;
   letter-spacing: 4px;
-  line-height: 50px;
+  line-height: 40px;
   text-transform: uppercase; }
 
 .text-minHeading {
   font-family: "RussoOne-Regular";
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  line-height: 20px;
+  text-transform: uppercase; }
+
+.text-button {
+  font-family: "RussoOne-Regular";
   font-size: 15px;
-  letter-spacing: 4px;
+  letter-spacing: 1.5px;
   line-height: 20px;
   text-transform: uppercase; }
 
@@ -104,6 +111,12 @@
   -ms-transition: all 900ms ease-in-out;
   transition: all 900ms ease-in-out; }
 
+.transition-1200 {
+  -webkit-transition: all 1200ms ease-in-out;
+  -moz-transition: all 1200ms ease-in-out;
+  -ms-transition: all 1200ms ease-in-out;
+  transition: all 1200ms ease-in-out; }
+
 /* CENTERS --------------------------------- */
 .center-container {
   position: relative; }
@@ -153,7 +166,8 @@ a:hover,
 a:focus,
 a:active {
   color: #151515;
-  outline: none; }
+  outline: none;
+  text-decoration: none !important; }
 
 /* LOADER --------------------------------- */
 .loader {
