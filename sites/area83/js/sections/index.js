@@ -1,6 +1,6 @@
 function animationsGsap() {
-  console.log("gsap!");
-  var s1_buttonPlay = document.getElementById("playButton")
+  var h_dropText = document.getElementsByClassName("text-drop-gsap");
+  var s1_buttonPlay = document.getElementById("playButton");
   TweenMax.fromTo(s1_buttonPlay, 3,{
     y: "-=10",
     opacity: 0,
@@ -10,6 +10,11 @@ function animationsGsap() {
     y: 0,
     opacity: 1,
   })
+
+  var mySplitText = new SplitText(h_dropText, {type:"chars,words, lines"}),
+    tl = new TimelineMax({repeatDelay:0.5});
+  var numChars = mySplitText.chars.length;
+  tl.staggerFrom(mySplitText.chars, 0.04, {opacity:0}, 0.04);
 };
 
 $("#playButton").click(function(){
