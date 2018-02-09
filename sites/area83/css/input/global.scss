@@ -362,8 +362,12 @@ a:active {
   }
   /* LOADER --------------------------------- */
   .loader img {
-      width: 160px;
+      width: 320px;
   }
+  #section-01 img.logo {
+    width: 200px;
+  }
+
   /* FONTS --------------------------------- */
   .text-heading {
 
@@ -376,5 +380,11 @@ a:active {
   }
   .text-body {
 
+  }
+  .videoDiv .closeVideo {
+    top: initial !important;
+    bottom: 40px !important;
+    left: 50% !important;
+    transform: translateX(-50%)!important;
   }
 }

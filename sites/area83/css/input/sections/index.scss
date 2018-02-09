@@ -19,10 +19,9 @@
     box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent;
     opacity: 0;
     &:hover {
-      animation-name: borderVideo;
-      animation-duration: .6s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
+      border: 1px solid RGB(235, 149, 0);
+      box-shadow: inset 0 0 4px 0px #EA7900, 0 0 4px 0px #EA7900;
+      color: white !important;
     }
   }
 }
@@ -70,7 +69,7 @@ $screen-background:#121010;
     background:transparentize($screen-background,0.9);
     opacity:0;
     pointer-events:none;
-    animation:flicker 0.15s infinite;
+    animation: flicker 0.15s infinite;
     z-index: 1;
   }
   // scanlines
@@ -82,7 +81,12 @@ $screen-background:#121010;
     left:0;
     bottom:0;
     right:0;
-    background:linear-gradient(transparentize($screen-background,1) 50%, transparentize(darken($screen-background,10),0.75) 50%), linear-gradient(90deg,transparentize(#ff0000,0.94),transparentize(#00ff00,0.98),transparentize(#0000ff,0.94));
+    background:
+      linear-gradient(transparentize($screen-background,0.93) 90%,
+      transparentize(darken($screen-background,10),0.93) 90%),
+      linear-gradient(90deg,transparentize(#ff0000,0.93),
+      transparentize(#00ff00,0.93),
+      transparentize(#0000ff,0.93));
     background-size:100% 2px, 3px 100%;
     pointer-events:none;
     z-index: 1;
@@ -126,16 +130,15 @@ $screen-background:#121010;
     left: calc(100vw - 10vw / 2);
     transform: translate(-50%,-50%);
     width: 40px;
+    border: 1px solid white;
     border-radius: 50%;
     cursor: pointer !important;
     box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent;
 
     &:hover {
-      transform: translate(-50%,-50%) scale(1.1);
-      animation-name: borderVideo;
-      animation-duration: .6s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
+      border: 1px solid RGB(235, 149, 0);
+      box-shadow: inset 0 0 4px 0px #EA7900, 0 0 4px 0px #EA7900;
+      color: white !important;
     }
   }
   iframe {

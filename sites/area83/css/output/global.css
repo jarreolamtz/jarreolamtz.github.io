@@ -268,8 +268,16 @@ a:active {
 
   /* LOADER --------------------------------- */
   .loader img {
-    width: 160px; }
+    width: 320px; }
 
-  /* FONTS --------------------------------- */ }
+  #section-01 img.logo {
+    width: 200px; }
+
+  /* FONTS --------------------------------- */
+  .videoDiv .closeVideo {
+    top: initial !important;
+    bottom: 40px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important; } }
 
 /*# sourceMappingURL=global.css.map */

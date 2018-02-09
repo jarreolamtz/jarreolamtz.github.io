@@ -6768,10 +6768,9 @@ template {
     box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent;
     opacity: 0; }
     #section-01 #playButton:hover {
-      animation-name: borderVideo;
-      animation-duration: .6s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate; }
+      border: 1px solid RGB(235, 149, 0);
+      box-shadow: inset 0 0 4px 0px #EA7900, 0 0 4px 0px #EA7900;
+      color: white !important; }
 
 canvas#canvas {
   background-size: content !important;
@@ -6784,47 +6783,47 @@ canvas#canvas {
 
 @keyframes flicker {
   0% {
-    opacity: 0.7928682866; }
+    opacity: 0.5654054183; }
   5% {
-    opacity: 0.3569150077; }
+    opacity: 0.2811323799; }
   10% {
-    opacity: 0.6342462092; }
+    opacity: 0.9372139592; }
   15% {
-    opacity: 0.0633603001; }
+    opacity: 0.0210540947; }
   20% {
-    opacity: 0.087883597; }
+    opacity: 0.4123142961; }
   25% {
-    opacity: 0.1663873673; }
+    opacity: 0.6712761424; }
   30% {
-    opacity: 0.4781923861; }
+    opacity: 0.9902846837; }
   35% {
-    opacity: 0.3687909989; }
+    opacity: 0.7802777359; }
   40% {
-    opacity: 0.1124714282; }
+    opacity: 0.6445840598; }
   45% {
-    opacity: 0.5406141208; }
+    opacity: 0.9128161175; }
   50% {
-    opacity: 0.369713949; }
+    opacity: 0.3479018988; }
   55% {
-    opacity: 0.9038711225; }
+    opacity: 0.4489938689; }
   60% {
-    opacity: 0.4858151595; }
+    opacity: 0.0788360331; }
   65% {
-    opacity: 0.5385685329; }
+    opacity: 0.6127471572; }
   70% {
-    opacity: 0.3201230918; }
+    opacity: 0.7718631689; }
   75% {
-    opacity: 0.2824503103; }
+    opacity: 0.3566551242; }
   80% {
-    opacity: 0.7492281036; }
+    opacity: 0.2608589184; }
   85% {
-    opacity: 0.9050187878; }
+    opacity: 0.988508349; }
   90% {
-    opacity: 0.8055993371; }
+    opacity: 0.8678923678; }
   95% {
-    opacity: 0.2499246642; }
+    opacity: 0.5066533448; }
   100% {
-    opacity: 0.7422074094; } }
+    opacity: 0.8591855674; } }
 .glitch {
   width: 100vw;
   height: 100vh;
@@ -6856,7 +6855,7 @@ canvas#canvas {
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background: linear-gradient(rgba(18, 16, 16, 0.07) 90%, rgba(0, 0, 0, 0.07) 90%), linear-gradient(90deg, rgba(255, 0, 0, 0.07), rgba(0, 255, 0, 0.07), rgba(0, 0, 255, 0.07));
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
     z-index: 1; }
@@ -6899,15 +6898,14 @@ canvas#canvas {
     left: calc(100vw - 10vw / 2);
     transform: translate(-50%, -50%);
     width: 40px;
+    border: 1px solid white;
     border-radius: 50%;
     cursor: pointer !important;
     box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent; }
     .videoDiv .closeVideo:hover {
-      transform: translate(-50%, -50%) scale(1.1);
-      animation-name: borderVideo;
-      animation-duration: .6s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate; }
+      border: 1px solid RGB(235, 149, 0);
+      box-shadow: inset 0 0 4px 0px #EA7900, 0 0 4px 0px #EA7900;
+      color: white !important; }
   .videoDiv iframe {
     width: calc(80vw) !important;
     height: calc(80vw / 1.77777777777779) !important; }
