@@ -5,49 +5,38 @@ $(document).ready(function(){
   var tablet = 991;
   var phone = 767;
 
-  function lineHeader(){
-    var initLine = ($(".initLine").offset().left) + ($(".initLine").width());
-    var endLine = $(".endLine").offset().left;
-    var widthLine = endLine - initLine - 20;
-    var linePos = (document.body.clientWidth / 2) + (($(".initLine").width() - $(".endLine").width())/2);
-    $("header .line").width(widthLine);
-    $("header .line").css("left", linePos);
-    console.log("linePos " + linePos);
-  }
+
   //DESKTOP
   if( viewPort > tablet ){
-    console.log("Desktop");
 
-    lineHeader();
-
-    window.onresize = function() {
-      $(".lineView").removeAttr("style");
-      lineHeader();
-    }
   }
-  //TABLET
   else if( viewPort < desktop && viewPort > phone){
-    console.log("Tablet");
-    lineHeader();
 
-    window.onresize = function() {
-      $(".lineView").removeAttr("style");
-      lineHeader();
-    }
   }
-  //PHONE
-  else if( viewPort <= phone){
-    console.log("Phone");
-    // Menu ------------------------------------------------------
-    $(".icon-menu, .close-menu, .menu-area a").click(function(){
-      if( $(".menu-area").hasClass("active") === true ) {
-        $(".menu-area").removeClass("active");
-        $(".menu-area").fadeOut();
+  //Mobile
+  else if( viewPort < desktop ){
+    $(".menuMobile").click(function(){
+      if( $("#navMobile").hasClass("active") === true ) {
+        $(".menuMobile").removeClass("active");
+        $("#navMobile").removeClass("active");
       } else {
-        $(".menu-area").addClass("active");
-        $(".menu-area").fadeIn();
+        $(".menuMobile").addClass("active");
+        $("#navMobile").addClass("active");
+        var activeSec = $("section.active").index() + 1;
+        $("#navMobile a").removeClass("active");
+        $("#navMobile a:nth-child("+activeSec+")").addClass("active");
       }
     });
+    $("#navMobile a").click(function(){
+      $(".menuMobile").removeClass("active");
+      $("#navMobile").removeClass("active");
+    });
+  };
+  //PHONE
+  if( viewPort <= phone){
+    console.log("Phone");
+    // Menu ------------------------------------------------------
+
     // SMOOTH SCROLL ------------------------------------------------------
     $(function() {
       $('a[href*="#"]:not([href="#"])').click(function() {
@@ -57,7 +46,7 @@ $(document).ready(function(){
           target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
           if (target.length) {
             $('html, body').animate({
-              scrollTop: target.offset().top - 60
+              scrollTop: target.offset().top - 0
             }, 1000);
             return false;
           }

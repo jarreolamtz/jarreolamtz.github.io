@@ -55,6 +55,8 @@
     <link rel="stylesheet" href="css/input/plugins/normalize.css">
     <!-- <link rel="stylesheet" href="css/input/plugins/cursor.css"> -->
     <link rel="stylesheet" href="css/input/fonts/russo/font-russo.css">
+    <link rel="stylesheet" href="css/input/plugins/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/input/plugins/slick.css"/>
     <link rel="stylesheet" href="css/output/global.css">
     <link rel="stylesheet" href="css/output/header.css">
     <link rel="stylesheet" href="css/output/sections/index.css">
@@ -77,41 +79,572 @@
               <header>
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-4 offset-1">
-                      <h1 class="text-minHeading color-white initLine text-drop-gsap">Full Site Febrero 2018</h1>
+                    <div class="col-4 col-sm-4 col-md-4 d-lg-none">
+                      <a href="javascript:void(0)" class="menuMobile">
+                        <img src="img/icons/icon-menu.svg" alt="Menu" class="menu-open transition">
+                        <img src="img/icons/icon-menu-close.svg" alt="Menu" class="transition menu-close">
+                      </a>
                     </div>
-                    <div class="col-2">
-                      <!-- Empty -->
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-2 text-center">
+                      <a href="index.html" data-slide="section-01">
+                        <img src="img/icons/header-logo.svg" alt="Logo Area83" class="logo">
+                        <img src="img/icons/header-logo-min.svg" alt="Logo Area83" class="logo-min">
+                      </a>
                     </div>
-                    <div class="col-4">
-                      <div class="endLine">
-                        <a href="mailTo:hola@area83.mx" class="text-minHeading color-white text-drop-gsap transition">hola@area83.mx</a>
-                        <a href="tel:+52 8115782169" class="text-minHeading color-white text-drop-gsap transition">+52 8115782169</a>
-                        <a href="https://vimeo.com/area83media" class="text-minHeading color-white text-drop-gsap transition">
-                          <div class="circle-link transition">
-                            <p class="fab fa-vimeo-v transition"></p>
-                          </div>
-                        </a>
-                      </div>
+                    <!-- Link - 01 -->
+                    <div class="d-none d-lg-block col-2 ">
+                      <a href="#base" class="link transition active" data-sec="1">
+                        <p class="text-link">Base:</p>
+                        <div class="lineLink">
+                          <div class="boldLine"></div>
+                        </div>
+                        <p class="desc text-body">So when its time to finally.</p>
+                      </a>
+                    </div>
+                    <!-- Link - 02 -->
+                    <div class="d-none d-lg-block col-2">
+                      <a href="#projects" class="link transition" data-sec="2">
+                        <p class="text-link">Projects:</p>
+                        <div class="lineLink">
+                          <div class="boldLine"></div>
+                        </div>
+                        <p class="desc text-body">So when its time to finally.</p>
+                      </a>
+                    </div>
+                    <!-- Link - 03 -->
+                    <div class="d-none d-lg-block col-2">
+                      <a href="#directors" class="link transition" data-sec="3">
+                        <p class="text-link">Directors:</p>
+                        <div class="lineLink">
+                          <div class="boldLine"></div>
+                        </div>
+                        <p class="desc text-body">So when its time to finally.</p>
+                      </a>
+                    </div>
+                    <!-- Link - 04 -->
+                    <div class="d-none d-lg-block col-2">
+                      <a href="#contact" class="link transition" data-sec="4">
+                        <p class="text-link">Contact:</p>
+                        <div class="lineLink">
+                          <div class="boldLine"></div>
+                        </div>
+                        <p class="desc text-body">So when its time to finally.</p>
+                      </a>
+                    </div>
+                    <!-- Play Button -->
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-2">
+                      <a href="javascript:void(0)" class="playHeader transition playDemo">
+                        <img src="img/icons/icon-play.svg" alt="Play">
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="line">
+                <!-- <div class="line">
                   <div class="lineView"></div>
-                </div>
+                </div> -->
               </header>
-              <!-- Section - 01 -->
-              <section id="section-01">
-                <div class="videoDiv">
-                  <img src="img/icons/icon-close-video.svg" alt="Close video" id="pauseButton" class="closeVideo transition-600">
-                  <iframe id="video" src="https://player.vimeo.com/video/181581011?api=1&player_id=player1" id="video" class="center-xy" frameborder="0" autoplay webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <!-- Controls -->
+              <ul id="menu">
+                <li data-menuanchor="base" class="active">
+                  <a href="#base"></a>
+                </li>
+                <li data-menuanchor="projects">
+                  <a href="#projects"></a>
+                </li>
+                <li data-menuanchor="directors">
+                  <a href="#directors"></a>
+                </li>
+                <li data-menuanchor="contact">
+                  <a href="#contact"></a>
+                </li>
+              </ul>
+              <!-- NAV MOBILE -->
+              <div id="navMobile" class="transition">
+                <div class="links text-center center-xy d-none d-md-block">
+                  <a data-menuanchor="base" href="#base" class="link text-heading active">Base <img src="img/icons/underscoreBig.svg" class="underscore"></a>
+                  <a data-menuanchor="projects" href="#projects" class="link text-heading">Projects <img src="img/icons/underscoreBig.svg" class="underscore"></a>
+                  <a data-menuanchor="directors" href="#directors" class="link text-heading">Directors <img src="img/icons/underscoreBig.svg" class="underscore"></a>
+                  <a data-menuanchor="contact" href="#contact" class="link text-heading">Contact <img src="img/icons/underscoreBig.svg" class="underscore"></a>
                 </div>
-                <img src="img/icons/logo-color.svg" class="logo center-xy" alt="Area 83">
-                <a href="javascript:void(0)" id="playButton" class="text-button color-white"><span class="transition">Demo Reel</span></a>
-                <div class="vertLines"></div>
-                <div class="glitch"></div>
-                <!-- <canvas id="canvas" width="300" height="300"></canvas> -->
-              </section>
+                <div class="links text-center center-xy d-block d-md-none">
+                  <a data-menuanchor="base" href="#section-01" class="link text-heading active">Base <img src="img/icons/underscoreBig.svg" class="underscore"></a>
+                  <a data-menuanchor="projects" href="#section-02" class="link text-heading">Projects <img src="img/icons/underscoreBig.svg" class="underscore"></a>
+                  <a data-menuanchor="directors" href="#section-03" class="link text-heading">Directors <img src="img/icons/underscoreBig.svg" class="underscore"></a>
+                  <a data-menuanchor="contact" href="#section-04" class="link text-heading">Contact <img src="img/icons/underscoreBig.svg" class="underscore"></a>
+                </div>
+              </div>
+              <!-- Video Demo Reel -->
+              <div class="videoDiv">
+                <img src="img/icons/icon-close-video.svg" alt="Close video" id="pauseButton" class="closeVideo transition-600">
+                <iframe id="video" src="https://player.vimeo.com/video/181581011" class="center-xy" frameborder="0" autoplay webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe hidden id="videoProject" src="https://player.vimeo.com/video/228285721" class="center-xy" frameborder="0" autoplay webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              </div>
+              <!-- FUI -->
+              <div id="fui">
+                <div class="fill-dots">
+                  <div class="mod">
+                    <div class="scrollDetect">
+                      <div class="dot transition-600"></div>
+                    </div>
+                  </div>
+                  <div class="mod">
+                    <div class="binario">
+                      <p class="num a">0</p><!--
+                      --><p class="num b active">1</p><!--
+                    --><p class="num c">0</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="xy-pos">
+                      <p class="north">north.112</p>
+                      <p class="west">west.332</p>
+                    </div>
+                  </div>
+                  <div class="mod">
+                    <div class="megas">
+                      <div class="lines">
+                        <!-- 18 Lines -->
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                        <div class="line transition-600"></div>
+                      </div>
+                      <p class="numMb">129mb</p>
+                    </div>
+                  </div>
+                  <div class="mod">
+                    <div class="keygen">
+                      <p class="key"></p>
+                      <p class="key active"></p>
+                      <p class="key"></p>
+                    </div>
+                  </div>
+                  <div class="mod">
+                    <div class="social">
+                      <a href="" target="_blank" class="transition circleSmall a">
+                        <i class="fab fa-facebook-f color-white"></i>
+                        <span class="dots-back"></span>
+                      </a>
+                      <a href="" target="_blank" class="transition circleSmall b">
+                        <i class="fab fa-vimeo-v color-white"></i>
+                        <span class="dots-back"></span>
+                      </a>
+                      <a href="" target="_blank" class="transition circleSmall c">
+                        <i class="fab fa-instagram color-white"></i>
+                        <span class="dots-back"></span>
+                      </a>
+                      <div class="halfCircleDiv">
+                        <div class="halfCircle"></div>
+                      </div>
+                      <a href="" target="_blank" class="transition circleBig">
+                        <i class="fas fa-share-alt color-white"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Fullpage -->
+              <div id="fullpage">
+                <!-- Section - 01 -->
+                <section id="section-01" class="transition section active" data-anchor="base">
+                  <!-- Centered content -->
+                  <div class="centeredContent">
+                    <!-- Content -->
+                    <div class="container-fluid">
+                    <!-- Nom -->
+                    <div class="row">
+                      <div class="col-8 offset-2 offset-md-0 col-md-4 col-lg-2 offset-lg-1">
+                        <div class="nom">
+                          <p class="nom-area text-nom">W.A83.S</p>
+                          <div class="nom-line"></div>
+                          <p class="nom-sec text-nom">°01</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Headline -->
+                    <div class="row">
+                      <div class="col-12 col-md-11 col-lg-10 offset-lg-1">
+                        <h1 class="text-bigHeading">
+                          Space Frontier <img src="img/icons/underscoreBig.svg" class="underscore">
+                        </h1>
+                      </div>
+                    </div>
+                    <!-- Button & Desc -->
+                    <div class="row">
+                      <!-- MOBILE -->
+                      <div class="col-12 d-block d-md-none">
+                        <div class="block">
+                          <p class="text-body">
+                            So when its time to finally get your children that very first telescope_
+                          </p>
+                        </div>
+                      </div>
+                      <!-- Button -->
+                      <div class="col-md-3 col-lg-2 offset-lg-1">
+                        <a href="javascript:void(0)" class="playDemo">
+                          <img src="img/icons/icon-play.svg" alt="">
+                        </a>
+                      </div>
+                      <div class=" d-none d-sm-none d-md-block col-12 col-md-8 col-lg-6">
+                        <div class="block">
+                          <h2 class="text-nom">About:</h2>
+                          <div class="line"></div>
+                          <div class="row">
+                            <div class="col-12">
+                              <p class="text-body">
+                                So when its time to finally get your children that very first telescope, you want to
+                                make sure it’s just the right thing. There are a number of reasons you should_
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- Canvas -->
+                    <canvas id="canvas" width="530" height="388"></canvas>
+                  </div>
+                </section>
+                <!-- Section - 02 -->
+                <section id="section-02" class="transition section" data-anchor="projects">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <!-- Video Info-->
+                      <div class="videoInfo" data-video="">
+                        <!-- Nom -->
+                        <div class="row">
+                          <div class="col-8 offset-2 offset-md-0 col-md-4 col-lg-4">
+                            <div class="nom">
+                              <p class="nom-area text-nom">Video</p>
+                              <div class="nom-line"></div>
+                              <p class="nom-sec text-nom">°01</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Heading -->
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <p class="text-heading">
+                              <span>the last round</span>
+                              <img src="img/icons/underscoreBig.svg" class="underscore">
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Body Text -->
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <p class="text-body">
+                              So when its time to finally get your children that very first telescope,
+                              you want to make sure it’s just the right thing. There are a
+                              number of reasons you should_
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Controls Video Slick -->
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="controlSlick">
+                              <div class="prev transition">
+                                <p class="text-nom transition d-none d-md-block">Prev Video_</p>
+                                <p class="text-nom transition mobile d-block d-md-none">Prev_</p>
+                              </div><!--
+                              --><div class="play transition playProject">
+                                <img src="img/icons/icon-play.svg" alt="Play" class="playWhite transition">
+                                <img src="img/icons/icon-play-black.svg" alt="Play" class="playBlack transition">
+                              </div><!--
+                              --><div class="next transition">
+                                <p class="text-nom transition d-none d-md-block">Next Video_</p>
+                                <p class="text-nom transition d-block d-md-none">Next_</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Slick -->
+                      <div class="slick">
+                        <div class="slick-slide">
+                          <!-- VIDEO BACKGROUND -->
+                          <div class="videoBack transition-600" style="background: url(img/assets/videoPrev2.jpg);" data-url="https://player.vimeo.com/video/251398414"></div>
+                          <!-- DATA -->
+                          <div class="videoData">
+                            <p class="titulo">
+                              Apple 2019
+                            </p>
+                            <p class="descripcion">
+                              So when its time to finally get your children that very
+                              first telescope, you want to make sure it’s just the right
+                              thing. There are a number of reasons you should_
+                            </p>
+                          </div>
+                          <!-- Select lines -->
+                          <div class="selectedBox transition-600">
+                            <div class="cornerTL"></div>
+                            <div class="cornerTR"></div>
+                            <div class="cornerBR"></div>
+                            <div class="cornerBL"></div>
+                          </div>
+                        </div>
+                        <div class="slick-slide">
+                          <!-- VIDEO BACKGROUND -->
+                          <div class="videoBack transition-600" style="background: url(img/assets/videoPrev3.jpg);" data-url="https://player.vimeo.com/video/251400434"></div>
+                          <!-- DATA -->
+                          <div class="videoData">
+                            <p class="titulo">Soñamos con ser mejores</p>
+                            <p class="descripcion">
+                              So when its time to finally get your children that very
+                              first telescope it’s just the right thing. There are a number
+                              of reasons you should_
+                            </p>
+                          </div>
+                          <!-- Select lines -->
+                          <div class="selectedBox transition-600">
+                            <div class="cornerTL"></div>
+                            <div class="cornerTR"></div>
+                            <div class="cornerBR"></div>
+                            <div class="cornerBL"></div>
+                          </div>
+                        </div>
+                        <div class="slick-slide">
+                          <!-- Video Background -->
+                          <div class="videoBack transition-600" style="background: url(img/assets/videoPrev4.jpg);" data-url="https://player.vimeo.com/video/251390068"></div>
+                          <!-- DATA -->
+                          <div class="videoData">
+                            <p class="titulo">Los Angeles</p>
+                            <p class="descripcion">
+                              So when its time to finally get your children that very
+                              first telescope it’s just the right thing. There are a number
+                              of reasons you should_
+                            </p>
+                          </div>
+                          <!-- Select lines -->
+                          <div class="selectedBox transition-600">
+                            <div class="cornerTL"></div>
+                            <div class="cornerTR"></div>
+                            <div class="cornerBR"></div>
+                            <div class="cornerBL"></div>
+                          </div>
+                        </div>
+                        <div class="slick-slide">
+                          <!-- Video Background -->
+                          <div class="videoBack transition-600" style="background: url(img/assets/videoPrev5.jpg);" data-url="https://player.vimeo.com/video/228272982"></div>
+                          <!-- DATA -->
+                          <div class="videoData">
+                            <p class="titulo">Mad Loft</p>
+                            <p class="descripcion">
+                              So when its time to finally get your children that very
+                              first telescope it’s just the right thing. There are a number
+                              of reasons you should_
+                            </p>
+                          </div>
+                          <!-- Select lines -->
+                          <div class="selectedBox transition-600">
+                            <div class="cornerTL"></div>
+                            <div class="cornerTR"></div>
+                            <div class="cornerBR"></div>
+                            <div class="cornerBL"></div>
+                          </div>
+                        </div>
+                        <div class="slick-slide">
+                          <!-- Video Background -->
+                          <div class="videoBack transition-600" style="background: url(img/assets/videoPrev6.jpg);" data-url="https://player.vimeo.com/video/228270060"></div>
+                          <!-- DATA -->
+                          <div class="videoData">
+                            <p class="titulo">Reebook</p>
+                            <p class="descripcion">
+                              So when its time to finally get your children that very
+                              first telescope it’s just the right thing. There are a number
+                              of reasons you should_
+                            </p>
+                          </div>
+                          <!-- Select lines -->
+                          <div class="selectedBox">
+                            <div class="cornerTL"></div>
+                            <div class="cornerTR"></div>
+                            <div class="cornerBR"></div>
+                            <div class="cornerBL"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- Section - 03 -->
+                <section id="section-03" class="transition section" data-anchor="directors">
+                  <div class="container-fluid">
+                    <div class="textArea">
+                      <!-- Nom -->
+                      <div class="row">
+                        <div class="col-8 offset-2 offset-md-0 col-md-4 col-lg-2 offset-lg-1">
+                          <div class="nom">
+                            <p class="nom-area text-nom">W.A83.S</p>
+                            <div class="nom-line"></div>
+                            <p class="nom-sec text-nom">°03</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Heading -->
+                      <div class="row">
+                        <div class="col-lg-5 offset-lg-1">
+                          <p class="text-heading">
+                            the last round
+                            <img src="img/icons/underscoreBig.svg" class="underscore">
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row desc">
+                        <div class="d-none d-md-block col-md-3 col-lg-2 offset-lg-1">
+                          <div class="nom">
+                            <p class="nom-area text-nom">System:</p>
+                            <div class="nom-line"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-8 col-lg-5">
+                          <div class="text-body">
+                            So when its time to finally get your children that very first telescope,
+                            you want to make sure it’s just the right thing. There are a
+                            number of reasons_
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="directorsList">
+                      <div class="row">
+                        <!-- Director -->
+                        <div class="col-md-6 col-lg-4 offset-lg-1">
+                          <!-- Controls -->
+                          <div class="controlsDirector">
+                            <!-- <img src="img/icons/icon-arrow-top.svg" class="arrowTop"> -->
+                            <p class="text-nom">Directors / 01 - 02</p>
+                            <img src="img/icons/icon-arrow-bottom.svg" class="arrowBottom">
+                          </div>
+                          <a href="directors/name1.html" target="_blank" class="director selected" data-director="1" data-back="url(img/assets/videoPrev7.jpg)" data-name="Aaronidas" data-link="#nombre1">
+                            <!-- Director Photo -->
+                            <div class="directorImg transition" style="background: url(img/assets/videoPrev7.jpg);">
+                              <!-- Select lines -->
+                              <div class="selectedBox">
+                                <div class="cornerTL"></div>
+                                <div class="cornerTR"></div>
+                                <div class="cornerBR"></div>
+                                <div class="cornerBL"></div>
+                              </div>
+                            </div>
+                            <!-- Director Name -->
+                            <p class="text-nom"><span>Aaronidas</span>_</p>
+                          </a>
+                        </div>
+                        <!-- Director -->
+                        <div class="col-md-6 col-lg-4">
+                          <a href="directors/name2.html" target="_blank" class="director selected" data-director="2" data-back="url(img/assets/videoPrev8.jpg)" data-name="Barbra Streisand" data-link="#nombre2">
+                            <!-- Director Photo -->
+                            <div class="directorImg transition" style="background: url(img/assets/videoPrev8.jpg);">
+                              <!-- Select lines -->
+                              <div class="selectedBox">
+                                <div class="cornerTL"></div>
+                                <div class="cornerTR"></div>
+                                <div class="cornerBR"></div>
+                                <div class="cornerBL"></div>
+                              </div>
+                            </div>
+                            <!-- Director Name -->
+                            <p class="text-nom"><span>Barbra Streisand</span>_</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="directorsNext">
+                      <div class="row">
+                        <!-- Director Next -->
+                        <div class="col-md-6 col-lg-2 offset-lg-1">
+                          <div class="director" data-director="3" style="background: url(img/assets/videoPrev4.jpg)" data-back="url(img/assets/videoPrev4.jpg)" data-name="Maulicious" data-link="#nombre3">
+                            <!-- Director Name -->
+                            <p class="text-nom"><span>Maulicious</span>_</p>
+                          </div>
+                        </div>
+                        <!-- Director Next -->
+                        <div class="col-md-6 col-lg-2">
+                          <div class="director" data-director="4" style="background: url(img/assets/videoPrev3.jpg)" data-back="url(img/assets/videoPrev3.jpg)" data-name="Sibidibidi" data-link="#nombre4">
+                            <!-- Director Name -->
+                            <p class="text-nom"><span>Sibidibidi</span>_</p>
+                          </div>
+                        </div>
+                        <!-- Director Next -->
+                        <div class="col-md-6 col-lg-2">
+                          <div class="director" data-director="5" style="background: url(img/assets/videoPrev6.jpg)" data-back="url(img/assets/videoPrev6.jpg)" data-name="Kimbo" data-link="#nombre5">
+                            <!-- Director Name -->
+                            <p class="text-nom"><span>Kimbo</span>_</p>
+                          </div>
+                        </div>
+                        <!-- Director Next -->
+                        <div class="col-md-6 col-lg-2">
+                          <div class="director" data-director="6" style="background: url(img/assets/videoPrev5.jpg)" data-back="url(img/assets/videoPrev5.jpg)" data-name="Canelita" data-link="#nombre6">
+                            <!-- Director Name -->
+                            <p class="text-nom"><span>Canelita</span>_</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- Section -04 -->
+                <section id="section-04" class="transition section" data-anchor="contact">
+                  <div class="container-fluid">
+                    <div class="textArea">
+                      <!-- Nom -->
+                      <div class="row">
+                        <div class="col-8 offset-2 offset-md-0 col-md-4 col-lg-2 offset-lg-1">
+                          <div class="nom">
+                            <p class="nom-area text-nom">W.A83.S</p>
+                            <div class="nom-line"></div>
+                            <p class="nom-sec text-nom">°04</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Heading -->
+                      <div class="row">
+                        <div class="col-lg-10 offset-lg-1">
+                          <p class="text-bigHeading">
+                            <a href="mailto:hello@area83.mx" class="color-white transition">
+                              hello@area83.mx
+                              <img src="img/icons/underscoreBig.svg" class="underscore">
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row desc">
+                        <div class="col-md-4 col-lg-2 offset-lg-1">
+                          <div class="nom">
+                            <p class="nom-area text-nom">Get in touch:</p>
+                            <div class="nom-line"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-7 col-lg-6">
+                          <div class="text-body">
+                            So when its time to finally get your children that very first telescope,
+                            you want to make sure it’s just the right thing. There are a
+                            number of reasons you should_
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- Background -->
+              <div class="vertLines"></div>
+              <div class="glitch"></div>
           </div>
       </div>
 
@@ -131,21 +664,24 @@
       <!-- Regular -->
       <script src="js/global.js"></script>
       <script src="js/framework/bootstrap.min.js"></script>
-      <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+      <script src="js/plugins/jquery.fullPage.js"></script>
+      <script src="js/plugins/slick.min.js"></script>
+      <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
       <script src="js/sections/index.js"></script>
+      <!-- <script src="js/plugins/glitch.js"></script> -->
       <!-- <script src="js/plugins/grid.js"></script> -->
 
       <!-- Loader -->
       <script>
-          setTimeout(function(){
-            $(".loader").fadeOut(1200);
-            animationsGsap();
-          }, 4600);
-          // setTimeout(function(){
-          //   glitchStart();
-          // }, 4000);
-          // home();
-          // cursorfollow();
+        setTimeout(function(){
+          $(".loader").fadeOut(1200);
+          animationsGsap();
+        }, 4600);
+        // setTimeout(function(){
+        //   glitchStart();
+        // }, 4000);
+        // home();
+        // cursorfollow();
       </script>
   </body>
 </html>

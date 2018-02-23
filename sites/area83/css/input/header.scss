@@ -1,6 +1,29 @@
+// VARIABLES
+$screen-background: #121010;
+// MIXINS
+@mixin background-dots() {
+  background: linear-gradient(90deg, black (4px - 1px), transparent 90%) center,
+  linear-gradient(rgba(255,255,255,0.2) (2px - 1px), transparent 10%) center,
+  black;
+  background-size: 4px 4px;
+}
+@mixin background-rgb() {
+  background:
+    linear-gradient(transparentize($screen-background,0.93) 90%,
+    transparentize(darken($screen-background,10),0.93) 90%),
+    linear-gradient(90deg,#0b0601,#011001,#01100b);
+  background-size:100% 2px, 3px 100%;
+}
+// ANIMATIONS
+@keyframes headerLine {
+  0% { width: 0;}
+  100% { width: 100%;}
+}
+
 header {
   position: fixed;
-  top: 15px;
+  z-index: 11;
+  top: 21px;
   width: 100vw;
   .line {
     height: 1px;
@@ -18,28 +41,235 @@ header {
     margin-left: -15px;
     vertical-align: top;
   }
-  .endLine {
-    margin-right: -15px;
-    float: right;
-    text-align: right;
-    a {
-      display: block;
-      margin-bottom: 10px;
+  .link {
+    margin-top: -2px;
+    display: inline-block;
+    opacity: .3;
+    &.active, &:hover {
+      opacity: 1;
+      .boldLine {
+        opacity: 1 !important;
+      }
+      .text-link::before {
+        opacity: 1;
+      }
     }
-    .circle-link {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 1px solid rgb(255, 255, 255);
-      text-align: center;
-      padding-top: 10px;
-      float: right;
-      color: white !important;
-      &:hover {
-        border: 1px solid RGB(235, 149, 0);
-        box-shadow: inset 0 0 4px 0px #EA7900, 0 0 4px 0px #EA7900;
-        border-radius: 32px;
-        color: white !important;
+    .text-link {
+      position: relative;
+      display: inline-block;
+      background: linear-gradient(rgba(18, 16, 16, 0.07) 90%, rgba(0, 0, 0, 0.07) 90%), linear-gradient(90deg, rgb(28, 14, 23), rgb(18, 25, 23), rgb(18, 14, 34));
+      background-size:100% 2px, 3px 100%;
+      pointer-events:none;
+      line-height: 14px;
+      padding-right: 10px;
+      &::before {
+        opacity: 0;
+        content: " ";
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        left: -11px;
+        top: 1px;
+        border-top: 3px solid white;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-left: 3px solid white;
+        box-shadow: -2px -1px 3px -1px rgba(255, 255, 255, 1);
+        -webkit-transition: all 300ms ease-in-out;
+           -moz-transition: all 300ms ease-in-out;
+            -ms-transition: all 300ms ease-in-out;
+                transition: all 300ms ease-in-out;
+      }
+    }
+    .lineLink {
+      display: inline-block;
+      height: 1px;
+      width: calc(100% - 60px);
+      background: rgb(255, 255, 255);
+      box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+      vertical-align: middle;
+      position: absolute;
+      top: 10px;
+      left: 30px;
+      z-index: -1;
+      .boldLine {
+        opacity: 0;
+        height: 3px;
+        background: rgb(255, 255, 255);
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+        margin-top: -1px;
+        width: 60%;
+        -webkit-transition: all 300ms ease-in-out;
+           -moz-transition: all 300ms ease-in-out;
+            -ms-transition: all 300ms ease-in-out;
+                transition: all 300ms ease-in-out;
+      }
+    }
+  }
+  .logo {
+    margin-top: 5px;
+  }
+  .logo-min {
+    display: none;
+  }
+  .playHeader {
+    position: relative;
+    float: right;
+    width: 80px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 7px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+    background: rgba(17, 6, 27, 0.25);
+    &::after {
+      content: " ";
+      background-image: url(../../img/icons/dots-4.svg);
+      background-size: 8px;
+      background-repeat: inherit;
+      opacity: .08;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:hover {
+      border: 1px solid RGB(235, 149, 0);
+      box-shadow: inset 0 0 4px 0px #EA7900, 0 0 4px 0px #EA7900;
+    }
+  }
+}
+
+
+/* HOVERS */
+@media screen and (min-width: 992px) {
+  #navMobile {
+    display: none;
+  }
+}
+
+/* MODULE --------------------------------- */
+@media screen and (min-width: 992px) {
+
+}
+
+/* MODULE --------------------------------- */
+@media screen and (max-width: 992px) and (min-width: 768px){
+
+}
+
+/* MODULE --------------------------------- */
+@media screen and (min-width: 768px) {
+
+}
+
+/* TABLET - 991px --------------------------------- */
+@media screen and (max-width: 991px) {
+  header {
+    .logo {
+      width: 140px;
+    }
+    .menuMobile {
+      .menu-close {
+        opacity: 0;
+        position: absolute;
+        left: 38px;
+      }
+      &.active {
+        .menu-open {
+          opacity: 0;
+        }
+        .menu-close {
+          opacity: 1;
+        }
+      }
+    }
+    .link {
+      .desc {
+        display: none;
+      }
+      .lineLink {
+        display: none;
+      }
+    }
+    .playHeader {
+      height: 35px;
+      padding-top: 3px;
+    }
+  }
+  #navMobile {
+    background: rgba(0,0,0,0.97);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    opacity: 0;
+    .center-xy {
+      width: calc(100% - 120px);
+    }
+    &.active {
+      opacity: 1;
+      z-index: 10;
+    }
+    a {
+      margin-bottom: 80px;
+      display: block;
+      position: relative;
+      opacity: .4;
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+      img {
+        display: none;
+        bottom: 3px;
+      }
+      &.active {
+        opacity: 1;
+        img {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+/* PHONE - 767px --------------------------------- */
+@media screen and (max-width: 767px) {
+  header {
+    .logo {
+      display: none;
+    }
+    .logo-min {
+      width: 65px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+    }
+    .playHeader {
+      height: 35px;
+      padding-top: 4px;
+      width: 35px;
+      img {
+        width: 15px;
+      }
+    }
+  }
+  #navMobile {
+    a {
+      margin-bottom: 60px;
+      font-size: 20px;
+      img.underscore {
+        width: 12px;
+      }
+      &:nth-last-child(1) {
+        margin-bottom: 0;
       }
     }
   }
