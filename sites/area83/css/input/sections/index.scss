@@ -367,7 +367,7 @@ $screen-background: #121010;
 }
 
 // Canvas
-canvas#canvas {
+#canvas {
   background-size: content !important;
   position: absolute;
   top: 50%;
@@ -377,6 +377,7 @@ canvas#canvas {
   height: 388px !important;
   z-index: -2;
   background: black;
+  display: none;
 }
 
 $ease-out-quint:cubic-bezier(0.230, 1.000, 0.320, 1.000);
@@ -573,7 +574,7 @@ $screen-background:#121010;
   .nom {
     text-align: left;
   }
-  canvas {
+  #canvas {
     display: none;
   }
   #section-01 {

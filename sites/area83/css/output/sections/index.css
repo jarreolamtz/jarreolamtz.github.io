@@ -7035,7 +7035,7 @@ template {
     #section-04 a:hover {
       color: white !important; }
 
-canvas#canvas {
+#canvas {
   background-size: content !important;
   position: absolute;
   top: 50%;
@@ -7044,51 +7044,52 @@ canvas#canvas {
   width: 530px !important;
   height: 388px !important;
   z-index: -2;
-  background: black; }
+  background: black;
+  display: none; }
 
 @keyframes flicker {
   0% {
-    opacity: 0.5817813281; }
+    opacity: 0.4925485377; }
   5% {
-    opacity: 0.4489541524; }
+    opacity: 0.4017572426; }
   10% {
-    opacity: 0.4031514976; }
+    opacity: 0.6638913186; }
   15% {
-    opacity: 0.7649877492; }
+    opacity: 0.3983762638; }
   20% {
-    opacity: 0.9247850384; }
+    opacity: 0.2204779401; }
   25% {
-    opacity: 0.9685119733; }
+    opacity: 0.8844307248; }
   30% {
-    opacity: 0.5094922426; }
+    opacity: 0.2261415577; }
   35% {
-    opacity: 0.2864265221; }
+    opacity: 0.4121686174; }
   40% {
-    opacity: 0.5415922943; }
+    opacity: 0.8752104278; }
   45% {
-    opacity: 0.9740398388; }
+    opacity: 0.1365824072; }
   50% {
-    opacity: 0.1005443392; }
+    opacity: 0.2430861533; }
   55% {
-    opacity: 0.8127099443; }
+    opacity: 0.4472925802; }
   60% {
-    opacity: 0.9607372882; }
+    opacity: 0.2329169455; }
   65% {
-    opacity: 0.9813301856; }
+    opacity: 0.2236970778; }
   70% {
-    opacity: 0.0813257327; }
+    opacity: 0.7840958436; }
   75% {
-    opacity: 0.806497026; }
+    opacity: 0.7601326998; }
   80% {
-    opacity: 0.6226427831; }
+    opacity: 0.3469076964; }
   85% {
-    opacity: 0.9478680047; }
+    opacity: 0.0532055057; }
   90% {
-    opacity: 0.3903213309; }
+    opacity: 0.5203972403; }
   95% {
-    opacity: 0.0307470343; }
+    opacity: 0.8467913204; }
   100% {
-    opacity: 0.4618091823; } }
+    opacity: 0.2971903593; } }
 .glitch {
   width: 100vw;
   height: 100vh;
@@ -7214,7 +7215,7 @@ canvas#canvas {
   .nom {
     text-align: left; }
 
-  canvas {
+  #canvas {
     display: none; }
 
   #section-01 {
