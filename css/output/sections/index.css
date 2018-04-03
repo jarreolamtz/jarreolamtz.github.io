@@ -6869,7 +6869,15 @@ template {
         width: 76vw;
         background-position-y: bottom !important;
         background-repeat: no-repeat !important;
-        background-size: cover !important; }
+        background-size: cover !important;
+        position: relative; }
+        #section-01 .side-2 .projects-slider .sliderSlick .slick-slide .fake-screen {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          background-size: cover !important;
+          height: 58vh;
+          width: 65vw; }
       #section-01 .side-2 .projects-slider .sliderSlick .slick-dots {
         display: none !important; }
         #section-01 .side-2 .projects-slider .sliderSlick .slick-dots li {

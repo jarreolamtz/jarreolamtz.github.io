@@ -150,6 +150,15 @@ $screen-background: #121010;
           background-position-y: bottom !important;
           background-repeat: no-repeat !important;
           background-size: cover !important;
+          position: relative;
+          .fake-screen {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-size: cover !important;
+            height: 58vh;
+            width: 65vw;
+          }
           &.slick-active {
           }
         }
