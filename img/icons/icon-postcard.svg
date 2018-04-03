@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="22px" viewBox="0 0 34 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-postcard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Menu-Postal" transform="translate(-17.000000, -20.000000)" stroke="#D8D1C1" stroke-width="2.1">
+            <g id="icon-postcard" transform="translate(19.000000, 22.000000)">
+                <path d="M3.40909,0 L26.59091,0 C28.47341,0 30,1.5500769 30,3.4615385 L30,14.5384615 C30,16.4499231 28.47341,18 26.59091,18 L3.40909,18 C1.52659,18 0,16.4499231 0,14.5384615 L0,6.4363846 C0,4.9901538 1.41545,3.9842308 2.75386,4.4785385 L13.04045,9.6611538 C14.30659,10.1284615 15.69341,10.1284615 16.95955,9.6611538 C20.9940189,7.61649135 24.0198706,6.08299452 26.037105,5.0606633" id="Page-1"></path>
+            </g>
+        </g>
+    </g>
+</svg>

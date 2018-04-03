@@ -1,636 +1,353 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!-- Iso -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <!-- Iso -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Title is the first phrase you see as a search result. -->
-  <title>Arreola | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <!-- Title is the first phrase you see as a search result. -->
+    <title>Arreola</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 
-  <!-- Description of your website. Max 160 Characters-->
-  <meta name="description" content="Bienvenido este es mi portafolio como Front-end Developer y UI & UX Designer."/>
+    <!-- Description of your website. Max 160 Characters-->
+    <meta name="description" content="Page description. No longer than 155 characters."/>
 
-  <!-- Most important word to use on specific page. / No more than 10 keyword phrases -->
-  <meta name="keywords" content="Front end Developer Ui Ux Web Designer México Monterrey">
+    <!-- Most important word to use on specific page. / No more than 10 keyword phrases -->
+    <meta name="keywords" content="words">
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="img/icons/favicon-16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="img/icons/favicon-32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="img/icons/favicon-64.png" sizes="64x64">
-  <!-- <link rel="manifest" href="favicons/manifest.json"> -->
-  <link rel="mask-icon" href="img/icons/favicon-64.svg" color="#2b2b2b">
-  <meta name="theme-color" content="#ffffff">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#2b2b2b">
+    <meta name="theme-color" content="#ffffff">
 
-  <!-- Allows robots to crawl your website. https://yoast.com/robots-meta-tags/ -->
-  <meta name="robots" content="selection">
+    <!-- Allows robots to crawl your website. https://yoast.com/robots-meta-tags/ -->
+    <meta name="robots" content="selection">
 
-  <!-- Schema.org markup for Google+ and Pinterest  http://schema.org/docs/gs.html-->
-  <meta itemprop="name" content="Arreola | Portafolio">
-  <meta itemprop="description" content="Bienvenido este es mi portafolio como Front-end Developer y UI & UX Designer">
-  <meta itemprop="image" content="http://www.example.com/image.jpg">
+    <!-- Schema.org markup for Google+ and Pinterest  http://schema.org/docs/gs.html-->
+    <meta itemprop="name" content="The Name or Title Here">
+    <meta itemprop="description" content="This is the page description">
+    <meta itemprop="image" content="http://www.example.com/image.jpg">
 
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" content="Arreola">
-  <meta name="twitter:site" content="@jarreolamtz">
-  <meta name="twitter:title" content="Arreola | Portafolio">
-  <meta name="twitter:description" content="Bienvenido este es mi portafolio como Front-end Developer y UI & UX Designer.">
-  <meta name="twitter:creator" content="@jarreolamtz">
-  <meta name="twitter:image" content="http://www.example.com/image.jpg">
-
-
-  <!-- Open Graph data for sharing in Facebook -->
-  <meta property="og:title" content="Arreola"/>
-  <meta property="og:type" content="Arreola"/>
-  <meta property="og:url" content="http://jarreolamtz.github.io/"/>
-  <meta property="og:image" content="http://example.com/image.jpg"/>
-  <meta property="og:site_name" content="Arreola | Portafolio"/>
-  <meta property="og:description" content="Bienvenido este es mi portafolio como Front-end Developer y UI & UX Designer."/>
-  <meta property="og:locale:alternate" content="es_MX"/>
-  <meta property="og:locale:alternate" content="en_US"/>
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="Company Name">
+    <meta name="twitter:site" content="@publisher_handle">
+    <meta name="twitter:title" content="Page Title">
+    <meta name="twitter:description" content="Page description less than 200 characters">
+    <meta name="twitter:creator" content="@author_handle">
+    <meta name="twitter:image" content="http://www.example.com/image.jpg">
 
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <!-- <link rel="stylesheet" href="css/fonts/font-awesome.min.css"> -->
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/slick/slick.css">
-  <link rel="stylesheet" href="css/selectric/selectric.css">
+    <!-- Open Graph data for sharing in Facebook -->
+    <meta property="og:title" content="Company Name"/>
+    <meta property="og:type" content="Company Name"/>
+    <meta property="og:url" content="Company URL"/>
+    <meta property="og:image" content="http://example.com/image.jpg"/>
+    <meta property="og:description" content="Description Here"/>
+    <meta property="og:site_name" content="Company Name site"/>
+    <meta property="og:locale:alternate" content="es_MX"/>
+    <meta property="og:locale:alternate" content="en_US"/>
 
-</head>
 
-<body>
-    <!-- LOADER -->
-    <div class="loader">
-        <img class="img center-xy" src="img/icons/logo-black.svg">
-    </div>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/input/plugins/normalize.css">
+    <!-- <link rel="stylesheet" href="css/input/plugins/cursor.css"> -->
+    <link rel="stylesheet" href="css/input/fonts/russo/font-russo.css">
+    <link rel="stylesheet" href="css/input/plugins/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/input/plugins/slick.css"/>
+    <link rel="stylesheet" href="css/output/global.css">
+    <link rel="stylesheet" href="css/output/header.css">
+    <link rel="stylesheet" href="css/output/sections/index.css">
 
-    <!-- CONTENT -->
-    <div class="site">
-        <div class="site-content">
-            <header>
-              <img src="img/icons/heading.svg" alt="Arreola" class="headingImage">
-              <div class="right-side">
-                <!-- <a href="index.html" class="logo-link">
-                  <img src="img/icons/logo-black.svg" alt="">
-                  <img src="img/icons/logo-black-blink.svg" class="blink hidden">
-                </a> -->
-                <div class="menu">
-                  <a href="javascript:void(0)" class="active transition" data-slider="1">Curriculum</a>
-                  <a href="javascript:void(0)" class="transition" data-slider="2">Proyectos</a>
-                  <a href="javascript:void(0)" class="transition" data-slider="3">Contacto</a>
+  </head>
+
+  <body>
+      <!-- LOADER -->
+      <div class="loader">
+          <img class="img center-xy" src="img/icons/logo-b.svg">
+      </div>
+      <!-- CURSOR -->
+      <div class="cursor"></div>
+      <div class="cursor-follower"></div>
+
+      <!-- CONTENT -->
+      <div class="site">
+          <div class="site-content">
+              <!-- Header -->
+              <header>
+                <div class="container-fluid">
+                  <div class="row">
+                    <!-- Link - 01 -->
+                    <div class="col-auto mr-auto ">
+                      <a href="#projects" class="link transition active" data-sec="1">
+                        <img src="img/icons/logo-b.svg" class="logo" alt="">
+                      </a>
+                    </div>
+                    <!-- Link - 02 -->
+                    <div class="col-1 col-auto">
+                      <a href="#contact" class="link button-postal" data-sec="3">
+                        <img src="img/icons/icon-postal.svg" class="icon-postal transition">
+                        <img src="img/icons/icon-postcard.svg" class="icon-postcard transition center-xy">
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <img src="img/icons/icon-menu.svg" class="icon-menu visible-sm">
+              </header>
+              <!-- Fullpage -->
+              <div id="fullpage">
+                <!-- Section - 01 -->
+                <section id="section-01" class="section active" data-anchor="projects">
+                  <!-- Content -->
+                  <div class="container-fluid">
+                    <div class="row">
+                      <!-- Side 1 -->
+                      <div class="col-lg-3 side-1 animateIntro">
+                        <!-- Link-01 -->
+                        <div class="linkDiv col-md-4 active">
+                          <p class="text-subHeading" data-website="https://jarreolamtz.github.io/sites/mau/">01 - Nance Wood:</p>
+                          <div class="lineDot"></div>
+                          <p class="text-body">
+                            One of the best ways to make a great vacation quickly horrible.
+                          </p>
+                        </div>
+                        <!-- Link-02 -->
+                        <div class="linkDiv col-md-4">
+                          <p class="text-subHeading" data-website="https://area83.mx">02 - Area83:</p>
+                          <div class="lineDot"></div>
+                          <p class="text-body">
+                            One of the best ways to make a great vacation quickly horrible.
+                          </p>
+                        </div>
+                        <!-- Link-03 -->
+                        <div class="linkDiv col-md-4">
+                          <p class="text-subHeading" data-website="https://ezride.mx">03 - Ezride:</p>
+                          <div class="lineDot"></div>
+                          <p class="text-body">
+                            One of the best ways to make a great vacation quickly horrible.
+                          </p>
+                        </div>
+                        <!-- Link-04 -->
+                        <div class="linkDiv col-md-4">
+                          <p class="text-subHeading" data-website="http://villaobispado.com/">04 - Villa Obispado:</p>
+                          <div class="lineDot"></div>
+                          <p class="text-body">
+                            One of the best ways to make a great vacation quickly horrible.
+                          </p>
+                        </div>
+                        <!-- Link-05 -->
+                        <div class="linkDiv col-md-4">
+                          <p class="text-subHeading" data-website="https://doscasas.com.mx/">05 - Dos Casas:</p>
+                          <div class="lineDot"></div>
+                          <p class="text-body">
+                            One of the best ways to make a great vacation quickly horrible.
+                          </p>
+                        </div>
+                        <!-- Link-06 -->
+                        <div class="linkDiv col-md-4">
+                          <p class="text-subHeading" data-website="https://jarreolamtz.github.io/sites/photo-temp/">06 - Photo Template:</p>
+                          <div class="lineDot"></div>
+                          <p class="text-body">
+                            One of the best ways to make a great vacation quickly horrible.
+                          </p>
+                        </div>
+                        <!-- Dots -->
+                        <div class="dots">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                      <!-- Side 2 -->
+                      <div class="col-lg-9 side-2">
+                        <div class="row">
+                          <div class="slideOut-brown animateIntro"></div>
+                          <div class="projects-slider">
+                            <div class="sliderSlick">
+                              <div class="slide-image transition-3200" style="background: url(img/assets/project-01.png);"></div>
+                              <div class="slide-image transition-3200" style="background: url(img/assets/project-02.png);"></div>
+                              <div class="slide-image transition-3200" style="background: url(img/assets/project-03.png);"></div>
+                              <div class="slide-image transition-3200" style="background: url(img/assets/project-04.png);"></div>
+                              <div class="slide-image transition-3200" style="background: url(img/assets/project-05.png);"></div>
+                              <div class="slide-image transition-3200" style="background: url(img/assets/project-06.png);"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row row-green animateIntro fill-green">
+                          <div class="col-md-8 col-lg-8 fill-green align-items-center ">
+                            <div class="textAreaGreen">
+                              <p class="text-heading">Description:</p>
+                              <p class="text-body">
+                                One of the best ways to make a great vacation quickly horrible is to choose the wrong
+                                accommodations for your trip. There is nothing quite as bad as spending a great day
+                                of vacation only to come back.
+                              </p>
+                            </div>
+                          </div>
+                          <a href="https://jarreolamtz.github.io/sites/mau/" target="_blank" class="col-md-4 col-lg-4 fill-greenDark align-items-center button-website">
+                            <p>view website</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- Section - 02 -->
+                <section id="section-02" class="section" data-anchor="about">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-5 col-lg-5">
+                        <div class="text-area center-y">
+                          <div class="description">
+                            <p class="text-heading">About:</p>
+                            <p class="text-body">
+                              One of the best ways to make a great vacation quickly horrible is to choose the wrong
+                              accommodations for your trip. There is nothing quite as bad as spending a great day
+                              of vacation only to come back to a less-than great place to stay for the night.
+                            </p>
+                            <p class="text-body">
+                              Nothing quite as bad as spending a great day of vacation only to come back to a
+                              less-than-great place to stay for the night wrong accommodations for your
+                              on your best night trip.
+                            </p>
+                          </div>
+                          <div class="list">
+                            <!-- Link-01 -->
+                            <div class="linkDiv transition active">
+                              <p class="text-subHeading">01 - Anagrama</p>
+                              <div class="lineDot"></div>
+                            </div>
+                            <!-- Link-02 -->
+                            <div class="linkDiv transition">
+                              <p class="text-subHeading">02 - V09</p>
+                              <div class="lineDot"></div>
+                            </div>
+                            <!-- Link-03 -->
+                            <div class="linkDiv transition">
+                              <p class="text-subHeading">03 - Saás</p>
+                              <div class="lineDot"></div>
+                            </div>
+                            <!-- Link-04 -->
+                            <div class="linkDiv transition">
+                              <p class="text-subHeading">04 - Innku</p>
+                              <div class="lineDot"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-5 col-lg-3 fill-plus transition-1200"></div>
+                      <div class="col-md-7 col-lg-4">
+                        <div class="row">
+                          <div class="about-slider">
+                            <div class="sliderSlick_About">
+                              <div class="slide-image" style="background: url(img/assets/sec-2-4.jpg);"></div>
+                              <div class="slide-image" style="background: url(img/assets/sec-2-5.jpg);"></div>
+                              <div class="slide-image" style="background: url(img/assets/sec-2.jpg);"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row green-row">
+                      <div class="col-md-12 col-lg-8 fill-greenDark"></div>
+                    </div>
+                  </div>
+                </section>
+                <!-- Section - 03 -->
+                <section id="section-03" class="section" data-anchor="contact">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="d-none d-lg-block col-lg-6 back-photo transition-3200" style="background: url(img/assets/sec-3.jpg); height: 100vh;"></div>
+                      <div class="col-md-12 col-lg-6">
+                        <div class="row row-top">
+                          <img src="img/icons/signature.svg" class="signature center-xy" alt="signature">
+                          <img src="img/icons/icon-flower.svg" class="icon-flower">
+                        </div>
+                        <div class="row row-bottom fill-white justify-content-center">
+                          <div class="col-md-10 col-lg-10">
+                            <div class="center-y">
+                              <p class="text-heading">
+                                Get in touch:
+                              </p>
+                              <p class="text-body">
+                                One of the best ways to make a great vacation quickly horrible is to choose the wrong
+                                accommodations for your trip there is nothing quite as bad as spending.
+                              </p>
+                              <p class="text-body">
+                                Email: j.arreolamtz@gmail.com
+                                <br>
+                                Cell Phone: +52 8181630649
+                              </p>
+                              <form action="">
+                                <!-- Send Button -->
+                                <input class="text-subHeading color-gold transition" type="submit" value="get in touch">
+                                <!-- Name -->
+                                <div class="inputDiv">
+                                  <label for="name" class="text-subHeading">Name:</label>
+                                  <input type="text" id="name" placeholder="John Doe" class="text-body">
+                                  <div class="lineDot"></div>
+                                </div>
+                                <!-- Name -->
+                                <div class="inputDiv">
+                                  <label for="email" class="text-subHeading">Email:</label>
+                                  <input type="email" id="email" placeholder="email@yourcompany.com" class="text-body">
+                                  <div class="lineDot"></div>
+                                </div>
+                                <!-- Name -->
+                                <div class="inputDiv">
+                                  <label for="phone" class="text-subHeading">Mobile Phone:</label>
+                                  <input type="phone" id="phone" placeholder="(+52)8181630649" class="text-body">
+                                  <div class="lineDot"></div>
+                                </div>
+                                <!-- Name -->
+                                <div class="inputDiv">
+                                  <label for="message" class="text-subHeading">Message:</label>
+                                  <input type="text" id="message" placeholder="Max 60 char limit" class="text-body">
+                                  <div class="lineDot"></div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
               </div>
-              <div class="clearfix"></div>
-            </header>
-            <!-- Mobile Menu -->
-            <div class="mobile-menu">
-              <img src="img/icons/icon-close.svg" class="icon-close">
-              <div class="center-y">
-                <a href="index.html" class="logo-link">
-                  <img src="img/icons/logo-black.svg" alt="">
-                  <img src="img/icons/logo-black-blink.svg" class="blink hidden">
-                </a>
-                <a href="javascript:void(0)" class="active transition" data-slider="1">Curriculum</a>
-                <a href="javascript:void(0)" class="transition" data-slider="2">Proyectos</a>
-                <a href="javascript:void(0)" class="transition" data-slider="3">Contacto</a>
-              </div>
-            </div>
-            <!-- Section - 01 -->
-            <section class="section-01">
-              <!-- Slider -->
-              <div class="slider">
-                <!-- Slide - 01 : Curriculum -->
-                <div class="slide">
-                  <div class="slideArea transition-600">
-                    <div class="container float-right">
-                      <div class="row">
-                        <!-- Images -->
-                        <div class="col-xs-12 col-sm-11 col-md-11 img-col">
-                          <div class="floated-element sliderInn">
-                            <div class="innerSlider" style="background-color:#5147FF; background-image:url(img/assets/pattern-dot.svg);">
-                              <div class="project-image transition transition" style="background: url(img/assets/foto-01.jpg)"></div>
-                              <div class="project-image transition transition" style="background: url(img/assets/foto-01.jpg)"></div>
-                              <div class="project-image transition transition" style="background: url(img/assets/foto-01.jpg)"></div>
-                            </div>
-                          </div>
-                          <!-- Controls Inn -->
-                          <div class="controlsInn">
-                            <div class="up"></div>
-                            <div class="down"></div>
-                          </div>
-                        </div>
-                        <!-- Description -->
-                        <div class="col-xs-11 desc-col col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 top">
-                          <div class="project-description floated-element" style="background-color:#ffffff">
-                            <div class="contrainer center-y">
-                              <!-- Number -->
-                              <div class="row">
-                                <div class="col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                  <h3 class="project-num">No.01</h3>
-                                </div>
-                              </div>
-                              <!-- Title -->
-                              <div class="row">
-                                <div class="col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                  <h2>Currículum Vitae</h2>
-                                </div>
-                              </div>
-                              <!-- Description -->
-
-                              <!-- Modules -->
-                              <div class="modules">
-                                <!-- Module -->
-                                <div class="module first">
-                                  <div class="row">
-                                    <div class="col-xs-6 col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">2016 - 2017</p>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-2">
-                                      <p class="description">Anagrama</p>
-                                    </div>
-                                    <div class="col-sm-4 col-md-6">
-                                      <p class="description">UI & UX / Front-end Developer</p>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Module -->
-                                <div class="module">
-                                  <div class="row">
-                                    <div class="col-xs-6 col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">2016 - 2016</p>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-2">
-                                      <p class="description">v09</p>
-                                    </div>
-                                    <div class="col-sm-4 col-md-6">
-                                      <p class="description">UI & UX / Front-end Developer</p>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Module -->
-                                <div class="module">
-                                  <div class="row">
-                                    <div class="col-xs-6 col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">2014 - 2015</p>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-2">
-                                      <p class="description">Saás</p>
-                                    </div>
-                                    <div class="col-sm-4 col-md-6">
-                                      <p class="description">Designer / Front-end Developer</p>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Module -->
-                                <div class="module">
-                                  <div class="row">
-                                    <div class="col-xs-6 col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">2013 - 2015</p>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-2">
-                                      <p class="description">Innku</p>
-                                    </div>
-                                    <div class="col-sm-4 col-md-6">
-                                      <p class="description">UI & UX / Front-end Developer</p>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="row">
-                                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                  <p>
-                                    Para el desarrollo de mis proyectos utilizo Html, Css o Sass, Javascript y Jquery, aunque
-                                    eh trabajado con PHP, MySql y Rails, mas durante este ultimo año en poca cantidad. Suelo utilizar
-                                    frameworks como Bootstrap, Foundation o Bourbon y para Diseñar Bohemian Sketch o Photoshop e illustrator.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="icon-plus transition rotate-45">
-                            <img src="img/icons/icon-plus-black.svg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container container-floated">
-                      <div class="row">
-                        <div class="col-sm-4 col-md-3">
-                          <h2 class="project-title">
-                            Curriculum Vitae
-                          </h2>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-6 col-md-4">
-                          <h3 class="project-text">
-                            Conoce un poco sobre mi Formación Profesional,
-                            equipos con los que colaboro y eh trabajado.
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="clickArea">
-                      <div class="left"></div><!--
-                      --><div class="right"></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide - 02 : Proyectos -->
-                <div class="slide">
-                  <div class="slideArea transition-600">
-                    <div class="container float-right">
-                      <div class="row">
-                        <!-- Images -->
-                        <div class="col-xs-12 col-sm-11 col-md-11">
-                          <div class="floated-element sliderInn">
-                            <div class="innerSlider" style="background-color:#5147FF; background-image:url(img/assets/pattern-dot.svg);">
-                              <div class="project-image transition transition" style="background: url(img/assets/project-04.jpg)"></div>
-                              <div class="project-image transition transition" style="background: url(img/assets/project-08.jpg)"></div>
-                              <div class="project-image transition transition" style="background: url(img/assets/project-09.jpg)"></div>
-                              <div class="project-image transition transition" style="background: url(img/assets/project-03.jpg)"></div>
-                              <div class="project-image transition transition" style="background: url(img/assets/project-06.jpg)"></div>
-                              <div class="project-image transition transition" style="background: url(img/assets/project-01.jpg)"></div>
-
-                            </div>
-                          </div>
-                          <!-- Controls Inn -->
-                          <div class="controlsInn working">
-                            <div class="up"></div>
-                            <div class="down"></div>
-                          </div>
-                        </div>
-                        <!-- Description -->
-                        <div class="col-xs-11 desc-col col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1">
-                          <div class="project-description floated-element" style="background-color:#ffffff">
-                            <div class="contrainer center-y">
-                              <div class="row">
-                                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                  <h3 class="project-num">No.02</h3>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                  <h2>Proyectos</h2>
-                                </div>
-                              </div>
-                              <div class="module">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                    <p>
-                                      Los proyectos seleccionados, fueron desarrollados en el transcurso de este año,
-                                      en su mayoria colaborados en Diseño con el equipo de Branding de Anagrama y el equipo de Web.
-                                      Algunos aun no han sido publicados ya que los proyectos siguen en proceso.
-                                    </p>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                    <div class="divider"></div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <!-- Modules -->
-                              <div class="modules">
-                                <!-- Module: Villa Obispado -->
-                                <div class="module">
-                                  <div class="row">
-                                    <div class="col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">Villa Obispado</p>
-                                    </div>
-                                    <div class="col-sm-3 col-md-8">
-                                      <p class="description"><a href="https://villaobispado.com/" target="_blank">https://villaobispado.com/</a></p>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Module: Jimjams -->
-                                <div class="module">
-                                  <div class="row">
-                                    <div class="col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">Jimjams</p>
-                                    </div>
-                                    <div class="col-sm-3 col-md-2">
-                                      <p class="description"><a href="http://jimjams.mx/" target="_blank">http://jimjams.mx/</a></p>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Module: Levain -->
-                                <div class="module">
-                                  <div class="row">
-                                    <div class="col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">Levain Co.</p>
-                                    </div>
-                                    <div class="col-sm-3 col-md-2">
-                                      <p class="description"><a href="https://levainco.com/" target="_blank">https://levainco.com/</a></p>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Module: Dos Casas -->
-                                <div class="module">
-                                  <div class="row">
-                                    <div class="col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">Dos Casas</p>
-                                    </div>
-                                    <div class="col-sm-3 col-md-2">
-                                      <p class="description"><a href="https://doscasas.com.mx/" target="_blank">https://doscasas.com.mx/</a></p>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Module: Photo Templ -->
-                                <div class="module">
-                                  <div class="row">
-                                    <div class="col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">Photography Template Site</p>
-                                    </div>
-                                    <div class="col-sm-3 col-md-2">
-                                      <p class="description"><a href="https://jarreolamtz.github.io/sites/photo-temp/" target="_blank">https://jarreolamtz.github.io/sites/photo-temp/</a></p>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="icon-plus transition">
-                            <img src="img/icons/icon-plus-black.svg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container container-floated">
-                      <div class="row">
-                        <div class="col-sm-4 col-md-3">
-                          <h2 class="project-title">
-                            Proyectos
-                          </h2>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-6 col-md-4">
-                          <h3 class="project-text">
-                            Buenos proyectos han llegado, algunos siguen en proceso
-                            y otros finalizados y online. Te muestro unos cuantos de ellos.
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="clickArea">
-                      <div class="left"></div><!--
-                      --><div class="right"></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide - 03 : Contacto -->
-                <div class="slide">
-                  <div class="slideArea transition-600">
-                    <div class="container float-right">
-                      <div class="row">
-                        <!-- Images -->
-                        <div class="col-xs-12 col-sm-11 col-md-11">
-                          <div class="floated-element sliderInn">
-                            <div class="innerSlider" style="background-color:#5147FF; background-image:url(img/assets/pattern-dot.svg);">
-                              <div class="project-image transition transition" style="background: url(img/assets/foto-01.jpg)"></div>
-                              <div class="project-image transition transition" style="background: url(img/assets/project-02.jpg)"></div>
-                              <div class="project-image transition transition" style="background: url(img/assets/project-03.jpg)"></div>
-                            </div>
-                          </div>
-                          <!-- Controls Inn -->
-                          <div class="controlsInn working">
-                            <div class="up"></div>
-                            <div class="down"></div>
-                          </div>
-                        </div>
-                        <!-- Description -->
-                        <div class="col-xs-11 desc-col col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1">
-                          <div class="project-description floated-element" style="background-color:#ffffff">
-                            <div class="contrainer center-y">
-                              <!-- Number -->
-                              <div class="row">
-                                <div class="col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                  <h3 class="project-num">No.03</h3>
-                                </div>
-                              </div>
-                              <!-- Title -->
-                              <div class="row">
-                                <div class="col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                  <h2>Contacto</h2>
-                                </div>
-                              </div>
-                              <!-- Description -->
-
-                              <!-- Modules -->
-                              <div class="modules">
-                                <!-- Module -->
-                                <div class="module first">
-                                  <div class="row">
-                                    <div class="col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">Celular</p>
-                                    </div>
-                                    <div class="col-sm-3 col-md-2">
-                                      <p class="description"><a href="tel:(+52)8181630649">818-163-0649</a></p>
-                                    </div>
-                                    <!-- <div class="col-sm-4 col-md-6">
-                                      <p class="description">Personal</p>
-                                    </div> -->
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Module -->
-                                <div class="module">
-                                  <div class="row">
-                                    <div class="col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">Teléfono</p>
-                                    </div>
-                                    <div class="col-sm-3 col-md-2">
-                                      <p class="description"><a href="tel:81039764">81-03-97-64</a></p>
-                                    </div>
-                                    <!-- <div class="col-sm-4 col-md-6">
-                                      <p class="description">Casa</p>
-                                    </div> -->
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Module -->
-                                <div class="module">
-                                  <div class="row">
-                                    <div class="col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">Email</p>
-                                    </div>
-                                    <div class="col-sm-3 col-md-2">
-                                      <p class="description"><a href="mailto:j.arreolamtz@gmail.com">j.arreolamtz@gmail.com</a></p>
-                                    </div>
-                                    <!-- <div class="col-sm-4 col-md-6">
-                                      <p class="description">Personal</p>
-                                    </div> -->
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Module -->
-                                <div class="module">
-                                  <div class="row">
-                                    <div class="col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
-                                      <p class="date">Skype</p>
-                                    </div>
-                                    <div class="col-sm-3 col-md-2">
-                                      <p class="description">jarreolamtz</p>
-                                    </div>
-                                    <!-- <div class="col-sm-4 col-md-6">
-                                      <p class="description">UI & UX / Front-end Developer</p>
-                                    </div> -->
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                      <div class="divider"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <!-- <div class="row">
-                                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                                  <p>
-                                    Para el desarrollo de mis proyectos utilizo Html, Css o Sass, Javascript y Jquery, aunque
-                                    eh trabajado con PHP, MySql y Rails, mas durante este ultimo año en poca cantidad. Suelo utilizar
-                                    frameworks como Bootstrap, Foundation o Bourbon y para Diseñar Bohemian Sketch o Photoshop e illustrator.
-                                  </p>
-                                </div>
-                              </div> -->
-                            </div>
-                          </div>
-                          <div class="icon-plus transition">
-                            <img src="img/icons/icon-plus-black.svg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container container-floated">
-                      <div class="row">
-                        <div class="col-sm-4 col-md-3">
-                          <h2 class="project-title">
-                            Contacto
-                          </h2>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-6 col-md-4">
-                          <h3 class="project-text">
-                            Si te gusta mi trabajo, no dudes en contactarme
-                            por cualquiera de los medios en disposición.
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="clickArea">
-                      <div class="left"></div><!--
-                      --><div class="right"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Divider -->
-              <div class="container-fluid container-floated divider">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="line-divider"></div>
-                  </div>
-                </div>
-              </div>
-              <!-- Counters -->
-              <div class="container container-floated-nums">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-2 col-md-2">
-                    <p class="project-num">No.01</p>
-                  </div>
-                  <div class="col-xs-6 col-sm-10 col-md-4  col-md-offset-6">
-                    <p class="project-count">01 / 07</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-        </div>
-    </div>
+          </div>
+      </div>
 
 
-    <!-- Js -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <!-- <script src="js/global.js"></script> -->
-    <script src="js/index.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <!-- <script src="js/grid.js"></script> -->
+      <!-- Js -->
+      <!-- Bootstrap -->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <!--CDN link for  TweenMax-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+      <!-- Regular -->
+      <script src="js/global.js"></script>
+      <script src="js/plugins/jquery.fullPage.js"></script>
+      <script src="js/plugins/slick.min.js"></script>
+      <script src="js/sections/index.js"></script>
+      <!-- <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
 
-    <!-- Loader -->
-    <script>
-        $(window).load(function () {
-          setTimeout(function(){
-            $(".loader").fadeOut(800);
-          }, 1200);
-        });
-    </script>
-</body>
+      <!-- Loader -->
+      <script>
+        setTimeout(function(){
+          $(".loader").fadeOut(1000).find("header");
+          var time = 150;
+          $(".animateIntro").each(function(){
+            var thisAn = this;
+            setTimeout(function(){
+              $(thisAn).addClass("activeAn");
+            }, time);
+            time += 300;
+          });
+          $("header").delay(300).animate({opacity: 1},1600);
+          animationsGsap();
+        }, 1200);
+      </script>
+  </body>
 </html>

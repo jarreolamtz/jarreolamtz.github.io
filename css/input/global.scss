@@ -1,0 +1,453 @@
+// sass --watch input:output
+
+// .site-content {
+// 	background: url(../../img/delete/home.jpg);
+// 	background-position: top center;
+// 	background-repeat: no-repeat;
+// 	opacity: 0.6;
+//   background-size: cover;
+// }
+
+/* IMPORTS */
+/* VARIABLES  --------------------------------- */
+// FILLS
+$fill-black:#151515;
+$fill-gray: #A1A1A1;
+$fill-white: #FCFAF7;
+// COLORS
+$color-black: #151515;
+$color-gray: #A1A1A1;
+$color-white: #FCFAF7;
+$color-gold: #A68C5C;
+// OPACITY
+$opacity-75: 0.75;
+$opacity-50: 0.5;
+$opacity-25: 0.25;
+$opacity-15: 0.15;
+/* MIXINS --------------------------------- */
+@mixin rotation($deg) {
+  -webkit-transform: rotate($deg);
+     -moz-transform: rotate($deg);
+      -ms-transform: rotate($deg);
+          transform: rotate($deg);
+}
+@mixin transition($ms) {
+  -webkit-transition: all $ms ease-in-out;
+     -moz-transition: all $ms ease-in-out;
+      -ms-transition: all $ms ease-in-out;
+          transition: all $ms ease-in-out;
+}
+@mixin background-dots() {
+  background: linear-gradient(90deg, black (4px - 1px), transparent 90%) center,
+  linear-gradient(rgba(255,255,255,0.2) (2px - 1px), transparent 10%) center,
+  black;
+  background-size: 4px 4px;
+}
+@mixin back-green() {
+  background: #5B7759;
+  background-image: url(../../img/icons/texture.svg);
+  background-size: 150px 150px;
+  position: relative;
+  * {
+    z-index: 1;
+  }
+  &::before {
+    content:" ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(top right, transparent 0%, #5B7759 100%);
+    background-image: -o-linear-gradient(top right, transparent 0%, #5B7759 100%);
+    background-image: linear-gradient(to bottom left, transparent 0%, #5B7759 100%);
+  }
+}
+@mixin back-greenDark() {
+  background: #404D3F;
+  position: relative;
+  background-image: url(../../img/icons/texture.svg);
+  background-size: 150px 150px;
+  &::before {
+    content:" ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(top right, transparent 0%, #404D3F 100%);
+    background-image: -o-linear-gradient(top right, transparent 0%, #404D3F 100%);
+    background-image: linear-gradient(to bottom left, transparent 0%, #404D3F 100%);
+  }
+}
+/* FILLS  --------------------------------- */
+.fill-black {
+  background: $fill-black;
+}
+.fill-gray {
+  background: $fill-gray;
+}
+.fill-white {
+  background: $fill-white;
+}
+.fill-green {
+  @include back-green();
+}
+.fill-greenDark {
+  @include back-greenDark();
+}
+.fill-plus {
+  background: url(../../img/icons/pattern-plus.svg);
+}
+/* FONTS --------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Syncopate:400,700');
+.text-bigHeading {
+
+}
+.text-heading	{
+  font-family: "Syncopate";
+  font-weight: 700;
+  font-size: 24px;
+  color: #2E302E;
+  letter-spacing: 3.91px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.text-subHeading {
+  font-family: "Syncopate";
+  font-weight: 700;
+  font-size: 10px;
+  color: #2E302E;
+  letter-spacing: 1.56px;
+  text-transform: uppercase;
+}
+.text-body {
+  font-family: "CourierNewPSMT";
+  font-size: 11px;
+  color: #2E302E;
+  letter-spacing: 0.05px;
+  line-height: 15px;
+  margin-bottom: 0;
+}
+.text-body + .text-body {
+  margin-top: 16px;
+}
+.text-link {
+
+}
+
+.lineDot {
+  background-image: linear-gradient(to right, #DBD8CD 60%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 9px 6px;
+  background-repeat: repeat-x;
+  height: 1px;
+  width: 100%;
+  display: block;
+  margin: 7px 0 7px;
+}
+
+
+/* COLORS --------------------------------- */
+.color-black {
+  color: $color-black;
+}
+
+.color-gray {
+  color: $color-gray;
+}
+
+.color-white {
+  color: $color-white;
+}
+.color-gold {
+  color: $color-gold;
+}
+/* BUTTON FILL --------------------------------- */
+button {
+
+}
+.button-fill {
+
+}
+.button-fill img {
+  display: inline-block;
+}
+/* BUTTON STROKE --------------------------------- */
+.button-stroke {
+
+}
+.button-stroke img {
+
+}
+/* OPACITY --------------------------------- */
+.opacity-75 {
+  opacity: $opacity-75;
+}
+
+.opacity-50 {
+  opacity: $opacity-50;
+}
+
+.opacity-25 {
+  opacity: $opacity-25;
+}
+
+.opacity-15 {
+  opacity: $opacity-15;
+}
+/* ROTATES --------------------------------- */
+.rotate-45 {
+  @include rotation(45deg)
+}
+.rotate-90 {
+  @include rotation(90deg)
+}
+.rotate-180 {
+  @include rotation(180deg)
+}
+.rotate-270 {
+  @include rotation(270deg)
+}
+/* TRANSITIONS --------------------------------- */
+.transition {
+  @include transition(300ms)
+}
+.transition-600 {
+  @include transition(600ms)
+}
+.transition-900 {
+  @include transition(900ms)
+}
+.transition-1200 {
+  @include transition(1200ms)
+}
+.transition-3200 {
+  @include transition(3200ms)
+}
+/* CENTERS --------------------------------- */
+.center-container {
+  position: relative
+}
+.center-x {
+
+}
+.center-y {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.center-xy {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+/* GENERAL --------------------------------- */
+body {
+  background: #FCFAF7 !important;
+	color: #2E302E;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, address {
+  margin: 0;
+}
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+li::selection,
+a::selection,
+span::selection,
+address::selection {
+
+}
+input,
+textarea {
+  border-radius: 0 !important;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  outline: none;
+  text-decoration: none !important;
+}
+/* LOADER --------------------------------- */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999999999;
+}
+.loader img {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+}
+
+/* GENERAL --------------------------------- */
+.line-black {
+  width: 100%;
+  height: 1px;
+  background: #333333;
+  display: block;
+  margin: 5px 0;
+}
+.line-gray {
+  width: 100%;
+  height: 1px;
+  background: #D8D8D8;
+  display: block;
+  margin: 5px 0;
+}
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: inline-block;
+  height: 6px;
+  margin-bottom: 0;
+  .slick-active {
+    background: #DBD8CD;
+  }
+  li {
+    height: 6px;
+    width: 6px;
+    border: 1px solid #DBD8CD;
+    border-radius: 50%;
+    display: inline-block;
+    content: " ";
+    vertical-align: top;
+    cursor: pointer;
+  }
+  li + li {
+    margin-left: 20px;
+  }
+}
+
+/* HOVERS */
+@media screen and (min-width: 992px) {
+    a:hover,
+    a:focus {
+      color: rgb(234, 114, 0) !important;
+      text-decoration: none;
+      outline: none !important;
+    }
+    *:focus {
+        outline: none;
+    }
+    /* LINKS --------------------------------- */
+    a.color-black:hover,
+    a.color-black:focus {
+        color: #4b4b4b;
+    }
+
+    a.color-gray:hover,
+    a.color-gray:focus {
+        color: #b3b3b3;
+    }
+
+    a.color-white:hover,
+    a.color-white:focus {
+        color: #d4d4d4;
+    }
+}
+
+/* MODULE --------------------------------- */
+@media screen and (min-width: 992px) {
+    .col-md-center {
+        float: none;
+        display: inline-block;
+    }
+}
+
+/* MODULE --------------------------------- */
+@media screen and (max-width: 992px) and (min-width: 768px){
+    .col-sm-center {
+        float: none;
+        display: inline-block;
+    }
+}
+
+/* MODULE --------------------------------- */
+@media screen and (min-width: 768px) {
+  .col-bottom {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+  }
+}
+
+/* TABLET - 991px --------------------------------- */
+@media screen and (max-width: 991px) {
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+   text-decoration: none;
+   color: white !important;
+  }
+  .text-center-mobile {
+    text-align: center;
+  }
+  .text-heading-text p {
+    margin-top: 10px;
+  }
+  .container {
+    max-width: initial;
+    padding: 0 40px;
+  }
+  /* FONTS --------------------------------- */
+  .text-heading {
+    font-size: 19px;
+    line-height: 19px;
+  }
+  .text-subHeading {
+    line-height: 9px;
+    font-size: 9px;
+  }
+  .text-body {
+
+  }
+  .text-body + .text-body {
+    margin-top: 15px;
+  }
+  .text-link {
+
+  }
+  .text-center-sm {
+      text-align: center;
+  }
+}
+
+/* PHONE - 767px --------------------------------- */
+@media screen and (max-width: 767px) {
+
+}
