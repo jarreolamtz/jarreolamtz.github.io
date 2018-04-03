@@ -6826,7 +6826,7 @@ template {
       content: " "; }
   #section-01 .side-1 .dots {
     text-align: center;
-    height: calc(10% + 30px);
+    height: calc(25% - 60px);
     position: relative; }
     #section-01 .side-1 .dots .center-xy {
       height: 6px; }
