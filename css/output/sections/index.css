@@ -6762,8 +6762,12 @@ template {
   100% {
     height: 0%; } }
 #section-01 .side-1 {
-  box-shadow: 5px -10px 30px rgba(23, 23, 23, 0.2);
   position: relative; }
+  #section-01 .side-1.animateIntro.activeAn .bottom-div {
+    height: calc(100vh - 110px);
+    margin-top: 110px;
+    position: absolute;
+    width: calc(100% - 60px); }
   #section-01 .side-1.animateIntro.activeAn::before {
     animation-duration: 1s;
     animation-name: fillOut;
@@ -6779,13 +6783,14 @@ template {
     z-index: 1; }
   #section-01 .side-1 .text-subHeading {
     margin-bottom: 0px; }
-  #section-01 .side-1 .linkDiv:first-child {
-    margin-top: 110px; }
   #section-01 .side-1 .linkDiv {
+    height: 15%;
+    margin: 0;
     display: block;
-    margin-bottom: 37px;
     position: relative;
     cursor: pointer; }
+    #section-01 .side-1 .linkDiv:nth-last-child(2) {
+      height: auto; }
     #section-01 .side-1 .linkDiv .lineDot {
       background-image: linear-gradient(to right, #DBD8CD 60%, rgba(255, 255, 255, 0) 0%);
       background-position: bottom;
@@ -6797,7 +6802,7 @@ template {
       margin: 7px 0 7px; }
     #section-01 .side-1 .linkDiv::before {
       width: 0px;
-      height: calc(100% + 37px);
+      height: 93px;
       position: absolute;
       left: -30px;
       top: -20px;
@@ -6811,7 +6816,7 @@ template {
       transition: all 800ms ease-in-out; }
     #section-01 .side-1 .linkDiv:hover::before, #section-01 .side-1 .linkDiv.active::before {
       width: 5px;
-      height: calc(100% + 37px);
+      height: 93px;
       position: absolute;
       left: -30px;
       top: -20px;
@@ -6821,7 +6826,10 @@ template {
       content: " "; }
   #section-01 .side-1 .dots {
     text-align: center;
-    height: 6px; }
+    height: calc(10% + 30px);
+    position: relative; }
+    #section-01 .side-1 .dots .center-xy {
+      height: 6px; }
     #section-01 .side-1 .dots .dot {
       height: 6px;
       width: 6px;
@@ -7046,7 +7054,13 @@ template {
     display: flex;
     height: 180px;
     flex-wrap: wrap; }
+    #section-01 .side-1.animateIntro.activeAn .bottom-div {
+      height: auto;
+      margin-top: 0px;
+      position: initial;
+      width: auto; }
     #section-01 .side-1 .linkDiv {
+      height: auto;
       width: 32.9%;
       display: inline-block;
       margin-bottom: 0px; }

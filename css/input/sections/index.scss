@@ -20,11 +20,16 @@ $screen-background: #121010;
 // Section 01
 #section-01 {
   .side-1 {
-    box-shadow: 5px -10px 30px hsla(0, 0%, 9%, 0.20);
+    // box-shadow: 5px -10px 30px hsla(0, 0%, 9%, 0.20);
     position: relative;
     &.animateIntro.activeAn {
+      .bottom-div {
+        height: calc(100vh - 110px);
+        margin-top: 110px;
+        position: absolute;
+        width: calc(100% - 60px);
+      }
       &::before {
-
         animation-duration: 1s;
         animation-name: fillOut;
         animation-fill-mode: forwards;
@@ -43,12 +48,13 @@ $screen-background: #121010;
     .text-subHeading {
       margin-bottom: 0px;
     }
-    .linkDiv:first-child {
-      margin-top: 110px;
-    }
     .linkDiv {
+      &:nth-last-child(2) {
+        height: auto;
+      }
+      height: 15%;
+      margin: 0;
       display: block;
-      margin-bottom: 37px;
       position: relative;
       cursor: pointer;
       .lineDot {
@@ -63,7 +69,7 @@ $screen-background: #121010;
       }
       &::before {
         width: 0px;
-        height: calc(100% + 37px);
+        height: 93px;
         position: absolute;
         left: -30px;
         top: -20px;
@@ -80,7 +86,7 @@ $screen-background: #121010;
       &.active {
         &::before {
           width: 5px;
-          height: calc(100% + 37px);
+          height: 93px;
           position: absolute;
           left: -30px;
           top: -20px;
@@ -93,7 +99,11 @@ $screen-background: #121010;
     }
     .dots {
       text-align: center;
-      height: 6px;
+      height: calc(10% + 30px);
+      position: relative;
+      .center-xy {
+        height: 6px;
+      }
       .dot {
         height: 6px;
         width: 6px;
@@ -402,7 +412,16 @@ $screen-background: #121010;
       display: flex;
       height: 180px;
       flex-wrap: wrap;
+      &.animateIntro.activeAn {
+        .bottom-div {
+          height: auto;
+          margin-top: 0px;
+          position: initial;
+          width: auto;
+        }
+      }
       .linkDiv {
+        height: auto;
         width: 32.9%;
         display: inline-block;
         margin-bottom: 0px;
