@@ -2,9 +2,10 @@
 $(document).ready(function() {
 	if( $(window).width() > 767 ) {
 		$('#fullpage').fullpage({
-			anchors:['projects', 'about', 'contact'],
+			// anchors:['projects', 'about', 'contact'],
 			scrollingSpeed: 1200,
 		});
+
 		var activeSec = $("section.active").index() + 1;
 		if( activeSec == 1){
 			slick01();
@@ -23,19 +24,18 @@ $(document).ready(function() {
   // SLICK CAROUSEL PROJECTS
 	function slick01() {
   	$('#section-01 .sliderSlick').slick({
-    arrows: false,
-    slidesToScroll: 1,
-    variableWidth: true,
-    draggable: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-		dots: true,
-		customPaging : function(slider, i) {
+	    arrows: false,
+	    slidesToScroll: 1,
+	    variableWidth: true,
+	    draggable: true,
+	    autoplay: true,
+	    autoplaySpeed: 3000,
+			dots: true,
+			customPaging : function(slider, i) {
         var thumb = $(slider.$slides[i]).data('thumb');
         return '<a></a>';
-    },
-
-  });
+	    },
+	  });
 	}
 	// SLICK CAROUSEL ABOUT
 	function slick02() {
@@ -69,7 +69,6 @@ $("#section-01 .linkDiv").click(function(){
 $('#section-01 .sliderSlick').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 	var activeDot = nextSlide + 1;
 	var activeHref = $("#section-01 .linkDiv:nth-child("+activeDot+")").children(".text-subHeading").data("website");
-	console.log(activeHref);
 	$("#section-01 .linkDiv").removeClass("active");
 	$("#section-01 .linkDiv:nth-child("+activeDot+")").addClass("active");
 	$("#section-01 .side-2 .button-website").attr("href", activeHref);
