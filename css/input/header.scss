@@ -93,34 +93,32 @@ header {
 /* PHONE - 767px --------------------------------- */
 @media screen and (max-width: 767px) {
   header {
+    opacity: 0;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+    .menu-mobile-trigger {
+      margin-top: 25px;
+    }
     .logo {
-      display: none;
+      margin-top: 20px;
+      height: 30px;
     }
-    .logo-min {
-      width: 65px;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      display: block;
-    }
-    .playHeader {
-      height: 35px;
-      padding-top: 4px;
-      width: 35px;
-      img {
-        width: 15px;
+    .button-postal {
+      height: 41px;
+      margin-top: 14px;
+      &:hover {
+        .icon-postal {
+          transform: translateX(0%) rotate(3deg);
+        }
       }
-    }
-  }
-  #navMobile {
-    a {
-      margin-bottom: 60px;
-      font-size: 20px;
-      img.underscore {
-        width: 12px;
+      .icon-postal {
+        width: 50px;
       }
-      &:nth-last-child(1) {
-        margin-bottom: 0;
+      .icon-postcard {
+        width: 22px;
+        left: initial;
+        right: 3px;
       }
     }
   }

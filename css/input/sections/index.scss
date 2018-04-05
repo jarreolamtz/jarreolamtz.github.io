@@ -211,6 +211,7 @@ $screen-background: #121010;
           color: #A68C5C;
           line-height: 27px;
           letter-spacing: 4.38px;
+          text-transform: uppercase !important;
           margin-bottom: 0;
           display: block;
           margin: 0 auto;
@@ -239,7 +240,26 @@ $screen-background: #121010;
         display: block;
         margin-bottom: 29px;
         position: relative;
-        cursor: pointer;
+        // cursor: pointer;
+      }
+    }
+    .socialDiv {
+      li {
+        display: inline-block;
+        a {
+          color: #2f302e;
+          &:hover,
+          &:focus,
+          &:active,
+          svg:hover,
+          svg:focus,
+          svg:active, {
+            color: #A68C5C !important;
+          }
+        }
+      }
+      li + li {
+        margin-left: 10px;
       }
     }
   }
@@ -275,7 +295,7 @@ $screen-background: #121010;
     bottom: 0;
     z-index: 1;
     .fill-greenDark {
-      height: 100px;
+      height: 80px;
     }
   }
   // Active Animation
@@ -339,6 +359,9 @@ $screen-background: #121010;
         &:hover {
           color: #A68C5C;
         }
+        &.active {
+          color: #A68C5C;
+        }
       }
       .inputDiv {
         display: flex;
@@ -368,9 +391,9 @@ $screen-background: #121010;
         label {
           margin-bottom: 0;
         }
-        label[for="phone"]{
-          width: 170px;
-        }
+        // label[for="phone"]{
+        //   width: 170px;
+        // }
         .lineDot {
           position: absolute;
           bottom: 0;
@@ -412,15 +435,29 @@ $screen-background: #121010;
         padding: 0;
       }
     }
+    .side-2 {
+      .row-green {
+        .fill-green {
+          display: flex !important;
+        }
+      }
+    }
   }
 }
 @include media-breakpoint-down(md) {
+  @keyframes fillDown {
+    0% { height: calc(100vh - 340px); }
+    100% { height: 0%;}
+  }
   #section-01 {
     .side-1 {
       padding: 80px 0 0;
       display: flex;
       height: 180px;
       flex-wrap: wrap;
+      &::before {
+        height: 18vh;
+      }
       &.animateIntro.activeAn {
         .bottom-div {
           height: auto;
@@ -449,6 +486,7 @@ $screen-background: #121010;
       }
     }
     .side-2 {
+      height: calc(100vh - 180px);
       .projects-slider {
         .sliderSlick {
         height: calc(100vh - 180px - 160px);
@@ -467,21 +505,40 @@ $screen-background: #121010;
       .row-green {
         .fill-green {
           min-height: 160px;
+          display: flex !important;
         }
         .fill-greenDark p {
         font-size: 23px;
         line-height: 23px;
       }
       }
+      .slideOut-brown {
+        height: calc(100vh - 340px);
+        bottom: 160px;
+      }
     }
   }
   #section-02 {
     position: relative;
+    .center-y {
+      position: initial;
+      transform: none;
+      top: initial;
+      margin-top: 120px;
+    }
+    &.active {
+      .fill-plus {
+        position: absolute;
+        bottom: 80px;
+        left: 0;
+        height: 400px;
+      }
+    }
     .fill-plus {
       position: absolute;
-      bottom: 100px;
+      bottom: 80px;
       left: 0;
-      height: 80px;
+      height: 400px;
     }
     .green-row {
       position: initial;
@@ -516,6 +573,104 @@ $screen-background: #121010;
   }
 }
 @include media-breakpoint-down(sm) {
-
+  #section-01 {
+    .side-1 {
+      padding: 80px 0 30px;
+      height: auto;
+      .bottom-div {
+        margin: 0 -15px;
+        .linkDiv {
+          height: auto;
+          width: 50% !important;
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .side-2 {
+      height: auto;
+      .projects-slider {
+        .sliderSlick {
+          height: calc(70vw);
+          width: 100vw;
+          .slide-image {
+            height: calc(70vw);
+            .fake-screen {
+              width: 90vw;
+              height: 41vw;
+              background-size: cover !important;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+      .row-green {
+        .fill-greenDark {
+          height: 120px;
+        }
+      }
+    }
+  }
+  #section-02 {
+    .center-y {
+      top: initial;
+      transform: none;
+      position: initial;
+      margin: 80px 0;
+    }
+    .fill-plus {
+      height: 200px;
+      transform: none;
+      opacity: 1;
+    }
+    .about-slider {
+      .sliderSlick_About {
+        width: 100vw;
+        .slide-image {
+          height: 80vh;
+          width: 100vw;
+          background-size: cover !important;
+          background-position: center center;
+        }
+        .slick-dots {
+          left: 50%;
+        }
+      }
+    }
+  }
+  #section-03 {
+    .row-top {
+      &::before {
+        transform: none !important;
+        opacity: 1;
+      }
+      .icon-flower {
+        width: 80px;
+      }
+      .signature {
+        width: 170px;
+      }
+    }
+    .row-bottom {
+      .center-y {
+        position: relative;
+        top: initial;
+        transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        -webkit-transform: none;
+        margin: 80px 0;
+        form {
+          .inputDiv label[for="phone"] {
+            width: 230px;
+          }
+        }
+      }
+    }
+  }
 }
 @include media-breakpoint-down(xs) {}

@@ -101,6 +101,7 @@ $opacity-15: 0.15;
 }
 /* FONTS --------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=Syncopate:400,700');
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
 .text-bigHeading {
 
 }
@@ -122,10 +123,10 @@ $opacity-15: 0.15;
   text-transform: uppercase;
 }
 .text-body {
-  font-family: "CourierNewPSMT";
-  font-size: 11px;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 12px;
   color: #2E302E;
-  letter-spacing: 0.05px;
+  letter-spacing: -.6px;
   line-height: 15px;
   margin-bottom: 0;
 }
@@ -449,5 +450,12 @@ a:active {
 
 /* PHONE - 767px --------------------------------- */
 @media screen and (max-width: 767px) {
-
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .container-fluid {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+  .row {
+    margin-right: -15px !important;
+    margin-left: -15px !important;
+  }
 }

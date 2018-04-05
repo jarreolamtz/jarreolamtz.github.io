@@ -6915,6 +6915,7 @@ template {
         color: #A68C5C;
         line-height: 27px;
         letter-spacing: 4.38px;
+        text-transform: uppercase !important;
         margin-bottom: 0;
         display: block;
         margin: 0 auto;
@@ -6930,8 +6931,18 @@ template {
   #section-02 .text-area .list .linkDiv {
     display: block;
     margin-bottom: 29px;
-    position: relative;
-    cursor: pointer; }
+    position: relative; }
+  #section-02 .text-area .socialDiv li {
+    display: inline-block; }
+    #section-02 .text-area .socialDiv li a {
+      color: #2f302e; }
+      #section-02 .text-area .socialDiv li a:hover, #section-02 .text-area .socialDiv li a:focus, #section-02 .text-area .socialDiv li a:active,
+      #section-02 .text-area .socialDiv li a svg:hover,
+      #section-02 .text-area .socialDiv li a svg:focus,
+      #section-02 .text-area .socialDiv li a svg:active {
+        color: #A68C5C !important; }
+  #section-02 .text-area .socialDiv li + li {
+    margin-left: 10px; }
   #section-02 .fill-plus {
     height: 100vh;
     transform: translateX(5vw);
@@ -6959,7 +6970,7 @@ template {
     bottom: 0;
     z-index: 1; }
     #section-02 .green-row .fill-greenDark {
-      height: 100px; }
+      height: 80px; }
   #section-02.active .fill-plus {
     height: 100vh;
     transform: translateX(0vw);
@@ -7009,6 +7020,8 @@ template {
         z-index: 1; }
         #section-03 .row-bottom form input[type="submit"]:hover {
           color: #A68C5C; }
+        #section-03 .row-bottom form input[type="submit"].active {
+          color: #A68C5C; }
       #section-03 .row-bottom form .inputDiv {
         display: flex;
         height: 24px;
@@ -7033,8 +7046,6 @@ template {
           background: transparent; }
         #section-03 .row-bottom form .inputDiv label {
           margin-bottom: 0; }
-        #section-03 .row-bottom form .inputDiv label[for="phone"] {
-          width: 170px; }
         #section-03 .row-bottom form .inputDiv .lineDot {
           position: absolute;
           bottom: 0;
@@ -7055,13 +7066,22 @@ template {
   #section-01 .side-1 .linkDiv {
     flex: none;
     max-width: initial;
-    padding: 0; } }
+    padding: 0; }
+  #section-01 .side-2 .row-green .fill-green {
+    display: flex !important; } }
 @media (max-width: 991.98px) {
+  @keyframes fillDown {
+    0% {
+      height: calc(100vh - 340px); }
+    100% {
+      height: 0%; } }
   #section-01 .side-1 {
     padding: 80px 0 0;
     display: flex;
     height: 180px;
     flex-wrap: wrap; }
+    #section-01 .side-1::before {
+      height: 18vh; }
     #section-01 .side-1.animateIntro.activeAn .bottom-div {
       height: auto;
       margin-top: 0px;
@@ -7080,29 +7100,45 @@ template {
         margin-top: 0px; }
     #section-01 .side-1 .dots {
       display: none; }
-  #section-01 .side-2 .projects-slider .sliderSlick {
-    height: calc(100vh - 180px - 160px);
-    width: 100vw; }
-    #section-01 .side-2 .projects-slider .sliderSlick .slide-image {
+  #section-01 .side-2 {
+    height: calc(100vh - 180px); }
+    #section-01 .side-2 .projects-slider .sliderSlick {
       height: calc(100vh - 180px - 160px);
-      width: 100vw;
-      background-position-x: -76px !important; }
-    #section-01 .side-2 .projects-slider .sliderSlick .slick-dots {
-      left: 50%;
-      transform: translateX(-50%); }
-  #section-01 .side-2 .row-green .fill-green {
-    min-height: 160px; }
-  #section-01 .side-2 .row-green .fill-greenDark p {
-    font-size: 23px;
-    line-height: 23px; }
+      width: 100vw; }
+      #section-01 .side-2 .projects-slider .sliderSlick .slide-image {
+        height: calc(100vh - 180px - 160px);
+        width: 100vw;
+        background-position-x: -76px !important; }
+      #section-01 .side-2 .projects-slider .sliderSlick .slick-dots {
+        left: 50%;
+        transform: translateX(-50%); }
+    #section-01 .side-2 .row-green .fill-green {
+      min-height: 160px;
+      display: flex !important; }
+    #section-01 .side-2 .row-green .fill-greenDark p {
+      font-size: 23px;
+      line-height: 23px; }
+    #section-01 .side-2 .slideOut-brown {
+      height: calc(100vh - 340px);
+      bottom: 160px; }
 
   #section-02 {
     position: relative; }
+    #section-02 .center-y {
+      position: initial;
+      transform: none;
+      top: initial;
+      margin-top: 120px; }
+    #section-02.active .fill-plus {
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+      height: 400px; }
     #section-02 .fill-plus {
       position: absolute;
-      bottom: 100px;
+      bottom: 80px;
       left: 0;
-      height: 80px; }
+      height: 400px; }
     #section-02 .green-row {
       position: initial;
       width: initial; }
@@ -7122,5 +7158,71 @@ template {
       height: 18px; }
       #section-03 .row-bottom form .inputDiv input {
         height: 10px; } }
+@media (max-width: 767.98px) {
+  #section-01 .side-1 {
+    padding: 80px 0 30px;
+    height: auto; }
+    #section-01 .side-1 .bottom-div {
+      margin: 0 -15px; }
+      #section-01 .side-1 .bottom-div .linkDiv {
+        height: auto;
+        width: 50% !important;
+        display: inline-block;
+        margin-bottom: 10px; }
+  #section-01 .side-2 {
+    height: auto; }
+    #section-01 .side-2 .projects-slider .sliderSlick {
+      height: calc(70vw);
+      width: 100vw; }
+      #section-01 .side-2 .projects-slider .sliderSlick .slide-image {
+        height: calc(70vw); }
+        #section-01 .side-2 .projects-slider .sliderSlick .slide-image .fake-screen {
+          width: 90vw;
+          height: 41vw;
+          background-size: cover !important;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%); }
+    #section-01 .side-2 .row-green .fill-greenDark {
+      height: 120px; }
+
+  #section-02 .center-y {
+    top: initial;
+    transform: none;
+    position: initial;
+    margin: 80px 0; }
+  #section-02 .fill-plus {
+    height: 200px;
+    transform: none;
+    opacity: 1; }
+  #section-02 .about-slider .sliderSlick_About {
+    width: 100vw; }
+    #section-02 .about-slider .sliderSlick_About .slide-image {
+      height: 80vh;
+      width: 100vw;
+      background-size: cover !important;
+      background-position: center center; }
+    #section-02 .about-slider .sliderSlick_About .slick-dots {
+      left: 50%; }
+
+  #section-03 .row-top::before {
+    transform: none !important;
+    opacity: 1; }
+  #section-03 .row-top .icon-flower {
+    width: 80px; }
+  #section-03 .row-top .signature {
+    width: 170px; }
+  #section-03 .row-bottom .center-y {
+    position: relative;
+    top: initial;
+    transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    -webkit-transform: none;
+    margin: 80px 0; }
+    #section-03 .row-bottom .center-y form .inputDiv label[for="phone"] {
+      width: 230px; } }
 
 /*# sourceMappingURL=index.css.map */

@@ -19,6 +19,11 @@ $(document).ready(function() {
 				slick01();
 			}, 600);
 		}
+	} else {
+		slick01();
+		setTimeout(function(){
+			slick02();
+		}, 600);
 	}
 
   // SLICK CAROUSEL PROJECTS
@@ -53,6 +58,36 @@ $(document).ready(function() {
 			},
 		});
 	}
+
+	// FORM DOTS
+	$("form input.casilla").focusin(function(){
+		var input = $(this).parent();
+		input.removeClass("filled");
+
+		var chequed = $("form .inputDiv.filled").length + 1;
+		if(chequed == 4) {
+			$("input.color-gold").addClass("active");
+		} else {
+			$("input.color-gold").removeClass("active");
+		}
+	});
+	$("form input.casilla").focusout(function(){
+		var input = $(this).parent();
+		var value = $(this).val();
+		var chequed = $("form .inputDiv.filled").length + 1;
+		if(value != "") {
+			input.addClass("filled");
+		} else {
+			input.removeClass("filled");
+		}
+		if(chequed == 4) {
+			$("input.color-gold").addClass("active");
+		} else {
+			$("input.color-gold").removeClass("active");
+		}
+	});
+
+
 });
 
 // SLICK01 CONTROLS
