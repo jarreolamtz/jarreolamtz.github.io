@@ -6874,10 +6874,10 @@ template {
         #section-01 .side-2 .projects-slider .sliderSlick .slick-slide .fake-screen {
           position: absolute;
           bottom: 0;
-          right: 0;
+          right: 0px;
           background-size: cover !important;
-          height: 58vh;
-          width: 65vw; }
+          height: 60vh;
+          width: 90vw; }
       #section-01 .side-2 .projects-slider .sliderSlick .slick-dots {
         display: none !important; }
         #section-01 .side-2 .projects-slider .sliderSlick .slick-dots li {
@@ -6955,7 +6955,7 @@ template {
         height: 100vh;
         width: 33.3333333333vw;
         background-size: cover !important;
-        background-position: center center; }
+        background-position: center !important; }
       #section-02 .about-slider .sliderSlick_About .slick-dots {
         position: absolute;
         bottom: 20px;
@@ -7133,31 +7133,34 @@ template {
       position: absolute;
       bottom: 80px;
       left: 0;
-      height: 400px; }
+      height: 260px; }
     #section-02 .fill-plus {
       position: absolute;
       bottom: 80px;
       left: 0;
-      height: 400px; }
+      height: 50px; }
     #section-02 .green-row {
       position: initial;
       width: initial; }
-    #section-02 .sliderSlick_About {
+    #section-02 .about-slider .sliderSlick_About {
       width: 58.3333333333vw; }
-      #section-02 .sliderSlick_About .slick-dots {
+      #section-02 .about-slider .sliderSlick_About .slick-dots {
         left: 50%; }
-      #section-02 .sliderSlick_About .slide-image {
-        width: 58.3333333333vw;
-        height: calc(100vh - 100px); }
+      #section-02 .about-slider .sliderSlick_About .slide-image {
+        width: 58.3333333333vw !important;
+        height: calc(100vh - 80px); }
 
-  #section-03 .row-top {
-    height: 32vh; }
-  #section-03 .row-bottom {
-    height: 68vh; }
-    #section-03 .row-bottom form .inputDiv {
-      height: 18px; }
-      #section-03 .row-bottom form .inputDiv input {
-        height: 10px; } }
+  #section-03 {
+    position: relative;
+    overflow: hidden !important; }
+    #section-03 .row-top {
+      height: 32vh; }
+    #section-03 .row-bottom {
+      height: 68vh; }
+      #section-03 .row-bottom form .inputDiv {
+        height: 18px; }
+        #section-03 .row-bottom form .inputDiv input {
+          height: 10px; } }
 @media (max-width: 767.98px) {
   #section-01 .side-1 {
     padding: 80px 0 30px;
