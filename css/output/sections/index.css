@@ -6877,7 +6877,7 @@ template {
           right: 0px;
           background-size: cover !important;
           height: 60vh;
-          width: 90vw; }
+          width: 67vw; }
       #section-01 .side-2 .projects-slider .sliderSlick .slick-dots {
         display: none !important; }
         #section-01 .side-2 .projects-slider .sliderSlick .slick-dots li {
@@ -7109,6 +7109,8 @@ template {
         height: calc(100vh - 180px - 160px);
         width: 100vw;
         background-position-x: -76px !important; }
+        #section-01 .side-2 .projects-slider .sliderSlick .slide-image .fake-screen {
+          width: 90vw; }
       #section-01 .side-2 .projects-slider .sliderSlick .slick-dots {
         left: 50%;
         transform: translateX(-50%); }

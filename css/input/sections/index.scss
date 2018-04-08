@@ -157,7 +157,7 @@ $screen-background: #121010;
             right: 0px;
             background-size: cover !important;
             height: 60vh;
-            width: 90vw;
+            width: 67vw;
           }
           &.slick-active {
           }
@@ -495,6 +495,9 @@ $screen-background: #121010;
           height: calc(100vh - 180px - 160px);
           width: 100vw;
           background-position-x: -76px !important;
+          .fake-screen {
+            width: 90vw;
+          }
         }
         .slick-dots {
           left: 50%;
