@@ -439,6 +439,9 @@ $screen-background: #121010;
       .row-green {
         .fill-green {
           display: flex !important;
+          .text-body {
+            color: #2d2f2d;
+          }
         }
       }
     }

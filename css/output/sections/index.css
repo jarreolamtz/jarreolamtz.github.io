@@ -7068,7 +7068,9 @@ template {
     max-width: initial;
     padding: 0; }
   #section-01 .side-2 .row-green .fill-green {
-    display: flex !important; } }
+    display: flex !important; }
+    #section-01 .side-2 .row-green .fill-green .text-body {
+      color: #2d2f2d; } }
 @media (max-width: 991.98px) {
   @keyframes fillDown {
     0% {
