@@ -247,7 +247,7 @@ $screen-background: #121010;
       li {
         display: inline-block;
         a {
-          color: #2f302e;
+          color: #2f302e !important;
           &:hover,
           &:focus,
           &:active,
@@ -587,6 +587,9 @@ $screen-background: #121010;
     .side-1 {
       padding: 80px 0 30px;
       height: auto;
+      &::before {
+        height: 100%;
+      }
       .bottom-div {
         margin: 0 -15px;
         .linkDiv {
@@ -617,9 +620,16 @@ $screen-background: #121010;
           }
         }
       }
+      .slideOut-brown {
+        height: 100%;
+        bottom: 0;
+      }
       .row-green {
         .fill-greenDark {
           height: 120px;
+        }
+        .fill-green {
+          display: none !important;
         }
       }
     }
@@ -641,7 +651,7 @@ $screen-background: #121010;
         width: 100vw;
         .slide-image {
           height: 80vh;
-          width: 100vw;
+          width: 100vw !important;
           background-size: cover !important;
           background-position: center center;
         }
@@ -652,6 +662,7 @@ $screen-background: #121010;
     }
   }
   #section-03 {
+    overflow: visible !important;
     .row-top {
       &::before {
         transform: none !important;
