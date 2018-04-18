@@ -147,7 +147,7 @@ br::-moz-selection {
   font-size: 140px;
   letter-spacing: 21.48px;
   margin-left: -10px;
-  line-height: 154px;
+  line-height: 100px;
   text-transform: uppercase;
 }
 .text-description-subHeading {

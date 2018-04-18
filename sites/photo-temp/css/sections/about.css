@@ -24,8 +24,9 @@ footer {
   width: calc(100% - 30px);
 }
 .text-description-heading {
-    margin-bottom: 0px;
-    height: 286px;
+  margin-bottom: 0px;
+  height: 244px;
+  line-height: 130px;
 }
 
 /* TABLET --------------------------------- */
