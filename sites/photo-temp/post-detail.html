@@ -55,7 +55,7 @@
   <link rel="stylesheet" href="css/framework/bootstrap.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/fonts/font-awesome.css">
-  <link rel="stylesheet" href="css/plugins/slick.css">
+  <link rel="stylesheet" href="css/plugins/cursor.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/sections/header.css">
   <link rel="stylesheet" href="css/sections/post-detail.css">
@@ -68,6 +68,10 @@
     <div class="loader">
         <img class="img center-xy" src="img/icons/logo-black.svg">
     </div>
+
+    <!-- CURSOR -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
     <!-- CONTENT -->
     <div class="site">
@@ -187,13 +191,13 @@
                     <div class="text-module">
                       <div class="row">
                         <div class="col-md-8 col-md-offset-4">
-                          <p class="text-big-number">Nº1</p>
+                          <p class="text-big-number color-black">Nº1</p>
                         </div>
                       </div>
                       <div class="bottom">
                         <div class="row">
                           <div class="col-md-6">
-                            <h1 class="text-heading">Workshop</h1>
+                            <h1 class="text-heading color-black">Workshop</h1>
                           </div>
                         </div>
                         <div class="row">
@@ -218,7 +222,7 @@
                     <div class="text-module">
                       <div class="row">
                         <div class="col-md-6">
-                          <h1 class="text-heading">Workshop</h1>
+                          <h1 class="text-heading color-black">Workshop</h1>
                         </div>
                       </div>
                       <div class="row">
@@ -252,7 +256,7 @@
                     <div class="text-module">
                       <div class="row">
                         <div class="col-md-6">
-                          <h1 class="text-heading">Workshop</h1>
+                          <h1 class="text-heading color-black">Workshop</h1>
                         </div>
                       </div>
                       <div class="row">
@@ -293,7 +297,7 @@
               </div>
               <div class="row">
                 <div class="col-sm-12 col-md-10 col-md-offset-1">
-                  <h2 class="text-description-subHeading">
+                  <h2 class="text-description-subHeading color-black">
                       Well educated, intellectual people, especially scientists
                       at all times demonstrate considerably smaller adherence
                       to religiosity than others.
@@ -341,7 +345,7 @@
 
           </section>
           <!-- Foooter -->
-          <footer>
+          <footer class="fill-black">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-1">
@@ -371,6 +375,7 @@
     <script src="js/framework/bootstrap.min.js"></script>
     <!-- <script src="js/plugins/jquery.lazyload.js"></script> -->
     <script src="js/sections/index.js"></script>
+    <script src="js/plugins/cursor.js"></script>
     <!-- <script src="js/plugins/grid.js"></script> -->
 
     <!-- Loader -->
@@ -380,6 +385,10 @@
             $(".loader").fadeOut(800);
           }, 1200);
         });
+        if( $(window).width() > 768 ){
+          home();
+          cursorfollow();
+        }
     </script>
 </body>
 </html>

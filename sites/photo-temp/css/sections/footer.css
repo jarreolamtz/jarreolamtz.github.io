@@ -1,19 +1,19 @@
 footer {
-  background: #5148FF;
   min-height: 100px;
   padding: 37px 0;
 }
 footer a {
-  color: #272727;
+  color: #73716e;
   font-family: "AlteDin";
   font-size: 14px;
   letter-spacing: 1.95px;
-  line-height: 30px;
+  line-height: 20px;
   display: inline-block;
 }
 footer a + a {
   margin-left: 20px;
 }
+
 
 /* TABLET --------------------------------- */
 @media screen and (max-width: 991px) {

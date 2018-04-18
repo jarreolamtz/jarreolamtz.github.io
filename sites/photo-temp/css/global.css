@@ -7,17 +7,12 @@
 }*/
 
 
+@import url('https://fonts.googleapis.com/css?family=Average|Source+Sans+Pro');
 
-@font-face {
-  font-family: 'AlteDin';
-  src: url('fonts/alte-din/din1451alt.ttf');
-    font-weight:  300;
-    font-style:   normal;
-    font-stretch: normal;
-}
 body {
-  color: #272727;
-  text-transform: uppercase;
+  color: #3e3d3c;
+  background: #fbfaf9;
+  cursor: none !important;
 }
 .container-fluid {
   max-width: 1440px;
@@ -37,7 +32,7 @@ a {
 a::after {
   content: "";
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   left: -4px;
   right: -4px;
   height: 0.65em;
@@ -79,90 +74,113 @@ br::-moz-selection {
 }
 /* FILLS  --------------------------------- */
 .fill-black {
-    background: #151515;
+  background: #3e3d3c;
 }
 
 .fill-gray {
-    background: #e0e1e2;
+  background: #e0e1e2;
 }
 
 .fill-white {
-    background: #FFFFFF;
+  background: #FFFFFF;
 }
 
 .fill-blue {
-    background: #5148FF;
+  background: #5148FF;
+}
+
+.fill-yellow {
+  background: #C9B8A7;
+}
+.fill-texture {
+  background-image: url(../img/assets/texture.png);
+  background-size: 250px;
+}
+.pattern-plus {
+  background-image: url(../img/icons/pattern-plus.svg);
 }
 
 
 
 /* FONTS --------------------------------- */
 .text-big-number {
-  font-family: "AlteDin";
-  font-size: 154px;
+  font-family: "Average";
+  text-transform: uppercase;
+  font-size: 116px;
   letter-spacing: 19.48px;
-  line-height: 135px;
+  line-height: 100px;
   text-align: right;
-  margin-right: -27px;
+  margin-right: -20px;
 }
 
 .text-heading {
-  font-family: "AlteDin";
-  font-size: 44px;
+  font-family: "Average";
+  /* text-transform: uppercase; */
+  font-size: 38px;
   letter-spacing: 0.74px;
-  line-height: 60px;
-  margin-bottom: 18px;
-  background: #272727;
-  color: white;
-  padding: 0 20px;
+  line-height: 30px;
+  margin-bottom: 16px;
   display: inline-block;
   /*transform: rotate(-1deg);*/
 }
 
 .text-body {
-  font-family: 'AlteDin';
-  font-size: 16px;
-  letter-spacing: 0.48px;
-  line-height: 25px;
+  font-family: 'Source Sans Pro';
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
   text-transform: none;
+  color: #4B4A49;
+}
+
+.text-body-num {
+  font-family: 'Average';
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  text-transform: none;
+  color: #4B4A49;
 }
 
 .text-description-heading {
-  font-family: "AlteDin";
-  font-size: 154px;
+  font-family: "Average";
+  font-size: 140px;
   letter-spacing: 21.48px;
   margin-left: -10px;
   line-height: 154px;
+  text-transform: uppercase;
 }
 .text-description-subHeading {
-  font-family: 'AlteDin';
+  font-family: 'Average';
   font-size: 34px;
   letter-spacing: 3.74px;
   line-height: 50px;
+  text-transform: uppercase;
 }
 .text-description-body {
-  font-family: "AlteDin";
+  font-family: "Average";
   font-size: 14px;
   letter-spacing: 1.95px;
   line-height: 25px;
+  text-transform: uppercase;
 }
 
 .text-footer {
-  font-family: "AlteDin";
+  font-family: "Average";
   font-size: 14px;
   letter-spacing: 1.95px;
   line-height: 30px;
 }
 
 .text-link {
-  font-family: "AlteDin";
+  font-family: "Average";
   font-size: 14px;
   letter-spacing: 1.95px;
   line-height: 30px;
 }
 
 .text-heading-menu {
-  font-family: "AlteDin";
+  font-family: "Average";
   font-size: 34px;
   letter-spacing: 0.74px;
   line-height: 60px;
@@ -171,7 +189,11 @@ br::-moz-selection {
 
 /* COLORS --------------------------------- */
 .color-black {
-  color: #272727;
+  color: #3e3d3c;
+}
+
+.color-lightGray {
+  color: #73716e;
 }
 
 .color-white {
@@ -220,7 +242,6 @@ button {
     display: inline-block;
     background:transparent;
     outline: none;
-    cursor: pointer;
 }
 .button-stroke.color-black {
     border: 1px solid #202020;
@@ -453,13 +474,13 @@ textarea {
 }
 .wordmark {
   position: absolute;
-  left: -5px;
+  left: 30px;
   top: 50vh;
   transform: translateY(-50%);
   height: 104vh;
 }
 .wordmark img {
-  height: 100%;
+  height: 100vh;
 }
 .wordmark-div.unActive {
   position: absolute;
@@ -511,7 +532,7 @@ a.color-white.active {
     a.active::after {
       content: "";
       position: absolute;
-      bottom: 5px;
+      bottom: 0px;
       left: -4px;
       height: 0.65em;
       border-top: 19px solid #272727;
@@ -521,11 +542,15 @@ a.color-white.active {
     }
     a:hover,
     a:focus,
-    a.active {
+    a.active,
+    a:hover p,
+    a:focus p,
+    a.active p {
       outline: none !important;
       color: white !important;
       z-index: 2;
       padding: 0 4px;
+      color: white;
     }
     /*White links*/
 
@@ -735,14 +760,14 @@ a.color-white.active {
   }
 
   .text-footer {
-    font-family: "AlteDin";
+    font-family: "Average";
     font-size: 14px;
     letter-spacing: 1.95px;
     line-height: 30px;
   }
 
   .text-link {
-    font-family: "AlteDin";
+    font-family: "Average";
     font-size: 14px;
     letter-spacing: 1.95px;
     line-height: 30px;
@@ -756,7 +781,7 @@ a.color-white.active {
     height: 40px;
   }
   a.active::after {
-    bottom: 5px;
+    bottom: 0px;
     border-top: 22px solid #272727;
   }
 
