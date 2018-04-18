@@ -675,7 +675,8 @@ a.color-white.active {
   }
   .wordmark img {
     width: 100%;
-    margin-top: -23px;
+    margin-top: 30px;
+    height: 100%;
   }
   .box,
   .box .image {
